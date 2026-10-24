@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "fractions": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "audit_sha256": "05903ad9783656eece92137a43c6ccb235da38ae6f955d1fe1c20436f3330efb",
+  "excluded_extra_copies": 1,
+  "unique_readable_images": 974,
+  "labels": {
+    "Real": 0,
+    "AI": 1
+  },
+  "limitation": "Exact hashes only; near-duplicates and common sources may remain."
+}

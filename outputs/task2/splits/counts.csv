@@ -1,0 +1,4 @@
+split,Real,AI,total
+train,305,376,681
+validation,65,81,146
+test,66,81,147
