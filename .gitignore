@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+dataset/
+dvc-toy/
+.cache/
+outputs/task2/models/
+outputs/task2/tuner_state/
+outputs/task2/mlruns/
+outputs/task2/**/*.keras
+gpu_debug.txt
+
