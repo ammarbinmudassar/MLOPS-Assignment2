@@ -45,6 +45,15 @@ class Task2Tests(unittest.TestCase):
             elif layer.trainable:
                 self.assertTrue(layer.name.startswith(("block_16_", "Conv_1", "out_relu")))
 
+    def test_threshold_respects_false_accusation_cost(self):
+        from task2.evaluate import choose_threshold
+        labels = np.array([0, 0, 1, 1])
+        probabilities = np.array([.1, .6, .5, .9])
+        best, _ = choose_threshold(labels, probabilities)
+        self.assertEqual(best["fp"], 0)
+        self.assertEqual(best["fn"], 1)
+        self.assertEqual(best["weighted_error"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

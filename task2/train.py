@@ -24,6 +24,8 @@ from task2.models import (
     backbone, baseline, transfer, unfreeze_last_block, unfreeze_last_layers,
 )
 
+RESUME = False
+
 
 def callbacks(directory):
     directory.mkdir(parents=True, exist_ok=True)
@@ -102,6 +104,11 @@ def save_curves(frame, name):
 
 def fit_stage(model, name, train, validation, epochs):
     destination = OUT / "models" / name
+    result_path = OUT / "histories" / f"{name}.json"
+    if RESUME and result_path.exists() and (destination / "best.keras").exists():
+        import json
+        print(f"Reusing completed stage: {name}", flush=True)
+        return tf.keras.models.load_model(destination / "best.keras"), json.loads(result_path.read_text())
     start = time.monotonic()
     print(f"\n=== {name}: maximum {epochs} epochs ===", flush=True)
     history = model.fit(train, validation_data=validation, epochs=epochs,
@@ -223,13 +230,22 @@ def vision_tuning(head_model, train, validation, epochs):
 
 
 def main():
+    global RESUME
     parser = argparse.ArgumentParser()
     parser.add_argument("--cnn-epochs", type=int, default=20)
     parser.add_argument("--head-epochs", type=int, default=12)
     parser.add_argument("--fine-epochs", type=int, default=12)
     parser.add_argument("--trial-epochs", type=int, default=5)
     parser.add_argument("--toy-epochs", type=int, default=3)
+    parser.add_argument("--resume", action="store_true", help="Reuse completed stages after interruption")
     args = parser.parse_args()
+    RESUME = args.resume
+    if RESUME and (OUT / "run_config.json").exists():
+        import json
+        previous = json.loads((OUT / "run_config.json").read_text())
+        for key in ["cnn_epochs", "head_epochs", "fine_epochs", "trial_epochs", "toy_epochs"]:
+            if previous[key] != getattr(args, key):
+                raise SystemExit(f"Cannot resume with a changed training budget: {key}")
     if (OUT / "evaluation/metrics.csv").exists():
         raise SystemExit("Test evaluation already exists. Use a new output directory for a new experiment.")
     setup()
@@ -239,7 +255,8 @@ def main():
     train = make_dataset(frames["train"], training=True)
     validation = make_dataset(frames["validation"])
     save_augmented_batch(train)
-    write_json(OUT / "run_config.json", {
+    config_path = OUT / "run_config.json"
+    write_json(OUT / ("resume_config.json" if RESUME and config_path.exists() else "run_config.json"), {
         **vars(args), "seed": SEED, "image_size": IMAGE_SIZE, "batch_size": BATCH_SIZE,
         "started_at": datetime.now().astimezone().isoformat(),
         "git_commit": git_commit(), "python": platform.python_version(),
