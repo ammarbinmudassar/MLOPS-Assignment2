@@ -1,0 +1,18 @@
+[
+  {
+    "run_id": "e33feb4c178046abad7d61e493d0e8c6",
+    "status": "FINISHED",
+    "metric_points_per_key": 5,
+    "model_status": "READY",
+    "model_reload_verified": true,
+    "plot_and_history_verified": true
+  },
+  {
+    "run_id": "3838748f0ee04b92bc15593f2db0c653",
+    "status": "FINISHED",
+    "metric_points_per_key": 5,
+    "model_status": "READY",
+    "model_reload_verified": true,
+    "plot_and_history_verified": true
+  }
+]

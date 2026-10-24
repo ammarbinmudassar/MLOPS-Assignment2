@@ -1,0 +1,3 @@
+name,run_id,experiment_id,learning_rate,final_val_loss,final_val_accuracy,model_uri
+3.1_fashion_lr_0.001,e33feb4c178046abad7d61e493d0e8c6,1,0.001,0.45308390259742737,0.8424999713897705,models:/m-368fd13f59314e6aafdede059ad533eb
+3.1_fashion_lr_0.0001,3838748f0ee04b92bc15593f2db0c653,1,0.0001,0.653317928314209,0.7860000133514404,models:/m-b9dd84dfff024646b6e4bc1f8b5c23fa

@@ -1,0 +1,45 @@
+2026/10/24 23:54:25 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at /home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/mlflow/assistant/skills/instrumenting-with-mlflow-tracing/SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792868065.914365   89218 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792868065.946988   89218 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792868067.001717   89218 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792868069.267799   89218 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 3976 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 6GB Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+157/157 - 2s - 13ms/step - accuracy: 0.7226 - loss: 0.8279 - val_accuracy: 0.7980 - val_loss: 0.6132
+Epoch 2/5
+157/157 - 0s - 3ms/step - accuracy: 0.8233 - loss: 0.5300 - val_accuracy: 0.8165 - val_loss: 0.5323
+Epoch 3/5
+157/157 - 0s - 2ms/step - accuracy: 0.8350 - loss: 0.4754 - val_accuracy: 0.8325 - val_loss: 0.4841
+Epoch 4/5
+157/157 - 0s - 2ms/step - accuracy: 0.8491 - loss: 0.4390 - val_accuracy: 0.8430 - val_loss: 0.4579
+Epoch 5/5
+157/157 - 0s - 2ms/step - accuracy: 0.8566 - loss: 0.4156 - val_accuracy: 0.8425 - val_loss: 0.4531
+E0000 00:00:1792868074.367688   89218 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_14}}
+Downloading artifacts:   0%|          | 0/6 [00:00<?, ?it/s]Downloading artifacts:  17%|█▋        | 1/6 [00:00<00:00, 146.48it/s]Downloading artifacts:  33%|███▎      | 2/6 [00:00<00:00, 284.22it/s]Downloading artifacts:  50%|█████     | 3/6 [00:00<00:00, 343.91it/s]Downloading artifacts:  67%|██████▋   | 4/6 [00:00<00:00, 438.51it/s]Downloading artifacts:  83%|████████▎ | 5/6 [00:00<00:00, 522.64it/s]Downloading artifacts: 100%|██████████| 6/6 [00:00<00:00, 535.26it/s]Downloading artifacts: 100%|██████████| 6/6 [00:00<00:00, 528.99it/s]
+🏃 View run 3.1_fashion_lr_0.001 at: http://127.0.0.1:5000/#/experiments/1/runs/e33feb4c178046abad7d61e493d0e8c6
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+157/157 - 1s - 5ms/step - accuracy: 0.5363 - loss: 1.5955 - val_accuracy: 0.6755 - val_loss: 1.1401
+Epoch 2/5
+157/157 - 1s - 5ms/step - accuracy: 0.7088 - loss: 0.9626 - val_accuracy: 0.7340 - val_loss: 0.8598
+Epoch 3/5
+157/157 - 0s - 3ms/step - accuracy: 0.7526 - loss: 0.7823 - val_accuracy: 0.7620 - val_loss: 0.7474
+Epoch 4/5
+157/157 - 0s - 2ms/step - accuracy: 0.7738 - loss: 0.6990 - val_accuracy: 0.7795 - val_loss: 0.6886
+Epoch 5/5
+157/157 - 0s - 2ms/step - accuracy: 0.7911 - loss: 0.6452 - val_accuracy: 0.7860 - val_loss: 0.6533
+Downloading artifacts:   0%|          | 0/6 [00:00<?, ?it/s]Downloading artifacts:  17%|█▋        | 1/6 [00:00<00:00, 27594.11it/s]Downloading artifacts:  33%|███▎      | 2/6 [00:00<00:00, 22075.28it/s]Downloading artifacts:  50%|█████     | 3/6 [00:00<00:00, 515.10it/s]  Downloading artifacts:  67%|██████▋   | 4/6 [00:00<00:00, 648.34it/s]Downloading artifacts:  83%|████████▎ | 5/6 [00:00<00:00, 503.07it/s]Downloading artifacts: 100%|██████████| 6/6 [00:00<00:00, 477.39it/s]Downloading artifacts: 100%|██████████| 6/6 [00:00<00:00, 473.91it/s]
+🏃 View run 3.1_fashion_lr_0.0001 at: http://127.0.0.1:5000/#/experiments/1/runs/3838748f0ee04b92bc15593f2db0c653
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+
+COMPARISON
+                  name                           run_id experiment_id  learning_rate  final_val_loss  final_val_accuracy                                  model_uri
+ 3.1_fashion_lr_0.001 e33feb4c178046abad7d61e493d0e8c6             1         0.0010        0.453084              0.8425 models:/m-368fd13f59314e6aafdede059ad533eb
+3.1_fashion_lr_0.0001 3838748f0ee04b92bc15593f2db0c653             1         0.0001        0.653318              0.7860 models:/m-b9dd84dfff024646b6e4bc1f8b5c23fa
+Open http://127.0.0.1:5000 and select experiment 23L-0630_A2_Ops.

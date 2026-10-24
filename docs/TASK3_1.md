@@ -61,3 +61,7 @@ comparison view lets me check how this change affected validation performance.
 
 Show the address bar and experiment/run name in screenshots. All artifacts must
 belong to the actual runs; the locally saved PNGs are also in `outputs/task3/3_1/`.
+
+The completed results, run IDs and saved interface screenshots are listed in
+`outputs/task3/3_1/RESULTS.md`. Final validation accuracies were 84.25% at 0.001
+and 78.60% at 0.0001, using the same five-epoch budget.

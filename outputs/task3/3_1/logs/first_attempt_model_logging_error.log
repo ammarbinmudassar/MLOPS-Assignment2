@@ -1,0 +1,48 @@
+2026/10/24 23:52:57 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at /home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/mlflow/assistant/skills/instrumenting-with-mlflow-tracing/SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792867978.203347   88697 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792867978.235307   88697 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792867979.150126   88697 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026/10/24 23:53:01 INFO mlflow.tracking.fluent: Experiment with name '23L-0630_A2_Ops' does not exist. Creating a new experiment.
+I0000 00:00:1792867982.078496   88697 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 3976 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 6GB Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+157/157 - 2s - 13ms/step - accuracy: 0.7226 - loss: 0.8279 - val_accuracy: 0.7980 - val_loss: 0.6132
+Epoch 2/5
+157/157 - 0s - 3ms/step - accuracy: 0.8233 - loss: 0.5300 - val_accuracy: 0.8165 - val_loss: 0.5323
+Epoch 3/5
+157/157 - 0s - 2ms/step - accuracy: 0.8350 - loss: 0.4754 - val_accuracy: 0.8325 - val_loss: 0.4841
+Epoch 4/5
+157/157 - 0s - 2ms/step - accuracy: 0.8491 - loss: 0.4390 - val_accuracy: 0.8430 - val_loss: 0.4579
+Epoch 5/5
+157/157 - 0s - 2ms/step - accuracy: 0.8566 - loss: 0.4156 - val_accuracy: 0.8425 - val_loss: 0.4531
+E0000 00:00:1792867987.313176   88697 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_14}}
+🏃 View run 3.1_fashion_lr_0.001 at: http://127.0.0.1:5000/#/experiments/1/runs/d71b64e2fd3a489daf85177fa673eaa3
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/task3/local_lab.py", line 139, in <module>
+    main()
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/task3/local_lab.py", line 113, in main
+    logged_model = mlflow.keras.log_model(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/mlflow/keras/save.py", line 345, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/mlflow/telemetry/track.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/mlflow/models/model.py", line 1228, in log
+    flavor.save_model(path=local_path, mlflow_model=mlflow_model, **kwargs)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/mlflow/keras/save.py", line 184, in save_model
+    _save_example(mlflow_model, input_example, path)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/mlflow/models/utils.py", line 504, in _save_example
+    example.save(path)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/mlflow/models/utils.py", line 418, in save
+    with open(os.path.join(parent_dir_path, self.info[INPUT_EXAMPLE_PATH]), "w") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp2k2v18jg/model/input_example.json'

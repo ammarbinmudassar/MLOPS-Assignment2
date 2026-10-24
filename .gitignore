@@ -13,4 +13,5 @@ outputs/task2/mlruns/
 outputs/task2/**/*.keras
 gpu_debug.txt
 .mlflow/
+outputs/task3/3_1/logs/server.log
 
