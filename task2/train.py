@@ -18,6 +18,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 import keras_tuner as kt
+from tensorboard.plugins.hparams import api as hparams_api  # Keras Tuner runtime dependency.
 
 from task2.data import make_dataset, prepare_splits, read_split, save_augmented_batch
 from task2.models import (
@@ -128,6 +129,8 @@ def fit_stage(model, name, train, validation, epochs):
 
 
 def trial_table(tuner, name):
+    # Fail early at module import if TensorBoard is absent, before expensive training.
+    _ = hparams_api
     rows = []
     for trial_id, trial in tuner.oracle.trials.items():
         row = {"trial_id": trial_id, "status": trial.status, **trial.hyperparameters.values,

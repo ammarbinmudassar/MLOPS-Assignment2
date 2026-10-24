@@ -65,7 +65,9 @@ kiwisolver==1.5.1
 kombu==5.6.2
 kt-legacy==1.0.5
 libclang==18.1.1
+Markdown==3.11.2
 markdown-it-py==4.2.0
+MarkupSafe==3.0.4
 matplotlib==3.11.2
 mdurl==0.1.2
 ml_dtypes==0.6.0
@@ -124,6 +126,8 @@ six==1.17.0
 smmap==5.0.3
 sqltrie==0.11.3
 tabulate==0.10.0
+tensorboard==2.21.0
+tensorboard-data-server==0.7.2
 tensorflow==2.21.0
 termcolor==3.3.0
 threadpoolctl==3.7.0
@@ -137,6 +141,7 @@ urllib3==2.8.0
 vine==5.1.0
 voluptuous==0.16.0
 wcwidth==0.9.3
+Werkzeug==3.1.9
 wrapt==2.5.1
 yarl==1.25.1
 zc.lockfile==4.0
