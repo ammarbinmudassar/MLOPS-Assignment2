@@ -12,4 +12,5 @@ outputs/task2/tuner_state/
 outputs/task2/mlruns/
 outputs/task2/**/*.keras
 gpu_debug.txt
+.mlflow/
 
