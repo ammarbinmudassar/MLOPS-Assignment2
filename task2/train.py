@@ -20,9 +20,9 @@ import tensorflow as tf
 import keras_tuner as kt
 from tensorboard.plugins.hparams import api as hparams_api  # Keras Tuner runtime dependency.
 
-from task2.data import make_dataset, prepare_splits, read_split, save_augmented_batch
+from task2.data import make_dataset, prepare_splits, save_augmented_batch
 from task2.models import (
-    backbone, baseline, transfer, unfreeze_last_block, unfreeze_last_layers,
+    baseline, transfer, unfreeze_last_block, unfreeze_last_layers,
 )
 
 RESUME = False

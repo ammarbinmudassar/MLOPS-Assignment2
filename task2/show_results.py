@@ -3,8 +3,6 @@
 import getpass
 import json
 from datetime import datetime
-from pathlib import Path
-
 from task2.common import OUT, ROOT, git_commit
 
 import pandas as pd

@@ -54,6 +54,12 @@ class Task2Tests(unittest.TestCase):
         self.assertEqual(best["fn"], 1)
         self.assertEqual(best["weighted_error"], 1)
 
+    def test_threshold_can_reject_saturated_false_positive(self):
+        from task2.evaluate import choose_threshold
+        best, _ = choose_threshold(np.array([0, 1]), np.array([1., 0.], dtype=np.float32))
+        self.assertEqual(best["fp"], 0)
+        self.assertEqual(best["fn"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

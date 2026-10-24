@@ -21,6 +21,7 @@ from task2.train import save_curves
 
 
 def metric_values(labels, probabilities, threshold):
+    probabilities = np.asarray(probabilities, dtype=np.float64)
     predicted = (probabilities >= threshold).astype(int)
     tn, fp, fn, tp = confusion_matrix(labels, predicted, labels=[0, 1]).ravel()
     return {
@@ -35,6 +36,7 @@ def metric_values(labels, probabilities, threshold):
 
 
 def choose_threshold(labels, probabilities):
+    probabilities = np.asarray(probabilities, dtype=np.float64)
     # Every distinct decision boundary, including predict-all/predict-none.
     candidates = np.unique(np.r_[0.0, probabilities, np.nextafter(probabilities.max(), np.inf), 1.0])
     table = pd.DataFrame([metric_values(labels, probabilities, value) for value in candidates])
@@ -115,7 +117,7 @@ def main():
     chosen = {}
     for name, path in paths.items():
         model = tf.keras.models.load_model(OUT / path)
-        probabilities = model.predict(validation_ds, verbose=0).ravel()
+        probabilities = model.predict(validation_ds, verbose=0).ravel().astype(np.float64)
         best, thresholds = choose_threshold(validation.label.to_numpy(), probabilities)
         thresholds.to_csv(destination / f"{name}_validation_thresholds.csv", index=False)
         frame = validation.copy()
@@ -137,7 +139,7 @@ def main():
     test_ds = make_dataset(test)
     for name, path in paths.items():
         model = tf.keras.models.load_model(OUT / path)
-        probabilities = model.predict(test_ds, verbose=0).ravel()
+        probabilities = model.predict(test_ds, verbose=0).ravel().astype(np.float64)
         threshold = chosen[name]["threshold"]
         result = {"model": name, **metric_values(test.label.to_numpy(), probabilities, threshold)}
         results.append(result)

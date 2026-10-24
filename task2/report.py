@@ -2,8 +2,6 @@
 
 import hashlib
 import json
-from pathlib import Path
-
 from task2.common import OUT, write_json
 
 import matplotlib
