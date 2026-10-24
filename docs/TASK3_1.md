@@ -5,6 +5,9 @@ batch size and five-epoch budget. Only the learning rate changes: 0.001 vs 0.000
 Each run records parameters, per-epoch loss/accuracy, validation loss/accuracy,
 a training-curve plot, a history CSV, tags and the trained MLflow Keras model.
 The model is loaded back from MLflow and its predictions checked against the original.
+The input example is logged separately because the installed MLflow Keras flavor
+has a directory-creation error when `input_example` is passed to `log_model`.
+The first failed attempt is retained in MLflow; compare the two FINISHED runs.
 
 ## Open the local interface
 

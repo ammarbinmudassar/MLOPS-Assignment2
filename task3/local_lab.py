@@ -110,8 +110,12 @@ def main():
             mlflow.log_text("\n".join(lines), "model_summary.txt")
             example = images[train[:3]]
             probabilities = model.predict(example, verbose=0)
+            # MLflow 3.17.2's Keras flavor saves input_example before creating its
+            # model directory. Keep the example as a separate run artifact.
+            mlflow.log_dict({"shape": list(example.shape), "values": example.tolist()},
+                            "input_example.json")
             logged_model = mlflow.keras.log_model(
-                model, name="model", input_example=example,
+                model, name="model",
                 signature=infer_signature(example, probabilities),
                 pip_requirements=[f"tensorflow=={version('tensorflow')}",
                                   f"keras=={version('keras')}", f"numpy=={version('numpy')}"],
