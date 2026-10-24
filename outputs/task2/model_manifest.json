@@ -1,0 +1,14 @@
+[
+  {
+    "approach": "baseline",
+    "path": "models/baseline/best.keras",
+    "bytes": 387925,
+    "sha256": "b29739485e977c940a42a211064fcbf3eabfc4d0a91fff635f1f7a41dbb239d8"
+  },
+  {
+    "approach": "transfer",
+    "path": "models/tuned_transfer.keras",
+    "bytes": 9633089,
+    "sha256": "80bf4e69869036dade3008d68f24ac38efc7eac2375de95b845d9740f27f87e2"
+  }
+]

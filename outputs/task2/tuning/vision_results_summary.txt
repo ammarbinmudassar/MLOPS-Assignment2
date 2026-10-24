@@ -1,0 +1,60 @@
+Results summary
+Results in /home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/outputs/task2/tuner_state/vision
+Showing 8 best trials
+Objective(name="val_loss", direction="min")
+
+Trial 7 summary
+Hyperparameters:
+learning_rate: 0.0001
+dropout: 0.5
+unfrozen_layers: 8
+Score: 0.4539927542209625
+
+Trial 0 summary
+Hyperparameters:
+learning_rate: 0.0001
+dropout: 0.2
+unfrozen_layers: 4
+Score: 0.4724237024784088
+
+Trial 3 summary
+Hyperparameters:
+learning_rate: 0.0001
+dropout: 0.2
+unfrozen_layers: 8
+Score: 0.47588106989860535
+
+Trial 6 summary
+Hyperparameters:
+learning_rate: 0.0001
+dropout: 0.5
+unfrozen_layers: 4
+Score: 0.4860828220844269
+
+Trial 4 summary
+Hyperparameters:
+learning_rate: 1e-05
+dropout: 0.2
+unfrozen_layers: 8
+Score: 0.5138588547706604
+
+Trial 2 summary
+Hyperparameters:
+learning_rate: 1e-05
+dropout: 0.5
+unfrozen_layers: 8
+Score: 0.5160316824913025
+
+Trial 5 summary
+Hyperparameters:
+learning_rate: 1e-05
+dropout: 0.2
+unfrozen_layers: 4
+Score: 0.5162187218666077
+
+Trial 1 summary
+Hyperparameters:
+learning_rate: 1e-05
+dropout: 0.5
+unfrozen_layers: 4
+Score: 0.5210021734237671

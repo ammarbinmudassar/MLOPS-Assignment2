@@ -65,6 +65,10 @@ def main():
         frame = pd.read_csv(OUT / "summaries" / f"{name}_trainable_layers.csv")
         weighted = frame.loc[frame.trainable_parameters > 0]
         trainables.append(f"- **{name}:** " + ", ".join(weighted.layer) + ".")
+    tuned_row = vision.loc[vision.best_val_loss.idxmin()]
+    tuned_epoch = int(tuned_row.best_step_zero_based) + 1
+    cnn_metrics = metrics.loc[metrics.model == "baseline"].iloc[0]
+    transfer_metrics = metrics.loc[metrics.model == "transfer"].iloc[0]
     explanations = []
     for name in ["baseline", "transfer"]:
         errors = pd.read_csv(OUT / "evaluation" / f"{name}_errors.csv")
@@ -127,6 +131,13 @@ Layers with trainable parameters (the full lists also include frozen layers):
 
 Transfer candidate selected before testing: **{selection['transfer_candidate']}**.
 Candidate minimum validation losses: `{selection['candidate_validation_losses']}`.
+The best tuner trial's checkpoint is from epoch **{tuned_epoch}**.
+
+![Selected tuned-transfer curves](figures/transfer_tuned_curves.png)
+
+Figure: training and validation curves for the winning tuning trial. The minimum
+validation-loss epoch supplies its saved weights; no extra retraining or test-based
+configuration change was performed.
 
 ## 2.5 — threshold selection and one held-out evaluation
 
@@ -143,6 +154,16 @@ and validation ROC-AUC, before looking at test results.
 Test metrics on 147 previously held-out images:
 
 {markdown_table(display_metrics)}
+
+The transfer model correctly classifies {int(transfer_metrics.tn + transfer_metrics.tp)}
+of 147 test images, compared with {int(cnn_metrics.tn + cnn_metrics.tp)} for the CNN.
+Its weighted test error is {int(transfer_metrics.weighted_error)}, versus
+{int(cnn_metrics.weighted_error)} for the CNN. The baseline makes fewer false AI
+accusations ({int(cnn_metrics.fp)} versus {int(transfer_metrics.fp)}), but misses
+many more AI images ({int(cnn_metrics.fn)} versus {int(transfer_metrics.fn)}).
+This shows why its relatively high precision does not imply strong overall
+detection. The model choice was already fixed on validation data before this
+comparison was observed.
 
 ![Validation threshold costs](figures/validation_thresholds.png)
 ![Test confusion matrices](figures/confusion_matrices.png)

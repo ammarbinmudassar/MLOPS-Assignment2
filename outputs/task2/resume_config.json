@@ -1,0 +1,22 @@
+{
+  "cnn_epochs": 20,
+  "head_epochs": 12,
+  "fine_epochs": 12,
+  "trial_epochs": 5,
+  "toy_epochs": 3,
+  "resume": true,
+  "seed": 42,
+  "image_size": 160,
+  "batch_size": 32,
+  "started_at": "2026-10-24T22:25:56.438009+05:00",
+  "git_commit": "557e63303bf82888fa82743c7aba9d9738b5faff",
+  "python": "3.11.17",
+  "tensorflow": "2.21.0",
+  "keras": "3.15.1",
+  "keras_tuner": "1.4.8",
+  "gpus": [
+    "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')"
+  ],
+  "selection": "Validation loss only; test images are never read during training or tuning.",
+  "tracking": "Local CSV/JSON evidence; Task 3 MLflow/DagsHub logging is not implemented here."
+}

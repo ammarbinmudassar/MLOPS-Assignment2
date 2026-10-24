@@ -1,0 +1,323 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792862741.996217   79619 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792862742.031931   79619 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792862743.289069   79619 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+     split  Real  AI  total
+     train   305 376    681
+validation    65  81    146
+      test    66  81    147
+I0000 00:00:1792862745.549214   79619 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 3978 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 6GB Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+E0000 00:00:1792862746.814792   79619 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_5}}
+W0000 00:00:1792862751.375415   79720 png_io.cc:96] PNG warning: iCCP: profile 'ICC Profile': 'CMYK': invalid ICC profile color space
+Reusing completed stage: baseline
+Reusing completed stage: transfer_frozen
+Reusing completed stage: transfer_last_block
+
+Search: Running Trial #1
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.0001            |learning_rate
+0.2               |0.2               |dropout
+4                 |4                 |unfrozen_layers
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+I0000 00:00:1792862765.661582   79665 cuda_dnn.cc:461] Loaded cuDNN version 92700
+22/22 - 15s - 666ms/step - accuracy: 0.7900 - auc: 0.8857 - loss: 0.4229 - val_accuracy: 0.7192 - val_auc: 0.8292 - val_loss: 0.5094 - learning_rate: 1.0000e-04
+Epoch 2/5
+22/22 - 9s - 415ms/step - accuracy: 0.8576 - auc: 0.9280 - loss: 0.3545 - val_accuracy: 0.7534 - val_auc: 0.8394 - val_loss: 0.5040 - learning_rate: 1.0000e-04
+Epoch 3/5
+22/22 - 9s - 411ms/step - accuracy: 0.8561 - auc: 0.9329 - loss: 0.3419 - val_accuracy: 0.7808 - val_auc: 0.8487 - val_loss: 0.4873 - learning_rate: 1.0000e-04
+Epoch 4/5
+22/22 - 9s - 415ms/step - accuracy: 0.8811 - auc: 0.9516 - loss: 0.3053 - val_accuracy: 0.7945 - val_auc: 0.8572 - val_loss: 0.4724 - learning_rate: 1.0000e-04
+Epoch 5/5
+22/22 - 9s - 405ms/step - accuracy: 0.9031 - auc: 0.9713 - loss: 0.2570 - val_accuracy: 0.7808 - val_auc: 0.8532 - val_loss: 0.4965 - learning_rate: 1.0000e-04
+
+Trial 1 Complete [00h 00m 52s]
+val_loss: 0.4724237024784088
+
+Best val_loss So Far: 0.4724237024784088
+Total elapsed time: 00h 00m 52s
+
+Search: Running Trial #2
+
+Value             |Best Value So Far |Hyperparameter
+1e-05             |0.0001            |learning_rate
+0.5               |0.2               |dropout
+4                 |4                 |unfrozen_layers
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+22/22 - 12s - 549ms/step - accuracy: 0.7577 - auc: 0.8409 - loss: 0.4908 - val_accuracy: 0.7397 - val_auc: 0.8164 - val_loss: 0.5270 - learning_rate: 1.0000e-05
+Epoch 2/5
+22/22 - 9s - 413ms/step - accuracy: 0.7518 - auc: 0.8424 - loss: 0.4931 - val_accuracy: 0.7397 - val_auc: 0.8170 - val_loss: 0.5265 - learning_rate: 1.0000e-05
+Epoch 3/5
+22/22 - 9s - 415ms/step - accuracy: 0.7518 - auc: 0.8431 - loss: 0.4913 - val_accuracy: 0.7534 - val_auc: 0.8186 - val_loss: 0.5247 - learning_rate: 1.0000e-05
+Epoch 4/5
+22/22 - 9s - 413ms/step - accuracy: 0.7695 - auc: 0.8468 - loss: 0.4817 - val_accuracy: 0.7534 - val_auc: 0.8201 - val_loss: 0.5233 - learning_rate: 1.0000e-05
+Epoch 5/5
+22/22 - 9s - 412ms/step - accuracy: 0.7930 - auc: 0.8608 - loss: 0.4666 - val_accuracy: 0.7534 - val_auc: 0.8222 - val_loss: 0.5210 - learning_rate: 1.0000e-05
+
+Trial 2 Complete [00h 00m 50s]
+val_loss: 0.5210021734237671
+
+Best val_loss So Far: 0.4724237024784088
+Total elapsed time: 00h 01m 41s
+
+Search: Running Trial #3
+
+Value             |Best Value So Far |Hyperparameter
+1e-05             |0.0001            |learning_rate
+0.5               |0.2               |dropout
+8                 |4                 |unfrozen_layers
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+22/22 - 12s - 562ms/step - accuracy: 0.7636 - auc: 0.8427 - loss: 0.4901 - val_accuracy: 0.7397 - val_auc: 0.8141 - val_loss: 0.5417 - learning_rate: 1.0000e-05
+Epoch 2/5
+22/22 - 9s - 424ms/step - accuracy: 0.7665 - auc: 0.8427 - loss: 0.4886 - val_accuracy: 0.7466 - val_auc: 0.8151 - val_loss: 0.5238 - learning_rate: 1.0000e-05
+Epoch 3/5
+22/22 - 9s - 428ms/step - accuracy: 0.7695 - auc: 0.8448 - loss: 0.4867 - val_accuracy: 0.7466 - val_auc: 0.8160 - val_loss: 0.5222 - learning_rate: 1.0000e-05
+Epoch 4/5
+22/22 - 9s - 423ms/step - accuracy: 0.7812 - auc: 0.8653 - loss: 0.4526 - val_accuracy: 0.7397 - val_auc: 0.8198 - val_loss: 0.5216 - learning_rate: 1.0000e-05
+Epoch 5/5
+22/22 - 9s - 423ms/step - accuracy: 0.7988 - auc: 0.8767 - loss: 0.4419 - val_accuracy: 0.7534 - val_auc: 0.8236 - val_loss: 0.5160 - learning_rate: 1.0000e-05
+
+Trial 3 Complete [00h 00m 51s]
+val_loss: 0.5160316824913025
+
+Best val_loss So Far: 0.4724237024784088
+Total elapsed time: 00h 02m 32s
+
+Search: Running Trial #4
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.0001            |learning_rate
+0.2               |0.2               |dropout
+8                 |4                 |unfrozen_layers
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+22/22 - 12s - 564ms/step - accuracy: 0.7651 - auc: 0.8520 - loss: 0.4749 - val_accuracy: 0.6849 - val_auc: 0.8372 - val_loss: 0.5616 - learning_rate: 1.0000e-04
+Epoch 2/5
+22/22 - 9s - 426ms/step - accuracy: 0.8003 - auc: 0.8899 - loss: 0.4157 - val_accuracy: 0.8014 - val_auc: 0.8415 - val_loss: 0.4939 - learning_rate: 1.0000e-04
+Epoch 3/5
+22/22 - 9s - 423ms/step - accuracy: 0.8355 - auc: 0.9361 - loss: 0.3335 - val_accuracy: 0.7808 - val_auc: 0.8514 - val_loss: 0.4801 - learning_rate: 1.0000e-04
+Epoch 4/5
+22/22 - 9s - 412ms/step - accuracy: 0.8649 - auc: 0.9415 - loss: 0.3167 - val_accuracy: 0.7808 - val_auc: 0.8617 - val_loss: 0.4918 - learning_rate: 1.0000e-04
+Epoch 5/5
+22/22 - 9s - 424ms/step - accuracy: 0.8987 - auc: 0.9645 - loss: 0.2640 - val_accuracy: 0.8014 - val_auc: 0.8675 - val_loss: 0.4759 - learning_rate: 1.0000e-04
+
+Trial 4 Complete [00h 00m 51s]
+val_loss: 0.47588106989860535
+
+Best val_loss So Far: 0.4724237024784088
+Total elapsed time: 00h 03m 23s
+
+Search: Running Trial #5
+
+Value             |Best Value So Far |Hyperparameter
+1e-05             |0.0001            |learning_rate
+0.2               |0.2               |dropout
+8                 |4                 |unfrozen_layers
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+22/22 - 12s - 557ms/step - accuracy: 0.8091 - auc: 0.8800 - loss: 0.4404 - val_accuracy: 0.7603 - val_auc: 0.8195 - val_loss: 0.5212 - learning_rate: 1.0000e-05
+Epoch 2/5
+22/22 - 9s - 413ms/step - accuracy: 0.8267 - auc: 0.9057 - loss: 0.3949 - val_accuracy: 0.7603 - val_auc: 0.8211 - val_loss: 0.5228 - learning_rate: 1.0000e-05
+Epoch 3/5
+22/22 - 9s - 423ms/step - accuracy: 0.8179 - auc: 0.9104 - loss: 0.3839 - val_accuracy: 0.7397 - val_auc: 0.8245 - val_loss: 0.5175 - learning_rate: 1.0000e-05
+Epoch 4/5
+22/22 - 9s - 411ms/step - accuracy: 0.8282 - auc: 0.9065 - loss: 0.3912 - val_accuracy: 0.7740 - val_auc: 0.8228 - val_loss: 0.5211 - learning_rate: 1.0000e-05
+Epoch 5/5
+22/22 - 9s - 423ms/step - accuracy: 0.8209 - auc: 0.9130 - loss: 0.3771 - val_accuracy: 0.7740 - val_auc: 0.8280 - val_loss: 0.5139 - learning_rate: 1.0000e-05
+
+Trial 5 Complete [00h 00m 50s]
+val_loss: 0.5138588547706604
+
+Best val_loss So Far: 0.4724237024784088
+Total elapsed time: 00h 04m 13s
+
+Search: Running Trial #6
+
+Value             |Best Value So Far |Hyperparameter
+1e-05             |0.0001            |learning_rate
+0.2               |0.2               |dropout
+4                 |4                 |unfrozen_layers
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+22/22 - 12s - 541ms/step - accuracy: 0.8062 - auc: 0.8867 - loss: 0.4281 - val_accuracy: 0.7534 - val_auc: 0.8168 - val_loss: 0.5236 - learning_rate: 1.0000e-05
+Epoch 2/5
+22/22 - 9s - 412ms/step - accuracy: 0.8179 - auc: 0.8898 - loss: 0.4241 - val_accuracy: 0.7534 - val_auc: 0.8198 - val_loss: 0.5216 - learning_rate: 1.0000e-05
+Epoch 3/5
+22/22 - 9s - 411ms/step - accuracy: 0.8297 - auc: 0.8990 - loss: 0.4094 - val_accuracy: 0.7534 - val_auc: 0.8229 - val_loss: 0.5202 - learning_rate: 1.0000e-05
+Epoch 4/5
+22/22 - 9s - 415ms/step - accuracy: 0.8179 - auc: 0.9011 - loss: 0.4061 - val_accuracy: 0.7603 - val_auc: 0.8258 - val_loss: 0.5168 - learning_rate: 1.0000e-05
+Epoch 5/5
+22/22 - 9s - 412ms/step - accuracy: 0.8238 - auc: 0.9030 - loss: 0.4038 - val_accuracy: 0.7671 - val_auc: 0.8278 - val_loss: 0.5162 - learning_rate: 1.0000e-05
+
+Trial 6 Complete [00h 00m 49s]
+val_loss: 0.5162187218666077
+
+Best val_loss So Far: 0.4724237024784088
+Total elapsed time: 00h 05m 02s
+
+Search: Running Trial #7
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.0001            |learning_rate
+0.5               |0.2               |dropout
+4                 |4                 |unfrozen_layers
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+22/22 - 12s - 540ms/step - accuracy: 0.7445 - auc: 0.8167 - loss: 0.5277 - val_accuracy: 0.7466 - val_auc: 0.8301 - val_loss: 0.5201 - learning_rate: 1.0000e-04
+Epoch 2/5
+22/22 - 9s - 411ms/step - accuracy: 0.7974 - auc: 0.8674 - loss: 0.4530 - val_accuracy: 0.7808 - val_auc: 0.8427 - val_loss: 0.4978 - learning_rate: 1.0000e-04
+Epoch 3/5
+22/22 - 9s - 411ms/step - accuracy: 0.8076 - auc: 0.8841 - loss: 0.4266 - val_accuracy: 0.7877 - val_auc: 0.8511 - val_loss: 0.4919 - learning_rate: 1.0000e-04
+Epoch 4/5
+22/22 - 9s - 400ms/step - accuracy: 0.8194 - auc: 0.9092 - loss: 0.3808 - val_accuracy: 0.7877 - val_auc: 0.8501 - val_loss: 0.4969 - learning_rate: 1.0000e-04
+Epoch 5/5
+22/22 - 9s - 411ms/step - accuracy: 0.8297 - auc: 0.9143 - loss: 0.3707 - val_accuracy: 0.8082 - val_auc: 0.8527 - val_loss: 0.4861 - learning_rate: 1.0000e-04
+
+Trial 7 Complete [00h 00m 49s]
+val_loss: 0.4860828220844269
+
+Best val_loss So Far: 0.4724237024784088
+Total elapsed time: 00h 05m 51s
+
+Search: Running Trial #8
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.0001            |learning_rate
+0.5               |0.2               |dropout
+8                 |4                 |unfrozen_layers
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+22/22 - 12s - 561ms/step - accuracy: 0.7372 - auc: 0.8280 - loss: 0.5050 - val_accuracy: 0.7671 - val_auc: 0.8244 - val_loss: 0.5160 - learning_rate: 1.0000e-04
+Epoch 2/5
+22/22 - 9s - 412ms/step - accuracy: 0.8018 - auc: 0.8755 - loss: 0.4389 - val_accuracy: 0.7329 - val_auc: 0.8345 - val_loss: 0.5201 - learning_rate: 1.0000e-04
+Epoch 3/5
+22/22 - 9s - 424ms/step - accuracy: 0.8253 - auc: 0.8983 - loss: 0.4023 - val_accuracy: 0.7740 - val_auc: 0.8420 - val_loss: 0.5011 - learning_rate: 1.0000e-04
+Epoch 4/5
+22/22 - 10s - 433ms/step - accuracy: 0.8267 - auc: 0.9087 - loss: 0.3836 - val_accuracy: 0.7808 - val_auc: 0.8466 - val_loss: 0.4969 - learning_rate: 1.0000e-04
+Epoch 5/5
+22/22 - 9s - 424ms/step - accuracy: 0.8429 - auc: 0.9248 - loss: 0.3478 - val_accuracy: 0.8151 - val_auc: 0.8696 - val_loss: 0.4540 - learning_rate: 1.0000e-04
+
+Trial 8 Complete [00h 00m 51s]
+val_loss: 0.4539927542209625
+
+Best val_loss So Far: 0.4539927542209625
+Total elapsed time: 00h 06m 42s
+trial_id    status  learning_rate  dropout  unfrozen_layers  best_val_loss  best_step_zero_based
+       7 COMPLETED        0.00010      0.5                8       0.453993                     4
+       0 COMPLETED        0.00010      0.2                4       0.472424                     3
+       3 COMPLETED        0.00010      0.2                8       0.475881                     4
+       6 COMPLETED        0.00010      0.5                4       0.486083                     4
+       4 COMPLETED        0.00001      0.2                8       0.513859                     4
+       2 COMPLETED        0.00001      0.5                8       0.516032                     4
+       5 COMPLETED        0.00001      0.2                4       0.516219                     4
+       1 COMPLETED        0.00001      0.5                4       0.521002                     4
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_1', because it has 2 variables whereas the saved optimizer has 12 variables. 
+  saveable.load_own_variables(store)
+
+=== Fashion-MNIST Keras Tuner toy exercise ===
+
+Search: Running Trial #1
+
+Value             |Best Value So Far |Hyperparameter
+64                |64                |units
+0.001             |0.001             |learning_rate
+
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/3
+157/157 - 2s - 13ms/step - accuracy: 0.7226 - loss: 0.8279 - val_accuracy: 0.7980 - val_loss: 0.6132
+Epoch 2/3
+157/157 - 0s - 3ms/step - accuracy: 0.8231 - loss: 0.5299 - val_accuracy: 0.8180 - val_loss: 0.5323
+Epoch 3/3
+157/157 - 0s - 3ms/step - accuracy: 0.8363 - loss: 0.4756 - val_accuracy: 0.8350 - val_loss: 0.4837
+
+Trial 1 Complete [00h 00m 04s]
+val_loss: 0.48374509811401367
+
+Best val_loss So Far: 0.48374509811401367
+Total elapsed time: 00h 00m 04s
+
+Search: Running Trial #2
+
+Value             |Best Value So Far |Hyperparameter
+32                |64                |units
+0.001             |0.001             |learning_rate
+
+Epoch 1/3
+157/157 - 1s - 6ms/step - accuracy: 0.6938 - loss: 0.9364 - val_accuracy: 0.8030 - val_loss: 0.6249
+Epoch 2/3
+157/157 - 0s - 3ms/step - accuracy: 0.8087 - loss: 0.5722 - val_accuracy: 0.8160 - val_loss: 0.5502
+Epoch 3/3
+157/157 - 0s - 3ms/step - accuracy: 0.8310 - loss: 0.5044 - val_accuracy: 0.8215 - val_loss: 0.5226
+
+Trial 2 Complete [00h 00m 02s]
+val_loss: 0.5225522518157959
+
+Best val_loss So Far: 0.48374509811401367
+Total elapsed time: 00h 00m 06s
+
+Search: Running Trial #3
+
+Value             |Best Value So Far |Hyperparameter
+64                |64                |units
+0.0003            |0.001             |learning_rate
+
+Epoch 1/3
+157/157 - 1s - 7ms/step - accuracy: 0.6460 - loss: 1.1352 - val_accuracy: 0.7500 - val_loss: 0.7695
+Epoch 2/3
+157/157 - 0s - 3ms/step - accuracy: 0.7823 - loss: 0.6708 - val_accuracy: 0.7990 - val_loss: 0.6304
+Epoch 3/3
+157/157 - 0s - 3ms/step - accuracy: 0.8094 - loss: 0.5796 - val_accuracy: 0.8155 - val_loss: 0.5676
+
+Trial 3 Complete [00h 00m 02s]
+val_loss: 0.5676395893096924
+
+Best val_loss So Far: 0.48374509811401367
+Total elapsed time: 00h 00m 08s
+
+Search: Running Trial #4
+
+Value             |Best Value So Far |Hyperparameter
+32                |64                |units
+0.0003            |0.001             |learning_rate
+
+Epoch 1/3
+157/157 - 1s - 6ms/step - accuracy: 0.6024 - loss: 1.3223 - val_accuracy: 0.7135 - val_loss: 0.8880
+Epoch 2/3
+157/157 - 0s - 3ms/step - accuracy: 0.7519 - loss: 0.7626 - val_accuracy: 0.7915 - val_loss: 0.6888
+Epoch 3/3
+157/157 - 0s - 3ms/step - accuracy: 0.7932 - loss: 0.6362 - val_accuracy: 0.8025 - val_loss: 0.6135
+
+Trial 4 Complete [00h 00m 02s]
+val_loss: 0.6135068535804749
+
+Best val_loss So Far: 0.48374509811401367
+Total elapsed time: 00h 00m 11s
+trial_id    status  units  learning_rate  best_val_loss  best_step_zero_based
+       0 COMPLETED     64         0.0010       0.483745                     2
+       1 COMPLETED     32         0.0010       0.522552                     2
+       2 COMPLETED     64         0.0003       0.567640                     2
+       3 COMPLETED     32         0.0003       0.613507                     2
+
+Training complete. Run python -m task2.evaluate for the locked test evaluation.

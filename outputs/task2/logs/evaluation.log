@@ -1,0 +1,19 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792863216.961491   81615 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792863216.995705   81615 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792863218.256483   81615 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792863220.331820   81615 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 3946 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 6GB Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+I0000 00:00:1792863221.519982   81667 cuda_dnn.cc:461] Loaded cuDNN version 92700
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_1', because it has 12 variables whereas the saved optimizer has 2 variables. 
+  saveable.load_own_variables(store)
+WARNING:tensorflow:5 out of the last 11 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7f65c7bdf420> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:tensorflow:5 out of the last 11 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7f65c7bdf420> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_1', because it has 12 variables whereas the saved optimizer has 2 variables. 
+  saveable.load_own_variables(store)
+   model  threshold  accuracy  precision   recall       f1  roc_auc  tn  fp  fn  tp  weighted_error  sample_count
+baseline   0.691345  0.619048   0.878788 0.358025 0.508772 0.742798  62   4  52  29              60           147
+transfer   0.538361  0.816327   0.846154 0.814815 0.830189 0.867939  54  12  15  66              39           147
+Validation-selected champion: transfer
+Raw sigmoid confidence has not been calibrated.

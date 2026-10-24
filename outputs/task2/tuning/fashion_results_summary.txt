@@ -1,0 +1,28 @@
+Results summary
+Results in /home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/outputs/task2/tuner_state/fashion
+Showing 4 best trials
+Objective(name="val_loss", direction="min")
+
+Trial 0 summary
+Hyperparameters:
+units: 64
+learning_rate: 0.001
+Score: 0.48374509811401367
+
+Trial 1 summary
+Hyperparameters:
+units: 32
+learning_rate: 0.001
+Score: 0.5225522518157959
+
+Trial 2 summary
+Hyperparameters:
+units: 64
+learning_rate: 0.0003
+Score: 0.5676395893096924
+
+Trial 3 summary
+Hyperparameters:
+units: 32
+learning_rate: 0.0003
+Score: 0.6135068535804749

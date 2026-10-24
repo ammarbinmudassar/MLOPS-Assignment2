@@ -1,0 +1,42 @@
+{
+  "git_commit": "2b9fb8c8c1ca6ec7d25782d8de0a564e8baf8581",
+  "positive_class": "AI",
+  "false_positive_cost": 2,
+  "false_negative_cost": 1,
+  "threshold_source": "validation only",
+  "champion": "transfer",
+  "validation_metrics": {
+    "baseline": {
+      "threshold": 0.691344678401947,
+      "accuracy": 0.6095890410958904,
+      "precision": 0.875,
+      "recall": 0.345679012345679,
+      "f1": 0.49557522123893805,
+      "roc_auc": 0.6980056980056979,
+      "tn": 61.0,
+      "fp": 4.0,
+      "fn": 53.0,
+      "tp": 28.0,
+      "weighted_error": 61.0,
+      "sample_count": 146.0,
+      "distance_from_half": 0.19134467840194702
+    },
+    "transfer": {
+      "threshold": 0.5383609533309937,
+      "accuracy": 0.821917808219178,
+      "precision": 0.8767123287671232,
+      "recall": 0.7901234567901234,
+      "f1": 0.8311688311688312,
+      "roc_auc": 0.8697056030389364,
+      "tn": 56.0,
+      "fp": 9.0,
+      "fn": 17.0,
+      "tp": 64.0,
+      "weighted_error": 35.0,
+      "sample_count": 146.0,
+      "distance_from_half": 0.03836095333099365
+    }
+  },
+  "test_predictions_per_model": 1,
+  "rationale": "Wrongly accusing a real image of being AI can harm trust; cost ratio is a product assumption."
+}

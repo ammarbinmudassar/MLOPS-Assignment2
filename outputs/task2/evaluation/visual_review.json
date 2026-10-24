@@ -1,0 +1,27 @@
+{
+  "review_method": "Visual inspection of both saved error grids after the locked test evaluation. These are hypotheses, not causal attributions.",
+  "transfer": {
+    "1": "The painted face has saturated colours and glossy highlights; these may resemble generated portraits despite its Real folder label.",
+    "2": "The bright red wig and highly colourful mural create an unusual photographic scene that may resemble synthetic imagery.",
+    "3": "The AI-labelled mountain illustration resembles a conventional travel poster; the stock watermark and drawn textures may provide misleading familiar cues.",
+    "4": "The close-up of a paint palette and brushes contains irregular colour patches and clutter that may be confused with generated textures.",
+    "5": "The flat geometric mountain graphic resembles ordinary vector design, which also occurs among the Real class's non-photographic images.",
+    "6": "The side-by-side segmentation map and realistic lake scene may let the photographic half or unusual composite layout dominate the decision.",
+    "7": "Many small headshots are combined in a grid; resizing may remove facial detail, while the repeated portrait layout resembles synthetic face collections.",
+    "8": "The sepia tiger-and-machinery illustration resembles traditional concept art, making artistic style an unreliable origin cue.",
+    "9": "The mouths use flat pop-art colours and repeated outlines, which overlap with poster and illustration styles in the Real class.",
+    "10": "The painted eye has strong brush textures and saturated colour blocks that may resemble generated artwork; painted style does not determine origin."
+  },
+  "baseline": {
+    "1": "Saturated paint and glossy facial highlights may match coarse colour and texture patterns associated with AI examples.",
+    "2": "The large flat sun and black silhouettes resemble a digital illustration, a style that overlaps with AI-labelled artwork.",
+    "3": "The strongly saturated golden sunset may trigger a colour-based shortcut even though the dataset labels this scene Real.",
+    "4": "The crowded, compressed group photograph contains many tiny faces and visible watermark text; downsampling can obscure natural photographic detail.",
+    "5": "The generated subject is presented as a framed artwork on a gallery wall; the frame and surrounding room may supply convincing photographic context.",
+    "6": "The pink and purple terraced landscape has a familiar field layout; a small CNN may miss the implausible colours and repeated terrain patterns.",
+    "7": "The smooth white cartoon cat resembles conventional illustration, so stylization alone cannot distinguish AI generation from human-made artwork.",
+    "8": "The hybrid animal has a natural-looking brown background and lighting; resizing may conceal the anatomical inconsistencies that could distinguish it.",
+    "9": "The colourful profile is displayed like a physical art print, potentially making its presentation resemble Real artwork examples.",
+    "10": "The geometric map graphic resembles conventional vector art; the CNN may learn broad subject/style cues rather than generation-specific evidence."
+  }
+}

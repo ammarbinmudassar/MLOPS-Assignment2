@@ -1,0 +1,172 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792862424.392553   78228 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792862424.426141   78228 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792862425.310271   78228 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+     split  Real  AI  total
+     train   305 376    681
+validation    65  81    146
+      test    66  81    147
+I0000 00:00:1792862427.146303   78228 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 3945 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 6GB Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+E0000 00:00:1792862428.248590   78228 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_5}}
+W0000 00:00:1792862432.945743   78340 png_io.cc:96] PNG warning: iCCP: profile 'ICC Profile': 'CMYK': invalid ICC profile color space
+Reusing completed stage: baseline
+
+=== transfer_frozen: maximum 12 epochs ===
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/12
+I0000 00:00:1792862441.285052   78289 cuda_dnn.cc:461] Loaded cuDNN version 92700
+22/22 - 14s - 624ms/step - accuracy: 0.5330 - auc: 0.5233 - loss: 0.8730 - val_accuracy: 0.5822 - val_auc: 0.5906 - val_loss: 0.7150 - learning_rate: 0.0010
+Epoch 2/12
+22/22 - 9s - 391ms/step - accuracy: 0.6094 - auc: 0.6430 - loss: 0.7084 - val_accuracy: 0.6027 - val_auc: 0.6640 - val_loss: 0.6597 - learning_rate: 0.0010
+Epoch 3/12
+22/22 - 9s - 390ms/step - accuracy: 0.6373 - auc: 0.6759 - loss: 0.6733 - val_accuracy: 0.6507 - val_auc: 0.7167 - val_loss: 0.6106 - learning_rate: 0.0010
+Epoch 4/12
+22/22 - 9s - 391ms/step - accuracy: 0.6564 - auc: 0.7430 - loss: 0.5947 - val_accuracy: 0.6781 - val_auc: 0.7482 - val_loss: 0.5844 - learning_rate: 0.0010
+Epoch 5/12
+22/22 - 8s - 384ms/step - accuracy: 0.7122 - auc: 0.8100 - loss: 0.5246 - val_accuracy: 0.6712 - val_auc: 0.7616 - val_loss: 0.6007 - learning_rate: 0.0010
+Epoch 6/12
+22/22 - 9s - 396ms/step - accuracy: 0.7151 - auc: 0.7845 - loss: 0.5573 - val_accuracy: 0.6644 - val_auc: 0.7717 - val_loss: 0.5740 - learning_rate: 0.0010
+Epoch 7/12
+22/22 - 9s - 397ms/step - accuracy: 0.7474 - auc: 0.8246 - loss: 0.5103 - val_accuracy: 0.6986 - val_auc: 0.7791 - val_loss: 0.5635 - learning_rate: 0.0010
+Epoch 8/12
+22/22 - 9s - 395ms/step - accuracy: 0.7533 - auc: 0.8307 - loss: 0.5052 - val_accuracy: 0.7055 - val_auc: 0.7937 - val_loss: 0.5448 - learning_rate: 0.0010
+Epoch 9/12
+22/22 - 8s - 382ms/step - accuracy: 0.7636 - auc: 0.8476 - loss: 0.4775 - val_accuracy: 0.7055 - val_auc: 0.8021 - val_loss: 0.5485 - learning_rate: 0.0010
+Epoch 10/12
+22/22 - 8s - 384ms/step - accuracy: 0.7783 - auc: 0.8578 - loss: 0.4671 - val_accuracy: 0.7192 - val_auc: 0.8078 - val_loss: 0.5507 - learning_rate: 0.0010
+Epoch 11/12
+22/22 - 9s - 398ms/step - accuracy: 0.7812 - auc: 0.8625 - loss: 0.4634 - val_accuracy: 0.7329 - val_auc: 0.8088 - val_loss: 0.5327 - learning_rate: 5.0000e-04
+Epoch 12/12
+22/22 - 9s - 398ms/step - accuracy: 0.7885 - auc: 0.8588 - loss: 0.4673 - val_accuracy: 0.7466 - val_auc: 0.8131 - val_loss: 0.5289 - learning_rate: 5.0000e-04
+
+=== transfer_last_block: maximum 12 epochs ===
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/12
+22/22 - 13s - 584ms/step - accuracy: 0.7797 - auc: 0.8589 - loss: 0.4651 - val_accuracy: 0.7534 - val_auc: 0.8195 - val_loss: 0.5218 - learning_rate: 1.0000e-05
+Epoch 2/12
+22/22 - 10s - 438ms/step - accuracy: 0.8032 - auc: 0.8984 - loss: 0.4050 - val_accuracy: 0.7603 - val_auc: 0.8238 - val_loss: 0.5162 - learning_rate: 1.0000e-05
+Epoch 3/12
+22/22 - 9s - 429ms/step - accuracy: 0.8120 - auc: 0.8985 - loss: 0.4071 - val_accuracy: 0.7397 - val_auc: 0.8270 - val_loss: 0.5117 - learning_rate: 1.0000e-05
+Epoch 4/12
+22/22 - 9s - 427ms/step - accuracy: 0.8032 - auc: 0.8927 - loss: 0.4114 - val_accuracy: 0.7740 - val_auc: 0.8327 - val_loss: 0.5105 - learning_rate: 1.0000e-05
+Epoch 5/12
+22/22 - 9s - 429ms/step - accuracy: 0.8223 - auc: 0.9123 - loss: 0.3806 - val_accuracy: 0.7671 - val_auc: 0.8340 - val_loss: 0.5049 - learning_rate: 1.0000e-05
+Epoch 6/12
+22/22 - 9s - 428ms/step - accuracy: 0.8429 - auc: 0.9111 - loss: 0.3804 - val_accuracy: 0.7671 - val_auc: 0.8379 - val_loss: 0.5011 - learning_rate: 1.0000e-05
+Epoch 7/12
+22/22 - 9s - 413ms/step - accuracy: 0.8414 - auc: 0.9202 - loss: 0.3647 - val_accuracy: 0.7534 - val_auc: 0.8395 - val_loss: 0.5037 - learning_rate: 1.0000e-05
+Epoch 8/12
+22/22 - 9s - 428ms/step - accuracy: 0.8399 - auc: 0.9213 - loss: 0.3584 - val_accuracy: 0.7740 - val_auc: 0.8439 - val_loss: 0.4949 - learning_rate: 1.0000e-05
+Epoch 9/12
+22/22 - 9s - 428ms/step - accuracy: 0.8678 - auc: 0.9371 - loss: 0.3305 - val_accuracy: 0.7808 - val_auc: 0.8429 - val_loss: 0.4925 - learning_rate: 1.0000e-05
+Epoch 10/12
+22/22 - 9s - 413ms/step - accuracy: 0.8605 - auc: 0.9338 - loss: 0.3358 - val_accuracy: 0.7808 - val_auc: 0.8429 - val_loss: 0.4936 - learning_rate: 1.0000e-05
+Epoch 11/12
+22/22 - 9s - 429ms/step - accuracy: 0.8355 - auc: 0.9221 - loss: 0.3560 - val_accuracy: 0.7603 - val_auc: 0.8451 - val_loss: 0.4911 - learning_rate: 1.0000e-05
+Epoch 12/12
+22/22 - 9s - 412ms/step - accuracy: 0.8502 - auc: 0.9279 - loss: 0.3465 - val_accuracy: 0.7740 - val_auc: 0.8405 - val_loss: 0.5013 - learning_rate: 1.0000e-05
+
+Search: Running Trial #1
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.0001            |learning_rate
+0.2               |0.2               |dropout
+4                 |4                 |unfrozen_layers
+
+Traceback (most recent call last):
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 274, in _try_run_and_update_trial
+    self._run_and_update_trial(trial, *fit_args, **fit_kwargs)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 239, in _run_and_update_trial
+    results = self.run_trial(trial, *fit_args, **fit_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/tuner.py", line 309, in run_trial
+    self._configure_tensorboard_dir(callbacks, trial, execution)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/tuner.py", line 421, in _configure_tensorboard_dir
+    from tensorboard.plugins.hparams import api as hparams_api
+ModuleNotFoundError: No module named 'tensorboard'
+
+Trial 1 Complete [00h 00m 00s]
+
+Best val_loss So Far: None
+Total elapsed time: 00h 00m 00s
+
+Search: Running Trial #2
+
+Value             |Best Value So Far |Hyperparameter
+1e-05             |0.0001            |learning_rate
+0.5               |0.2               |dropout
+4                 |4                 |unfrozen_layers
+
+Traceback (most recent call last):
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 274, in _try_run_and_update_trial
+    self._run_and_update_trial(trial, *fit_args, **fit_kwargs)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 239, in _run_and_update_trial
+    results = self.run_trial(trial, *fit_args, **fit_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/tuner.py", line 309, in run_trial
+    self._configure_tensorboard_dir(callbacks, trial, execution)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/tuner.py", line 421, in _configure_tensorboard_dir
+    from tensorboard.plugins.hparams import api as hparams_api
+ModuleNotFoundError: No module named 'tensorboard'
+
+Trial 2 Complete [00h 00m 00s]
+
+Best val_loss So Far: None
+Total elapsed time: 00h 00m 00s
+
+Search: Running Trial #3
+
+Value             |Best Value So Far |Hyperparameter
+1e-05             |0.0001            |learning_rate
+0.5               |0.2               |dropout
+8                 |4                 |unfrozen_layers
+
+Traceback (most recent call last):
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 274, in _try_run_and_update_trial
+    self._run_and_update_trial(trial, *fit_args, **fit_kwargs)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 239, in _run_and_update_trial
+    results = self.run_trial(trial, *fit_args, **fit_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/tuner.py", line 309, in run_trial
+    self._configure_tensorboard_dir(callbacks, trial, execution)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/tuner.py", line 421, in _configure_tensorboard_dir
+    from tensorboard.plugins.hparams import api as hparams_api
+ModuleNotFoundError: No module named 'tensorboard'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/task2/train.py", line 308, in <module>
+    main()
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/task2/train.py", line 288, in main
+    tuned, tuned_loss = vision_tuning(head, train, validation, args.trial_epochs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/task2/train.py", line 205, in vision_tuning
+    tuner.search(train, validation_data=validation, epochs=epochs, verbose=2,
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 235, in search
+    self.on_trial_end(trial)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 339, in on_trial_end
+    self.oracle.end_trial(trial)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/oracle.py", line 108, in wrapped_func
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/oracle.py", line 588, in end_trial
+    self._check_consecutive_failures()
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/oracle.py", line 545, in _check_consecutive_failures
+    raise RuntimeError(
+RuntimeError: Number of consecutive failures exceeded the limit of 3.
+Traceback (most recent call last):
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 274, in _try_run_and_update_trial
+    self._run_and_update_trial(trial, *fit_args, **fit_kwargs)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/base_tuner.py", line 239, in _run_and_update_trial
+    results = self.run_trial(trial, *fit_args, **fit_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/tuner.py", line 309, in run_trial
+    self._configure_tensorboard_dir(callbacks, trial, execution)
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras_tuner/src/engine/tuner.py", line 421, in _configure_tensorboard_dir
+    from tensorboard.plugins.hparams import api as hparams_api
+ModuleNotFoundError: No module named 'tensorboard'
+

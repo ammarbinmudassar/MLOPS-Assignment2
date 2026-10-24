@@ -1,0 +1,11 @@
+{
+  "transfer_candidate": "tuned",
+  "transfer_path": "models/tuned_transfer.keras",
+  "candidate_validation_losses": {
+    "frozen_head": 0.5288604497909546,
+    "last_block": 0.4910646080970764,
+    "tuned": 0.4539927542209625
+  },
+  "baseline_path": "models/baseline/best.keras",
+  "test_used": false
+}

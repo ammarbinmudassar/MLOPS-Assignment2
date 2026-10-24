@@ -1,0 +1,131 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792858646.986744   70115 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792858647.018627   70115 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792858647.820669   70115 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+     split  Real  AI  total
+     train   305 376    681
+validation    65  81    146
+      test    66  81    147
+I0000 00:00:1792858649.574695   70115 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 4054 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 6GB Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+E0000 00:00:1792858650.606501   70115 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_5}}
+W0000 00:00:1792858654.761068   70219 png_io.cc:96] PNG warning: iCCP: profile 'ICC Profile': 'CMYK': invalid ICC profile color space
+
+=== baseline: maximum 20 epochs ===
+/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/20
+I0000 00:00:1792858661.182938   70169 cuda_dnn.cc:461] Loaded cuDNN version 92700
+22/22 - 7s - 319ms/step - accuracy: 0.5521 - auc: 0.5534 - loss: 0.7398 - val_accuracy: 0.4452 - val_auc: 0.5598 - val_loss: 0.6974 - learning_rate: 0.0010
+Epoch 2/20
+22/22 - 2s - 107ms/step - accuracy: 0.5903 - auc: 0.6268 - loss: 0.6675 - val_accuracy: 0.4658 - val_auc: 0.6099 - val_loss: 0.6944 - learning_rate: 0.0010
+Epoch 3/20
+22/22 - 2s - 104ms/step - accuracy: 0.6065 - auc: 0.6601 - loss: 0.6421 - val_accuracy: 0.6096 - val_auc: 0.6221 - val_loss: 0.6877 - learning_rate: 0.0010
+Epoch 4/20
+22/22 - 4s - 174ms/step - accuracy: 0.6241 - auc: 0.6606 - loss: 0.6453 - val_accuracy: 0.5685 - val_auc: 0.6121 - val_loss: 0.6897 - learning_rate: 0.0010
+Epoch 5/20
+22/22 - 5s - 248ms/step - accuracy: 0.6417 - auc: 0.6975 - loss: 0.6223 - val_accuracy: 0.6164 - val_auc: 0.6233 - val_loss: 0.6834 - learning_rate: 0.0010
+Epoch 6/20
+22/22 - 9s - 408ms/step - accuracy: 0.6373 - auc: 0.6894 - loss: 0.6333 - val_accuracy: 0.6233 - val_auc: 0.6472 - val_loss: 0.6771 - learning_rate: 0.0010
+Epoch 7/20
+22/22 - 9s - 409ms/step - accuracy: 0.6535 - auc: 0.7027 - loss: 0.6220 - val_accuracy: 0.5890 - val_auc: 0.6361 - val_loss: 0.6752 - learning_rate: 0.0010
+Epoch 8/20
+22/22 - 9s - 406ms/step - accuracy: 0.6256 - auc: 0.6781 - loss: 0.6363 - val_accuracy: 0.5342 - val_auc: 0.6455 - val_loss: 0.6706 - learning_rate: 0.0010
+Epoch 9/20
+22/22 - 9s - 406ms/step - accuracy: 0.6755 - auc: 0.7355 - loss: 0.6015 - val_accuracy: 0.5548 - val_auc: 0.6494 - val_loss: 0.6687 - learning_rate: 0.0010
+Epoch 10/20
+22/22 - 9s - 402ms/step - accuracy: 0.6652 - auc: 0.7109 - loss: 0.6154 - val_accuracy: 0.5685 - val_auc: 0.6618 - val_loss: 0.6758 - learning_rate: 0.0010
+Epoch 11/20
+22/22 - 9s - 404ms/step - accuracy: 0.6535 - auc: 0.7084 - loss: 0.6112 - val_accuracy: 0.5822 - val_auc: 0.6392 - val_loss: 0.6639 - learning_rate: 0.0010
+Epoch 12/20
+22/22 - 9s - 403ms/step - accuracy: 0.6725 - auc: 0.7298 - loss: 0.6014 - val_accuracy: 0.5890 - val_auc: 0.6783 - val_loss: 0.6621 - learning_rate: 0.0010
+Epoch 13/20
+22/22 - 9s - 402ms/step - accuracy: 0.6784 - auc: 0.7320 - loss: 0.6033 - val_accuracy: 0.5822 - val_auc: 0.6670 - val_loss: 0.6785 - learning_rate: 0.0010
+Epoch 14/20
+22/22 - 9s - 404ms/step - accuracy: 0.6637 - auc: 0.7361 - loss: 0.6008 - val_accuracy: 0.5822 - val_auc: 0.6740 - val_loss: 0.6573 - learning_rate: 0.0010
+Epoch 15/20
+22/22 - 9s - 402ms/step - accuracy: 0.6843 - auc: 0.7282 - loss: 0.6053 - val_accuracy: 0.5822 - val_auc: 0.6874 - val_loss: 0.6611 - learning_rate: 0.0010
+Epoch 16/20
+22/22 - 9s - 402ms/step - accuracy: 0.6755 - auc: 0.7400 - loss: 0.5937 - val_accuracy: 0.5753 - val_auc: 0.6860 - val_loss: 0.6766 - learning_rate: 0.0010
+Epoch 17/20
+22/22 - 9s - 402ms/step - accuracy: 0.6828 - auc: 0.7497 - loss: 0.5858 - val_accuracy: 0.6164 - val_auc: 0.6973 - val_loss: 0.6432 - learning_rate: 5.0000e-04
+Epoch 18/20
+22/22 - 9s - 401ms/step - accuracy: 0.6784 - auc: 0.7474 - loss: 0.5858 - val_accuracy: 0.5685 - val_auc: 0.6825 - val_loss: 0.6595 - learning_rate: 5.0000e-04
+Epoch 19/20
+22/22 - 9s - 401ms/step - accuracy: 0.7137 - auc: 0.7685 - loss: 0.5746 - val_accuracy: 0.5822 - val_auc: 0.6916 - val_loss: 0.6632 - learning_rate: 5.0000e-04
+Epoch 20/20
+22/22 - 9s - 401ms/step - accuracy: 0.6843 - auc: 0.7619 - loss: 0.5805 - val_accuracy: 0.5685 - val_auc: 0.6613 - val_loss: 0.6884 - learning_rate: 2.5000e-04
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/mobilenet_v2/mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_160_no_top.h5
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/urllib/request.py", line 1361, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.11/http/client.py", line 1351, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.11/http/client.py", line 1397, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.11/http/client.py", line 1346, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.11/http/client.py", line 1106, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.11/http/client.py", line 1044, in send
+    self.connect()
+  File "/usr/lib/python3.11/http/client.py", line 1516, in connect
+    super().connect()
+  File "/usr/lib/python3.11/http/client.py", line 1010, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 839, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 974, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/utils/file_utils.py", line 395, in get_file
+    urlretrieve(origin, download_target, DLProgbar())
+  File "/usr/lib/python3.11/urllib/request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 1404, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 1364, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/task2/train.py", line 291, in <module>
+    main()
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/task2/train.py", line 261, in main
+    mobile = transfer()
+             ^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/task2/models.py", line 36, in transfer
+    base = tf.keras.applications.MobileNetV2(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/applications/mobilenet_v2.py", line 385, in MobileNetV2
+    weights_path = file_utils.get_file(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/.venv/lib/python3.11/site-packages/keras/src/utils/file_utils.py", line 399, in get_file
+    raise Exception(error_msg.format(origin, e.errno, e.reason))
+Exception: URL fetch failure on https://storage.googleapis.com/tensorflow/keras-applications/mobilenet_v2/mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_160_no_top.h5: None -- [Errno -3] Temporary failure in name resolution

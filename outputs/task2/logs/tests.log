@@ -1,0 +1,18 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792862927.923023       4 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792862927.961546       4 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792862929.302140       4 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+E0000 00:00:1792862930.393062       4 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+test_letterbox_preserves_shape_and_padding (test_task2.Task2Tests.test_letterbox_preserves_shape_and_padding) ... ok
+test_overlap_is_rejected (test_task2.Task2Tests.test_overlap_is_rejected) ... ok
+test_saved_manifests_have_no_exact_duplicate_leakage (test_task2.Task2Tests.test_saved_manifests_have_no_exact_duplicate_leakage) ... ok
+test_threshold_can_reject_saturated_false_positive (test_task2.Task2Tests.test_threshold_can_reject_saturated_false_positive) ... ok
+test_threshold_respects_false_accusation_cost (test_task2.Task2Tests.test_threshold_respects_false_accusation_cost) ... ok
+test_transfer_preprocessing_and_batchnorm_policy (test_task2.Task2Tests.test_transfer_preprocessing_and_batchnorm_policy) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.681s
+
+OK
