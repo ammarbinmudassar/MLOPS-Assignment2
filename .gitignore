@@ -15,4 +15,6 @@ gpu_debug.txt
 .mlflow/
 outputs/task3/3_1/logs/server.log
 outputs/task3/3_2/training.log
+outputs/task3/3_3/**/*.keras
+outputs/task3/3_3/training.log
 
