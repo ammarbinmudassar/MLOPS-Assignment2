@@ -1,0 +1,4 @@
+filename     | label | confidence | model_version 
+------------------+-------+------------+---------------
+ compose_test.jpg | AI    |   0.553433 | 2
+(1 row)

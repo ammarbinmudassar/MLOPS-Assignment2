@@ -132,6 +132,7 @@ def create_app(test_config=None, predictor=None):
             ready = False
         return jsonify(status="ok" if ready else "unavailable", model_name=metadata["model_name"],
                        model_version=metadata["model_version"], threshold=predictor.threshold,
-                       history_backend="sqlite", database_ready=ready, debug=app.debug), (200 if ready else 503)
+                       history_backend=app.extensions["recent_results"].backend,
+                       database_ready=ready, debug=app.debug), (200 if ready else 503)
 
     return app

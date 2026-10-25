@@ -1,0 +1,40 @@
+{
+  "status_before_restart": "NAME                            IMAGE                COMMAND                  SERVICE   CREATED          STATUS                    PORTS\nvisionguard-assignment2-db-1    postgres:17-alpine   \"docker-entrypoint.s\u2026\"   db        28 seconds ago   Up 27 seconds (healthy)   5432/tcp\nvisionguard-assignment2-web-1   visionguard:6.3      \"python -m task4.run\u2026\"   web       28 seconds ago   Up 21 seconds (healthy)   127.0.0.1:8083->8000/tcp",
+  "database_port_bindings": {},
+  "database_mounts": [
+    {
+      "Type": "volume",
+      "Name": "visionguard-assignment2_postgres_data",
+      "Source": "/var/lib/docker/volumes/visionguard-assignment2_postgres_data/_data",
+      "Destination": "/var/lib/postgresql/data",
+      "Driver": "local",
+      "Mode": "rw",
+      "RW": true,
+      "Propagation": ""
+    }
+  ],
+  "service_name_resolution": "172.23.0.2",
+  "health": {
+    "database_ready": true,
+    "debug": false,
+    "history_backend": "postgresql",
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2",
+    "status": "ok",
+    "threshold": 0.5
+  },
+  "postgresql_rows": "filename     | label | confidence | model_version \n------------------+-------+------------+---------------\n compose_test.jpg | AI    |   0.553433 | 2\n(1 row)",
+  "postgresql_query_verified": true,
+  "prediction_survives_container_recreation": true,
+  "status_after_restart": "NAME                            IMAGE                COMMAND                  SERVICE   CREATED          STATUS                    PORTS\nvisionguard-assignment2-db-1    postgres:17-alpine   \"docker-entrypoint.s\u2026\"   db        11 seconds ago   Up 11 seconds (healthy)   5432/tcp\nvisionguard-assignment2-web-1   visionguard:6.3      \"python -m task4.run\u2026\"   web       11 seconds ago   Up 5 seconds (healthy)    127.0.0.1:8083->8000/tcp",
+  "health_after_restart": {
+    "database_ready": true,
+    "debug": false,
+    "history_backend": "postgresql",
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2",
+    "status": "ok",
+    "threshold": 0.5
+  },
+  "host_localhost_5432_connect_code": 0
+}

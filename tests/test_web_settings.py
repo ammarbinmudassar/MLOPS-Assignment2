@@ -24,6 +24,16 @@ class WebSettingsTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Invalid"):
                 settings_from_env()
 
+    def test_compose_credentials_use_service_name_and_escape_reserved_characters(self):
+        with patch.dict(os.environ, {
+            "DATABASE_HOST": "db", "DATABASE_USER": "course@user",
+            "DATABASE_PASSWORD": "test:/?#@", "DATABASE_NAME": "visionguard",
+            "DATABASE_URL": "sqlite:////data/visionguard.sqlite3",
+        }, clear=True):
+            settings = settings_from_env()
+        self.assertEqual(settings["DATABASE_URL"],
+                         "postgresql://course%40user:test%3A%2F%3F%23%40@db:5432/visionguard")
+
     def test_flask_launcher_disables_debug_reload_and_implicit_dotenv(self):
         with patch.dict(os.environ, {}, clear=True), \
                 patch("sys.argv", ["run", "--server", "flask"]), \

@@ -1,4 +1,4 @@
-"""SQLite result metadata; uploaded image bytes are never stored."""
+"""SQLite or PostgreSQL result metadata; uploaded images are never stored."""
 
 from contextlib import contextmanager
 from pathlib import Path
@@ -11,13 +11,17 @@ FIELDS = ("id", "filename", "created_at", "label", "confidence", "p_ai", "thresh
 
 class ResultStore:
     def __init__(self, database_url):
-        if not database_url.startswith("sqlite:///"):
-            raise ValueError("Use a sqlite:/// database address for this assignment.")
-        path = Path(database_url.removeprefix("sqlite:///")).expanduser()
-        self.path = path if path.is_absolute() else ROOT / path
-        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.backend = "postgresql" if database_url.startswith(("postgresql://", "postgres://")) else "sqlite"
+        self.database_url = database_url
+        if self.backend == "sqlite":
+            if not database_url.startswith("sqlite:///"):
+                raise ValueError("Use a sqlite:/// or postgresql:// database address.")
+            path = Path(database_url.removeprefix("sqlite:///")).expanduser()
+            self.path = path if path.is_absolute() else ROOT / path
+            self.path.parent.mkdir(parents=True, exist_ok=True)
         with self.connection() as connection:
-            connection.execute("PRAGMA journal_mode=WAL")
+            if self.backend == "sqlite":
+                connection.execute("PRAGMA journal_mode=WAL")
             connection.execute("""CREATE TABLE IF NOT EXISTS predictions (
                 id TEXT PRIMARY KEY, filename TEXT NOT NULL, created_at TEXT NOT NULL,
                 label TEXT NOT NULL CHECK(label IN ('AI','Real')),
@@ -30,32 +34,41 @@ class ResultStore:
 
     @contextmanager
     def connection(self):
-        connection = sqlite3.connect(self.path, timeout=5)
-        connection.row_factory = sqlite3.Row
+        if self.backend == "postgresql":
+            import psycopg
+            from psycopg.rows import dict_row
+            connection = psycopg.connect(self.database_url, row_factory=dict_row, connect_timeout=5)
+        else:
+            connection = sqlite3.connect(self.path, timeout=5)
+            connection.row_factory = sqlite3.Row
         try:
             with connection:
                 yield connection
         finally:
             connection.close()
 
+    @property
+    def placeholder(self):
+        return "%s" if self.backend == "postgresql" else "?"
+
     def add(self, record):
         with self.connection() as connection:
             connection.execute(
-                f"INSERT INTO predictions ({','.join(FIELDS)}) VALUES ({','.join('?' for _ in FIELDS)})",
-                tuple(record[key] for key in FIELDS),
+                f"INSERT INTO predictions ({','.join(FIELDS)}) VALUES ({','.join(self.placeholder for _ in FIELDS)})",
+                tuple(int(record[key]) if key == "confidence_is_calibrated" else record[key] for key in FIELDS),
             )
 
     def list(self, limit=100):
         with self.connection() as connection:
             return [dict(row) for row in connection.execute(
-                "SELECT * FROM predictions ORDER BY created_at DESC, rowid DESC LIMIT ?", (limit,),
+                f"SELECT * FROM predictions ORDER BY created_at DESC, id DESC LIMIT {self.placeholder}", (limit,),
             )]
 
     def get(self, identifier):
         with self.connection() as connection:
-            row = connection.execute("SELECT * FROM predictions WHERE id = ?", (identifier,)).fetchone()
+            row = connection.execute(f"SELECT * FROM predictions WHERE id = {self.placeholder}", (identifier,)).fetchone()
             return dict(row) if row else None
 
     def ping(self):
         with self.connection() as connection:
-            return connection.execute("SELECT 1").fetchone()[0] == 1
+            return connection.execute("SELECT 1 AS ready").fetchone()["ready"] == 1

@@ -1,0 +1,5 @@
+Assignment database HostConfig.PortBindings: {}
+No host port is published by this Compose database service.
+A separate listener already accepts connections on host localhost:5432, so a
+host-wide TCP probe is not evidence about this container. Inspect this service's
+PortBindings instead. No existing host service was changed.

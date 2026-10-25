@@ -54,6 +54,12 @@ runtime-only build context. Build with `docker build -t visionguard:6.2 .`;
 model mounting, startup and terminal evidence commands are in
 [docs/TASK6_2.md](docs/TASK6_2.md).
 
-Compose, CI and public deployment are not implemented yet.
-AI assistance was used to implement, test and document Tasks 2, 3, 4, 5, 6.1 and 6.2;
+Task 6.3 adds `compose.yaml` with PostgreSQL, health-based startup ordering,
+a persistent database volume and a read-only model mount. Private database
+credentials belong in the ignored `.env`; see `.env.example`. Run
+`docker compose up -d --build --wait`, then open http://127.0.0.1:8083.
+See [docs/TASK6_3.md](docs/TASK6_3.md) for terminal evidence commands.
+
+CI and public deployment are not implemented yet.
+AI assistance was used to implement, test and document Tasks 2, 3, 4, 5 and 6.1–6.3;
 the final submitted report must disclose that assistance.

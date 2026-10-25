@@ -1,0 +1,56 @@
+name: visionguard-assignment2
+
+services:
+  web:
+    build: .
+    image: visionguard:6.3
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8083}:8000"
+    environment:
+      APP_HOST: 0.0.0.0
+      APP_PORT: "8000"
+      APP_TIMEZONE: Asia/Karachi
+      MODEL_DIR: /models/champion
+      DECISION_THRESHOLD: "${DECISION_THRESHOLD:-0.5}"
+      DATABASE_HOST: db
+      DATABASE_PORT: "5432"
+      DATABASE_NAME: "${POSTGRES_DB:-visionguard}"
+      DATABASE_USER: "${POSTGRES_USER:-visionguard}"
+      DATABASE_PASSWORD: "${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in the untracked .env}"
+    volumes:
+      - type: bind
+        source: ./models/champion
+        target: /models/champion
+        read_only: true
+        bind:
+          create_host_path: false
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app
+
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: "${POSTGRES_DB:-visionguard}"
+      POSTGRES_USER: "${POSTGRES_USER:-visionguard}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in the untracked .env}"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    # No ports: database connections stay on the Compose network.
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
+
+volumes:
+  postgres_data:

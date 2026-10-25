@@ -3,6 +3,7 @@
 **
 !Dockerfile
 !requirements-web.txt
+!requirements-db.txt
 !task4/
 !task4/__init__.py
 !task4/app.py

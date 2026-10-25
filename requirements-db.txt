@@ -1,0 +1,2 @@
+# Binary wheel includes libpq; no compiler or PostgreSQL client needed in web.
+psycopg[binary]==3.3.2

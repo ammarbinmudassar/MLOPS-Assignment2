@@ -1,0 +1,67 @@
+time="2026-10-26T01:36:47+05:00" level=warning msg="buildx Docker CLI plugin not found: falling back to the classic builder. BuildKit-only build features (multi-arch, secrets, ssh, additional contexts, ...) will not be available"
+ Image visionguard:6.3 Building 
+ Image visionguard:6.3 Building 
+Sending build context to Docker daemon  31.54kB
+Step 1/15 : FROM python:3.11-slim
+ ---> e88e9763f943
+Step 2/15 : ENV PYTHONDONTWRITEBYTECODE=1     PYTHONUNBUFFERED=1     PIP_DISABLE_PIP_VERSION_CHECK=1     CUDA_VISIBLE_DEVICES=-1     TF_CPP_MIN_LOG_LEVEL=2     TF_NUM_INTRAOP_THREADS=4     TF_NUM_INTEROP_THREADS=2     APP_HOST=0.0.0.0     APP_PORT=8000     MODEL_DIR=/models/champion     DATABASE_URL=sqlite:////data/visionguard.sqlite3
+ ---> Using cache
+ ---> ddfedc8725be
+Step 3/15 : WORKDIR /app
+ ---> Using cache
+ ---> 7cf7d5c25788
+Step 4/15 : RUN apt-get update     && apt-get install -y --no-install-recommends libgomp1     && rm -rf /var/lib/apt/lists/*     && groupadd --gid 10001 visionguard     && useradd --uid 10001 --gid visionguard --no-create-home visionguard     && mkdir -p /data /models/champion     && chown visionguard:visionguard /data
+ ---> Using cache
+ ---> 1fb5c7c76f30
+Step 5/15 : COPY requirements-web.txt ./
+ ---> Using cache
+ ---> 3ca7c02ff0e0
+Step 6/15 : RUN python -m pip install --no-cache-dir -r requirements-web.txt
+ ---> Using cache
+ ---> 0e4c7600047f
+Step 7/15 : COPY requirements-db.txt ./
+ ---> 256a184ffb77
+Step 8/15 : RUN python -m pip install --no-cache-dir -r requirements-db.txt
+ ---> Running in 2992bc490525
+Collecting psycopg==3.3.2 (from psycopg[binary]==3.3.2->-r requirements-db.txt (line 2))
+  Downloading psycopg-3.3.2-py3-none-any.whl.metadata (4.3 kB)
+Requirement already satisfied: typing-extensions>=4.6 in /usr/local/lib/python3.11/site-packages (from psycopg==3.3.2->psycopg[binary]==3.3.2->-r requirements-db.txt (line 2)) (4.16.0)
+Collecting psycopg-binary==3.3.2 (from psycopg[binary]==3.3.2->-r requirements-db.txt (line 2))
+  Downloading psycopg_binary-3.3.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+Downloading psycopg-3.3.2-py3-none-any.whl (212 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.8/212.8 kB 630.8 kB/s eta 0:00:00
+Downloading psycopg_binary-3.3.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 4.5 MB/s eta 0:00:00
+Installing collected packages: psycopg-binary, psycopg
+Successfully installed psycopg-3.3.2 psycopg-binary-3.3.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m ---> Removed intermediate container 2992bc490525
+ ---> db6c45eb66bb
+Step 9/15 : COPY task4/ ./task4/
+ ---> af69f9be7d37
+Step 10/15 : COPY visionguard/ ./visionguard/
+ ---> 2c0c25ba852f
+Step 11/15 : USER 10001:10001
+ ---> Running in 00be07fdc5d6
+ ---> Removed intermediate container 00be07fdc5d6
+ ---> 3701f203ce9a
+Step 12/15 : EXPOSE 8000
+ ---> Running in dbccbac07893
+ ---> Removed intermediate container dbccbac07893
+ ---> 510b0bc6c306
+Step 13/15 : HEALTHCHECK --interval=15s --timeout=5s --start-period=60s --retries=3     CMD python -c "import os,urllib.request; urllib.request.urlopen('http://127.0.0.1:'+os.environ.get('APP_PORT','8000')+'/health',timeout=3).read()" || exit 1
+ ---> Running in d89cb8bede73
+ ---> Removed intermediate container d89cb8bede73
+ ---> 8a4a4c888729
+Step 14/15 : CMD ["python", "-m", "task4.run", "--server", "gunicorn"]
+ ---> Running in dbb3976e6d38
+ ---> Removed intermediate container dbb3976e6d38
+ ---> 49bfda50cabb
+Step 15/15 : LABEL com.docker.compose.image.builder=classic
+ ---> Running in 01d67a1bed20
+ ---> Removed intermediate container 01d67a1bed20
+ ---> 73a8d6314503
+Successfully built 73a8d6314503
+Successfully tagged visionguard:6.3
+ Image visionguard:6.3 Built 
+ Image visionguard:6.3 Built 
