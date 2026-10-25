@@ -82,7 +82,9 @@ def main():
         model_path = TRAINING / method / "best.keras"
         model = tf.keras.models.load_model(model_path)
         expected = model.predict(example, verbose=0)
-        np.testing.assert_allclose(expected.ravel(), predictions.p_ai.iloc[:3], atol=1e-6, rtol=1e-5)
+        # Saved test predictions used batches of 32; this probe has 3 images.
+        # GPU convolution algorithms can differ slightly with batch shape.
+        np.testing.assert_allclose(expected.ravel(), predictions.p_ai.iloc[:3], atol=1e-4, rtol=1e-4)
         with tempfile.TemporaryDirectory() as temporary:
             export = Path(temporary) / "model"
             mlflow.keras.save_model(
