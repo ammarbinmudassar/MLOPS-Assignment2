@@ -1,0 +1,6 @@
+target-version = "py311"
+extend-exclude = ["outputs", "dvc-toy", "models", "dataset", ".cache", "ci-toy"]
+
+[lint]
+# Catch broken code without imposing a style rewrite on the coursework.
+select = ["E9", "F63", "F7", "F82"]

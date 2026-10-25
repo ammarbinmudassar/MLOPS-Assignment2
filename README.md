@@ -1,5 +1,7 @@
 # 23L-0630_A2_Ops — VisionGuard
 
+[![VisionGuard CI](https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/workflows/ci.yml)
+
 TensorFlow/Keras coursework for distinguishing the dataset's AI and Real image
 classes. The original dataset is kept locally and excluded from Git.
 
@@ -69,6 +71,10 @@ failure, diagnosed from logs and recovered without losing history. Commands and
 evidence are in [docs/TASK6_5.md](docs/TASK6_5.md). `compose.failure.yaml` is an
 explicit troubleshooting override; normal startup uses only `compose.yaml`.
 
-CI and public deployment are not implemented yet.
-AI assistance was used to implement, test and document Tasks 2, 3, 4, 5 and 6.1–6.5;
+Task 6.6 defines GitHub Actions CI in `.github/workflows/ci.yml`: install
+dependencies, lint, run the full tests and build Docker. See
+[docs/TASK6_6.md](docs/TASK6_6.md) for hosted-run evidence status and secrets guidance.
+
+Public deployment is not implemented yet.
+AI assistance was used to implement, test and document Tasks 2, 3, 4, 5 and 6.1–6.6;
 the final submitted report must disclose that assistance.
