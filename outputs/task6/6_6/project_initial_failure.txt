@@ -1,0 +1,74 @@
+checks	Run tests without credentials, datasets or model downloads	﻿2026-10-25T21:11:48.2143937Z ##[group]Run python -m unittest discover -s tests -v
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2144353Z ^[[36;1mpython -m unittest discover -s tests -v^[[0m
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2205924Z shell: /usr/bin/bash -e {0}
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2206188Z env:
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2206392Z   CUDA_VISIBLE_DEVICES: -1
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2206639Z   TF_NUM_INTRAOP_THREADS: 2
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2206868Z   TF_NUM_INTEROP_THREADS: 2
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2207097Z   TF_CPP_MIN_LOG_LEVEL: 2
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2207394Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2207869Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2208309Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2208719Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2209465Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2209928Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:48.2210304Z ##[endgroup]
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.4374880Z test_credentials_cannot_be_embedded_in_url (test_dagshub_config.DagsHubConfigurationTests.test_credentials_cannot_be_embedded_in_url) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.4389507Z test_credentials_cannot_be_sent_to_another_host (test_dagshub_config.DagsHubConfigurationTests.test_credentials_cannot_be_sent_to_another_host) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.4405962Z test_https_dagshub_endpoint_is_accepted (test_dagshub_config.DagsHubConfigurationTests.test_https_dagshub_endpoint_is_accepted) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.4420552Z test_invalid_port_is_not_echoed (test_dagshub_config.DagsHubConfigurationTests.test_invalid_port_is_not_echoed) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.4436002Z test_missing_token_identifies_variable_without_echoing_credentials (test_dagshub_config.DagsHubConfigurationTests.test_missing_token_identifies_variable_without_echoing_credentials) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.4447655Z test_model_hash_mismatch_fails_before_loading (test_inference.InferenceTests.test_model_hash_mismatch_fails_before_loading) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.4853808Z test_reuses_model_and_keeps_raw_letterboxed_pixels (test_inference.InferenceTests.test_reuses_model_and_keeps_raw_letterboxed_pixels) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.5997347Z test_fake_image_is_rejected_before_prediction (test_routes.RouteTests.test_fake_image_is_rejected_before_prediction) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.6116272Z test_file_and_total_request_size_are_bounded (test_routes.RouteTests.test_file_and_total_request_size_are_bounded) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.6231258Z test_format_mismatch_and_missing_upload (test_routes.RouteTests.test_format_mismatch_and_missing_upload) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.6441578Z test_history_persists_when_app_restarts (test_routes.RouteTests.test_history_persists_when_app_restarts) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.6543419Z test_large_dimensions_are_rejected (test_routes.RouteTests.test_large_dimensions_are_rejected) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.6682423Z test_pages_health_and_empty_history (test_routes.RouteTests.test_pages_health_and_empty_history) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.6787951Z test_same_predictor_handles_two_requests (test_routes.RouteTests.test_same_predictor_handles_two_requests) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.6964921Z test_success_sanitizes_name_and_stores_only_metadata (test_routes.RouteTests.test_success_sanitizes_name_and_stores_only_metadata) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7062478Z test_unknown_result_has_friendly_error (test_routes.RouteTests.test_unknown_result_has_friendly_error) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7136887Z test_upload_stream_remains_in_memory (test_routes.RouteTests.test_upload_stream_remains_in_memory) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7482809Z test_valid_image_larger_than_parser_chunk_is_accepted (test_routes.RouteTests.test_valid_image_larger_than_parser_chunk_is_accepted) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7582453Z test_wrong_extension_is_rejected_before_prediction (test_routes.RouteTests.test_wrong_extension_is_rejected_before_prediction) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7645158Z test_letterbox_preserves_shape_and_padding (test_task2.Task2Tests.test_letterbox_preserves_shape_and_padding) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7652556Z test_overlap_is_rejected (test_task2.Task2Tests.test_overlap_is_rejected) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7698456Z test_saved_manifests_have_no_exact_duplicate_leakage (test_task2.Task2Tests.test_saved_manifests_have_no_exact_duplicate_leakage) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7759584Z test_threshold_can_reject_saturated_false_positive (test_task2.Task2Tests.test_threshold_can_reject_saturated_false_positive) ... ERROR
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:53.7767532Z test_threshold_respects_false_accusation_cost (test_task2.Task2Tests.test_threshold_respects_false_accusation_cost) ... ERROR
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3030982Z test_transfer_preprocessing_and_batchnorm_policy (test_task2.Task2Tests.test_transfer_preprocessing_and_batchnorm_policy) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3039832Z test_bad_threshold_fails_at_startup (test_web_settings.WebSettingsTests.test_bad_threshold_fails_at_startup) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3048749Z test_compose_credentials_use_service_name_and_escape_reserved_characters (test_web_settings.WebSettingsTests.test_compose_credentials_use_service_name_and_escape_reserved_characters) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3071637Z test_flask_launcher_disables_debug_reload_and_implicit_dotenv (test_web_settings.WebSettingsTests.test_flask_launcher_disables_debug_reload_and_implicit_dotenv) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3079916Z test_settings_are_read_from_environment (test_web_settings.WebSettingsTests.test_settings_are_read_from_environment) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3080880Z 
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3081156Z ======================================================================
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3082265Z ERROR: test_threshold_can_reject_saturated_false_positive (test_task2.Task2Tests.test_threshold_can_reject_saturated_false_positive)
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3083446Z ----------------------------------------------------------------------
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3084001Z Traceback (most recent call last):
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3092316Z   File "/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/tests/test_task2.py", line 58, in test_threshold_can_reject_saturated_false_positive
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3093506Z     from task2.evaluate import choose_threshold
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3094386Z   File "/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/task2/evaluate.py", line 20, in <module>
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3095196Z     from task2.train import save_curves
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3095975Z   File "/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/task2/train.py", line 20, in <module>
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3097193Z     import keras_tuner as kt
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3097637Z ModuleNotFoundError: No module named 'keras_tuner'
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3097993Z 
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3098174Z ======================================================================
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3099313Z ERROR: test_threshold_respects_false_accusation_cost (test_task2.Task2Tests.test_threshold_respects_false_accusation_cost)
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3100353Z ----------------------------------------------------------------------
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3100904Z Traceback (most recent call last):
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3101933Z   File "/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/tests/test_task2.py", line 49, in test_threshold_respects_false_accusation_cost
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3102974Z     from task2.evaluate import choose_threshold
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3103804Z   File "/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/task2/evaluate.py", line 20, in <module>
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3104589Z     from task2.train import save_curves
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3105353Z   File "/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/task2/train.py", line 20, in <module>
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3106093Z     import keras_tuner as kt
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3106515Z ModuleNotFoundError: No module named 'keras_tuner'
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3106851Z 
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3107079Z ----------------------------------------------------------------------
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3107585Z Ran 29 tests in 1.637s
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3107797Z 
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:54.3108196Z FAILED (errors=2)
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:11:55.0648468Z ##[error]Process completed with exit code 1.
