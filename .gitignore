@@ -17,4 +17,6 @@ outputs/task3/3_1/logs/server.log
 outputs/task3/3_2/training.log
 outputs/task3/3_3/**/*.keras
 outputs/task3/3_3/training.log
+outputs/task3/3_5/**/*.keras
+outputs/task3/3_5/training.log
 
