@@ -1,6 +1,6 @@
 """Task 3.5: six controlled VisionGuard experiments, selected on validation."""
 
-import hashlib
+import argparse
 import json
 from importlib.metadata import version
 from pathlib import Path
@@ -234,13 +234,24 @@ def verify(runs):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--run", choices=[config["name"] for config in CONFIGS],
+                        help="Run one configuration; automatically finalize when all six exist")
+    args = parser.parse_args()
     validate_configs()
     configure_dagshub()
     setup()
     OUT.mkdir(parents=True, exist_ok=True)
     frames, data_version, split_version = verify_data()
     mlflow.set_experiment("23L-0630_A2_Ops")
-    runs = [train(config, frames, data_version, split_version) for config in CONFIGS]
+    selected_configs = [config for config in CONFIGS if not args.run or config["name"] == args.run]
+    for config in selected_configs:
+        train(config, frames, data_version, split_version)
+    missing = [config["name"] for config in CONFIGS if not (OUT / config["name"] / "result.json").exists()]
+    if missing:
+        print("Remaining experiments:", ", ".join(missing), flush=True)
+        return
+    runs = [json.loads((OUT / config["name"] / "result.json").read_text()) for config in CONFIGS]
     write_json(OUT / "runs.json", runs)
     winner, metrics = select_and_evaluate(runs, frames)
     comparison(runs, winner)
