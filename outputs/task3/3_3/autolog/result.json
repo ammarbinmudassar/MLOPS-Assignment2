@@ -1,0 +1,13 @@
+{
+  "method": "autolog",
+  "run_id": "df4e67511af74ed6ac35cb357f65ae69",
+  "experiment_id": "0",
+  "test_accuracy": 0.6326530612244898,
+  "test_precision": 0.6134453781512605,
+  "test_recall": 0.9012345679012346,
+  "test_f1": 0.73,
+  "test_roc_auc": 0.7495323606434717,
+  "epochs_run": 20,
+  "best_epoch": 20,
+  "training_seconds": 67.98398646999999
+}

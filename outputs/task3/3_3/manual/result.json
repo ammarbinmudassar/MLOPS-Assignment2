@@ -1,0 +1,13 @@
+{
+  "method": "manual",
+  "run_id": "a479985fb89442e485a12d4f0f7e80f4",
+  "experiment_id": "0",
+  "test_accuracy": 0.6326530612244898,
+  "test_precision": 0.6134453781512605,
+  "test_recall": 0.9012345679012346,
+  "test_f1": 0.73,
+  "test_roc_auc": 0.7495323606434717,
+  "epochs_run": 20,
+  "best_epoch": 20,
+  "training_seconds": 66.40313511999989
+}
