@@ -1,0 +1,9 @@
+{
+  "two_ready_versions": true,
+  "champion_alias_verified": true,
+  "alias_load_and_prediction": "passed",
+  "matches_local_champion_same_batch": true,
+  "local_p_ai": 0.5538548231124878,
+  "alias_p_ai": 0.5538548231124878,
+  "note": "Comparison uses batch size 1 in both models; GPU batch sizes can yield small rounding differences."
+}

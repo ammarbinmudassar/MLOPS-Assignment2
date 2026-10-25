@@ -26,6 +26,13 @@ Fashion-MNIST. Internet access is needed unless these downloads are already cach
 Test data is reserved until tuning is complete. The evaluation command refuses to
 overwrite completed test results. Use saved predictions for later analysis.
 
-MLflow/DagsHub, serving, database, Docker, CI and deployment tasks are not implemented
-by this Task 2 work. AI assistance was used to implement, test and document Task 2;
+Task 3 MLflow/DagsHub tracking, comparisons and the model registry are implemented
+in `task3/`. Subsection guides and evidence instructions are in `docs/TASK3_1.md`
+through `docs/TASK3_6.md`; results are under `outputs/task3/`.
+The registered model is `23L-0630_VisionGuard`, with `champion` pointing to version 2.
+Run `bash run_gpu.sh python -m task3.predict_champion` to load it by alias and
+classify the first saved test image. Credentials come from the Git-ignored `.env`.
+
+Serving, database, Docker, CI and deployment tasks are not implemented yet.
+AI assistance was used to implement, test and document Tasks 2 and 3;
 the final submitted report must disclose that assistance.

@@ -1,0 +1,24 @@
+{
+  "model_name": "23L-0630_VisionGuard",
+  "versions": [
+    {
+      "version": "1",
+      "configuration": "unfreeze_4",
+      "run_id": "93f7b0553b60447085968c9822b038b5",
+      "status": "READY",
+      "source": "mlflow-artifacts:/804d78082c0e4604b48ca8ff4faa219d/93f7b0553b60447085968c9822b038b5/artifacts/model"
+    },
+    {
+      "version": "2",
+      "configuration": "unfreeze_8",
+      "run_id": "36cdf49361924598b55143251cc26845",
+      "status": "READY",
+      "source": "mlflow-artifacts:/804d78082c0e4604b48ca8ff4faa219d/36cdf49361924598b55143251cc26845/artifacts/model"
+    }
+  ],
+  "alias": "champion",
+  "champion_version": "2",
+  "champion_run_id": "36cdf49361924598b55143251cc26845",
+  "alias_verified": true,
+  "model_uri": "models:/23L-0630_VisionGuard@champion"
+}

@@ -1,0 +1,7 @@
+Loaded: models:/23L-0630_VisionGuard@champion
+Resolved version: 2
+Image: dataset/AiArtData/AiArtData/1000_F_551420122_DMVybsWtGw1kS6ogwlk66jcm78PmUIgn.jpg
+Dataset label: AI
+Prediction: AI
+AI probability: 0.553855
+Confidence: 55.39% (uncalibrated)

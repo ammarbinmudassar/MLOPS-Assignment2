@@ -1,0 +1,12 @@
+{
+  "model_uri": "models:/23L-0630_VisionGuard@champion",
+  "model_version": "2",
+  "source_run_id": "36cdf49361924598b55143251cc26845",
+  "image": "dataset/AiArtData/AiArtData/1000_F_551420122_DMVybsWtGw1kS6ogwlk66jcm78PmUIgn.jpg",
+  "expected_label": "AI",
+  "prediction": "AI",
+  "p_ai": 0.5538548231124878,
+  "confidence": 0.5538548231124878,
+  "threshold": 0.5,
+  "confidence_is_calibrated": false
+}
