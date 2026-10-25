@@ -1,0 +1,240 @@
+[
+  {
+    "command": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "db",
+      "sh",
+      "-c",
+      "psql -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -Atc \"SELECT COUNT(*) FROM predictions;\""
+    ],
+    "input": null,
+    "output": "2\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "stop"
+    ],
+    "input": null,
+    "output": " Container visionguard-assignment2-web-1 Stopping \n Container visionguard-assignment2-web-1 Stopped \n Container visionguard-assignment2-db-1 Stopping \n Container visionguard-assignment2-db-1 Stopped \n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "ps",
+      "-a"
+    ],
+    "input": null,
+    "output": "NAME                            IMAGE                   COMMAND                  SERVICE   CREATED         STATUS                              PORTS\nvisionguard-assignment2-db-1    postgres:17-alpine      \"docker-entrypoint.s\u2026\"   db        9 minutes ago   Exited (0) Less than a second ago   \nvisionguard-assignment2-web-1   visionguard:6.4-after   \"python -m task4.run\u2026\"   web       3 minutes ago   Exited (0) Less than a second ago   \n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "start",
+      "--wait"
+    ],
+    "input": null,
+    "output": " Container visionguard-assignment2-db-1 Starting \n Container visionguard-assignment2-db-1 Started \n Container visionguard-assignment2-db-1 Waiting \n Container visionguard-assignment2-db-1 Healthy \n Container visionguard-assignment2-web-1 Starting \n Container visionguard-assignment2-web-1 Started \n Container visionguard-assignment2-db-1 Waiting \n Container visionguard-assignment2-web-1 Waiting \n Container visionguard-assignment2-db-1 Healthy \n Container visionguard-assignment2-web-1 Healthy \n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "ps"
+    ],
+    "input": null,
+    "output": "NAME                            IMAGE                   COMMAND                  SERVICE   CREATED         STATUS                    PORTS\nvisionguard-assignment2-db-1    postgres:17-alpine      \"docker-entrypoint.s\u2026\"   db        9 minutes ago   Up 12 seconds (healthy)   5432/tcp\nvisionguard-assignment2-web-1   visionguard:6.4-after   \"python -m task4.run\u2026\"   web       4 minutes ago   Up 6 seconds (healthy)    127.0.0.1:8083->8000/tcp\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "restart"
+    ],
+    "input": null,
+    "output": " Container visionguard-assignment2-web-1 Restarting \n Container visionguard-assignment2-db-1 Restarting \n Container visionguard-assignment2-db-1 Started \n Container visionguard-assignment2-web-1 Started \n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "up",
+      "-d",
+      "--wait"
+    ],
+    "input": null,
+    "output": " Container visionguard-assignment2-web-1 Running \n Container visionguard-assignment2-db-1 Running \n Container visionguard-assignment2-db-1 Waiting \n Container visionguard-assignment2-db-1 Healthy \n Container visionguard-assignment2-db-1 Waiting \n Container visionguard-assignment2-web-1 Waiting \n Container visionguard-assignment2-db-1 Healthy \n Container visionguard-assignment2-web-1 Healthy \n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "ps"
+    ],
+    "input": null,
+    "output": "NAME                            IMAGE                   COMMAND                  SERVICE   CREATED         STATUS                   PORTS\nvisionguard-assignment2-db-1    postgres:17-alpine      \"docker-entrypoint.s\u2026\"   db        9 minutes ago   Up 6 seconds (healthy)   5432/tcp\nvisionguard-assignment2-web-1   visionguard:6.4-after   \"python -m task4.run\u2026\"   web       4 minutes ago   Up 5 seconds (healthy)   127.0.0.1:8083->8000/tcp\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "logs",
+      "--no-color",
+      "--tail",
+      "15",
+      "web"
+    ],
+    "input": null,
+    "output": "web-1  | I0000 00:00:1792961271.960146       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nweb-1  | 127.0.0.1 - - [25/Oct/2026:20:47:53 +0000] \"GET /health HTTP/1.1\" 200 155 \"-\" \"Python-urllib/3.11\"\nweb-1  | [2026-10-25 20:47:54 +0000] [1] [INFO] Handling signal: term\nweb-1  | [2026-10-25 20:47:54 +0000] [7] [INFO] Worker exiting (pid: 7)\nweb-1  | [2026-10-25 20:47:54 +0000] [1] [INFO] Shutting down: Master\nweb-1  | [2026-10-25 20:47:55 +0000] [1] [INFO] Starting gunicorn 26.2.0\nweb-1  | [2026-10-25 20:47:55 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)\nweb-1  | [2026-10-25 20:47:55 +0000] [1] [INFO] Using worker: gthread\nweb-1  | [2026-10-25 20:47:55 +0000] [7] [INFO] Booting worker with pid: 7\nweb-1  | [2026-10-25 20:47:55 +0000] [1] [ERROR] Control server error: [Errno 13] Permission denied: '/home/visionguard'\nweb-1  | WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nweb-1  | I0000 00:00:1792961275.927416       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nweb-1  | WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nweb-1  | I0000 00:00:1792961278.938461       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nweb-1  | 127.0.0.1 - - [25/Oct/2026:20:48:00 +0000] \"GET /health HTTP/1.1\" 200 155 \"-\" \"Python-urllib/3.11\"\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "logs",
+      "--no-color",
+      "--tail",
+      "15",
+      "db"
+    ],
+    "input": null,
+    "output": "db-1  | 2026-10-25 20:47:54.159 UTC [1] LOG:  aborting any active transactions\ndb-1  | 2026-10-25 20:47:54.161 UTC [1] LOG:  background worker \"logical replication launcher\" (PID 32) exited with exit code 1\ndb-1  | 2026-10-25 20:47:54.161 UTC [27] LOG:  shutting down\ndb-1  | 2026-10-25 20:47:54.164 UTC [27] LOG:  checkpoint starting: shutdown immediate\ndb-1  | 2026-10-25 20:47:54.182 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.006 s, total=0.022 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/1998590, redo lsn=0/1998590\ndb-1  | 2026-10-25 20:47:54.185 UTC [1] LOG:  database system is shut down\ndb-1  | \ndb-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization\ndb-1  | \ndb-1  | 2026-10-25 20:47:54.445 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit\ndb-1  | 2026-10-25 20:47:54.446 UTC [1] LOG:  listening on IPv4 address \"0.0.0.0\", port 5432\ndb-1  | 2026-10-25 20:47:54.446 UTC [1] LOG:  listening on IPv6 address \"::\", port 5432\ndb-1  | 2026-10-25 20:47:54.451 UTC [1] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"\ndb-1  | 2026-10-25 20:47:54.457 UTC [29] LOG:  database system was shut down at 2026-10-25 20:47:54 UTC\ndb-1  | 2026-10-25 20:47:54.462 UTC [1] LOG:  database system is ready to accept connections\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "web",
+      "sh"
+    ],
+    "input": "id\npwd\nexit\n",
+    "output": "uid=10001(visionguard) gid=10001(visionguard) groups=10001(visionguard)\n/app\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "db",
+      "sh"
+    ],
+    "input": "id\npg_isready -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\"\nexit\n",
+    "output": "uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)\n/var/run/postgresql:5432 - accepting connections\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "-f",
+      "compose.yaml",
+      "-f",
+      "compose.failure.yaml",
+      "up",
+      "-d",
+      "--no-deps",
+      "--force-recreate",
+      "web"
+    ],
+    "input": null,
+    "output": " Container visionguard-assignment2-web-1 Recreate \n Container visionguard-assignment2-web-1 Recreated \n Container visionguard-assignment2-web-1 Starting \n Container visionguard-assignment2-web-1 Started \n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "ps",
+      "-a",
+      "-q",
+      "web"
+    ],
+    "input": null,
+    "output": "d1ad017e51304806e6a9cb015447fea6f3aede9c3e337faf8a55bc5f387f25c5\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "wait",
+      "d1ad017e51304806e6a9cb015447fea6f3aede9c3e337faf8a55bc5f387f25c5"
+    ],
+    "input": null,
+    "output": "3\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "logs",
+      "--no-color",
+      "--tail",
+      "60",
+      "web"
+    ],
+    "input": null,
+    "output": "web-1  | [2026-10-25 20:48:03 +0000] [1] [INFO] Starting gunicorn 26.2.0\nweb-1  | [2026-10-25 20:48:03 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)\nweb-1  | [2026-10-25 20:48:03 +0000] [1] [INFO] Using worker: gthread\nweb-1  | [2026-10-25 20:48:03 +0000] [7] [INFO] Booting worker with pid: 7\nweb-1  | [2026-10-25 20:48:03 +0000] [1] [ERROR] Control server error: [Errno 13] Permission denied: '/home/visionguard'\nweb-1  | WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nweb-1  | I0000 00:00:1792961283.610084       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nweb-1  | WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nweb-1  | I0000 00:00:1792961286.603206       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nweb-1  | [2026-10-25 20:48:07 +0000] [7] [ERROR] Exception in worker process\nweb-1  | Traceback (most recent call last):\nweb-1  |   File \"/usr/local/lib/python3.11/site-packages/gunicorn/arbiter.py\", line 753, in spawn_worker\nweb-1  |     worker.init_process()\nweb-1  |   File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/gthread.py\", line 274, in init_process\nweb-1  |     super().init_process()\nweb-1  |   File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py\", line 137, in init_process\nweb-1  |     self.load_wsgi()\nweb-1  |   File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py\", line 149, in load_wsgi\nweb-1  |     self.wsgi = self.app.wsgi()\nweb-1  |                 ^^^^^^^^^^^^^^^\nweb-1  |   File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/base.py\", line 66, in wsgi\nweb-1  |     self.callable = self.load()\nweb-1  |                     ^^^^^^^^^^^\nweb-1  |   File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py\", line 57, in load\nweb-1  |     return self.load_wsgiapp()\nweb-1  |            ^^^^^^^^^^^^^^^^^^^\nweb-1  |   File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py\", line 47, in load_wsgiapp\nweb-1  |     return util.import_app(self.app_uri)\nweb-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nweb-1  |   File \"/usr/local/lib/python3.11/site-packages/gunicorn/util.py\", line 473, in import_app\nweb-1  |     app = app(*args, **kwargs)\nweb-1  |           ^^^^^^^^^^^^^^^^^^^^\nweb-1  |   File \"/app/task4/app.py\", line 35, in create_app\nweb-1  |     predictor = VisionGuardPredictor(app.config[\"MODEL_DIR\"], threshold=app.config[\"DECISION_THRESHOLD\"])\nweb-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nweb-1  |   File \"/app/task4/inference.py\", line 18, in __init__\nweb-1  |     self.metadata = json.loads((directory / \"metadata.json\").read_text())\nweb-1  |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nweb-1  |   File \"/usr/local/lib/python3.11/pathlib.py\", line 1058, in read_text\nweb-1  |     with self.open(mode='r', encoding=encoding, errors=errors) as f:\nweb-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nweb-1  |   File \"/usr/local/lib/python3.11/pathlib.py\", line 1044, in open\nweb-1  |     return io.open(self, mode, buffering, encoding, errors, newline)\nweb-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nweb-1  | FileNotFoundError: [Errno 2] No such file or directory: '/models/missing/metadata.json'\nweb-1  | [Errno 2] No such file or directory: '/models/missing/metadata.json'\nweb-1  | [2026-10-25 20:48:07 +0000] [7] [INFO] Worker exiting (pid: 7)\nweb-1  | [2026-10-25 20:48:07 +0000] [1] [ERROR] Worker (pid:7) exited with code 3.\nweb-1  | [2026-10-25 20:48:07 +0000] [1] [ERROR] Shutting down: Master\nweb-1  | [2026-10-25 20:48:07 +0000] [1] [ERROR] Reason: Worker failed to boot.\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "up",
+      "-d",
+      "--no-deps",
+      "--force-recreate",
+      "--wait",
+      "web"
+    ],
+    "input": null,
+    "output": " Container visionguard-assignment2-web-1 Recreate \n Container visionguard-assignment2-web-1 Recreated \n Container visionguard-assignment2-web-1 Starting \n Container visionguard-assignment2-web-1 Started \n Container visionguard-assignment2-web-1 Waiting \n Container visionguard-assignment2-web-1 Healthy \n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "db",
+      "sh",
+      "-c",
+      "psql -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -Atc \"SELECT COUNT(*) FROM predictions;\""
+    ],
+    "input": null,
+    "output": "2\n",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "docker",
+      "compose",
+      "ps"
+    ],
+    "input": null,
+    "output": "NAME                            IMAGE                   COMMAND                  SERVICE   CREATED         STATUS                    PORTS\nvisionguard-assignment2-db-1    postgres:17-alpine      \"docker-entrypoint.s\u2026\"   db        9 minutes ago   Up 20 seconds (healthy)   5432/tcp\nvisionguard-assignment2-web-1   visionguard:6.4-after   \"python -m task4.run\u2026\"   web       6 seconds ago   Up 6 seconds (healthy)    127.0.0.1:8083->8000/tcp\n",
+    "exit_code": 0
+  }
+]

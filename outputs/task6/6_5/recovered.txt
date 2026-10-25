@@ -1,0 +1,13 @@
+NAME                            IMAGE                   COMMAND                  SERVICE   CREATED         STATUS                    PORTS
+visionguard-assignment2-db-1    postgres:17-alpine      "docker-entrypoint.s…"   db        9 minutes ago   Up 20 seconds (healthy)   5432/tcp
+visionguard-assignment2-web-1   visionguard:6.4-after   "python -m task4.run…"   web       6 seconds ago   Up 6 seconds (healthy)    127.0.0.1:8083->8000/tcp
+
+{
+  "database_ready": true,
+  "debug": false,
+  "history_backend": "postgresql",
+  "model_name": "23L-0630_VisionGuard",
+  "model_version": "2",
+  "status": "ok",
+  "threshold": 0.5
+}

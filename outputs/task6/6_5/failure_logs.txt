@@ -1,0 +1,50 @@
+web-1  | [2026-10-25 20:48:03 +0000] [1] [INFO] Starting gunicorn 26.2.0
+web-1  | [2026-10-25 20:48:03 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+web-1  | [2026-10-25 20:48:03 +0000] [1] [INFO] Using worker: gthread
+web-1  | [2026-10-25 20:48:03 +0000] [7] [INFO] Booting worker with pid: 7
+web-1  | [2026-10-25 20:48:03 +0000] [1] [ERROR] Control server error: [Errno 13] Permission denied: '/home/visionguard'
+web-1  | WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+web-1  | I0000 00:00:1792961283.610084       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+web-1  | WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+web-1  | I0000 00:00:1792961286.603206       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+web-1  | [2026-10-25 20:48:07 +0000] [7] [ERROR] Exception in worker process
+web-1  | Traceback (most recent call last):
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/arbiter.py", line 753, in spawn_worker
+web-1  |     worker.init_process()
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/workers/gthread.py", line 274, in init_process
+web-1  |     super().init_process()
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py", line 137, in init_process
+web-1  |     self.load_wsgi()
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py", line 149, in load_wsgi
+web-1  |     self.wsgi = self.app.wsgi()
+web-1  |                 ^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/app/base.py", line 66, in wsgi
+web-1  |     self.callable = self.load()
+web-1  |                     ^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+web-1  |     return self.load_wsgiapp()
+web-1  |            ^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+web-1  |     return util.import_app(self.app_uri)
+web-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/util.py", line 473, in import_app
+web-1  |     app = app(*args, **kwargs)
+web-1  |           ^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/app/task4/app.py", line 35, in create_app
+web-1  |     predictor = VisionGuardPredictor(app.config["MODEL_DIR"], threshold=app.config["DECISION_THRESHOLD"])
+web-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/app/task4/inference.py", line 18, in __init__
+web-1  |     self.metadata = json.loads((directory / "metadata.json").read_text())
+web-1  |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/pathlib.py", line 1058, in read_text
+web-1  |     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+web-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/pathlib.py", line 1044, in open
+web-1  |     return io.open(self, mode, buffering, encoding, errors, newline)
+web-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  | FileNotFoundError: [Errno 2] No such file or directory: '/models/missing/metadata.json'
+web-1  | [Errno 2] No such file or directory: '/models/missing/metadata.json'
+web-1  | [2026-10-25 20:48:07 +0000] [7] [INFO] Worker exiting (pid: 7)
+web-1  | [2026-10-25 20:48:07 +0000] [1] [ERROR] Worker (pid:7) exited with code 3.
+web-1  | [2026-10-25 20:48:07 +0000] [1] [ERROR] Shutting down: Master
+web-1  | [2026-10-25 20:48:07 +0000] [1] [ERROR] Reason: Worker failed to boot.

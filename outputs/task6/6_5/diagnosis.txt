@@ -1,0 +1,1 @@
+The web worker cannot open /models/missing/metadata.json (FileNotFoundError). The model directory setting points to a missing package. Restore MODEL_DIR=/models/champion by starting with the normal Compose file.

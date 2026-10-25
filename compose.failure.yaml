@@ -1,0 +1,6 @@
+# Task 6.5 only: intentionally point web at a missing model package.
+# Use explicitly with -f; the normal compose.yaml does not load this file.
+services:
+  web:
+    environment:
+      MODEL_DIR: /models/missing

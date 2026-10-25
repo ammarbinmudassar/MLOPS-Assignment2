@@ -1,0 +1,15 @@
+db-1  | 2026-10-25 20:47:54.159 UTC [1] LOG:  aborting any active transactions
+db-1  | 2026-10-25 20:47:54.161 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+db-1  | 2026-10-25 20:47:54.161 UTC [27] LOG:  shutting down
+db-1  | 2026-10-25 20:47:54.164 UTC [27] LOG:  checkpoint starting: shutdown immediate
+db-1  | 2026-10-25 20:47:54.182 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.006 s, total=0.022 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/1998590, redo lsn=0/1998590
+db-1  | 2026-10-25 20:47:54.185 UTC [1] LOG:  database system is shut down
+db-1  | 
+db-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-1  | 
+db-1  | 2026-10-25 20:47:54.445 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+db-1  | 2026-10-25 20:47:54.446 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1  | 2026-10-25 20:47:54.446 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1  | 2026-10-25 20:47:54.451 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1  | 2026-10-25 20:47:54.457 UTC [29] LOG:  database system was shut down at 2026-10-25 20:47:54 UTC
+db-1  | 2026-10-25 20:47:54.462 UTC [1] LOG:  database system is ready to accept connections

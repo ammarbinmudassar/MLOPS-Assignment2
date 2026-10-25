@@ -1,0 +1,15 @@
+web-1  | I0000 00:00:1792961271.960146       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+web-1  | 127.0.0.1 - - [25/Oct/2026:20:47:53 +0000] "GET /health HTTP/1.1" 200 155 "-" "Python-urllib/3.11"
+web-1  | [2026-10-25 20:47:54 +0000] [1] [INFO] Handling signal: term
+web-1  | [2026-10-25 20:47:54 +0000] [7] [INFO] Worker exiting (pid: 7)
+web-1  | [2026-10-25 20:47:54 +0000] [1] [INFO] Shutting down: Master
+web-1  | [2026-10-25 20:47:55 +0000] [1] [INFO] Starting gunicorn 26.2.0
+web-1  | [2026-10-25 20:47:55 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+web-1  | [2026-10-25 20:47:55 +0000] [1] [INFO] Using worker: gthread
+web-1  | [2026-10-25 20:47:55 +0000] [7] [INFO] Booting worker with pid: 7
+web-1  | [2026-10-25 20:47:55 +0000] [1] [ERROR] Control server error: [Errno 13] Permission denied: '/home/visionguard'
+web-1  | WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+web-1  | I0000 00:00:1792961275.927416       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+web-1  | WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+web-1  | I0000 00:00:1792961278.938461       7 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+web-1  | 127.0.0.1 - - [25/Oct/2026:20:48:00 +0000] "GET /health HTTP/1.1" 200 155 "-" "Python-urllib/3.11"

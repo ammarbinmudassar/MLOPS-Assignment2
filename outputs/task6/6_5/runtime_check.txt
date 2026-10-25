@@ -1,0 +1,27 @@
+{
+  "operations": [
+    "stop",
+    "start",
+    "restart",
+    "web logs",
+    "db logs",
+    "web shell",
+    "db shell"
+  ],
+  "failure": "missing model directory via explicit override",
+  "diagnosis_source": "web logs: FileNotFoundError /models/missing/metadata.json",
+  "fix": "recreate web using only normal compose.yaml",
+  "recovered_health": {
+    "database_ready": true,
+    "debug": false,
+    "history_backend": "postgresql",
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2",
+    "status": "ok",
+    "threshold": 0.5
+  },
+  "database_records_before": 2,
+  "database_records_after": 2,
+  "history_preserved": true,
+  "normal_configuration_restored": true
+}
