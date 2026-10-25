@@ -35,8 +35,10 @@ It trains the same toy model, logging parameters, per-epoch metrics, plots and a
 Models are stored as run artifacts for compatibility with hosted MLflow servers.
 The saved model is loaded back and its predictions verified.
 
-This is prepared setup, not proof of a completed remote run. Completion requires
-an authenticated check, two FINISHED remote runs and their visible artifacts.
+The authenticated connection and both remote runs completed successfully.
+Learning rate `0.001` reached 84.25% validation accuracy; `0.0001` reached 78.60%.
+Both saved models were downloaded, reloaded and checked against the original predictions.
+Results are saved under `outputs/task3/3_2/`.
 
 ## Evidence for the report
 
@@ -49,4 +51,6 @@ an authenticated check, two FINISHED remote runs and their visible artifacts.
 MLflow server. The tracking URL and credentials are loaded from environment
 variables through an ignored `.env` file, keeping the token out of source control.
 
-Use that explanation only after the remote setup has actually been verified.
+Open the repository's **Experiments** page, select `23L-0630_A2_Ops`, and select
+the two `3.2_fashion_lr_...` runs to compare them. The browser pane requires
+its own DagsHub sign-in; screenshots must be taken while signed in.

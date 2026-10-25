@@ -1,0 +1,26 @@
+[
+  {
+    "run_id": "4538b2f8b4e84fcca9c1da9081d5febe",
+    "status": "FINISHED",
+    "metric_points": {
+      "loss": 5,
+      "accuracy": 5,
+      "val_loss": 5,
+      "val_accuracy": 5
+    },
+    "required_artifacts_verified": true,
+    "model_reload_verified": true
+  },
+  {
+    "run_id": "ba9bd1a559e54edbb69ab76237f8958c",
+    "status": "FINISHED",
+    "metric_points": {
+      "loss": 5,
+      "accuracy": 5,
+      "val_loss": 5,
+      "val_accuracy": 5
+    },
+    "required_artifacts_verified": true,
+    "model_reload_verified": true
+  }
+]

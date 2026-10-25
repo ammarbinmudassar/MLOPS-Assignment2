@@ -1,0 +1,20 @@
+[
+  {
+    "name": "3.2_fashion_lr_0.001",
+    "run_id": "4538b2f8b4e84fcca9c1da9081d5febe",
+    "experiment_id": "0",
+    "learning_rate": 0.001,
+    "final_val_loss": 0.45308390259742737,
+    "final_val_accuracy": 0.8424999713897705,
+    "model_uri": "runs:/4538b2f8b4e84fcca9c1da9081d5febe/model"
+  },
+  {
+    "name": "3.2_fashion_lr_0.0001",
+    "run_id": "ba9bd1a559e54edbb69ab76237f8958c",
+    "experiment_id": "0",
+    "learning_rate": 0.0001,
+    "final_val_loss": 0.653317928314209,
+    "final_val_accuracy": 0.7860000133514404,
+    "model_uri": "runs:/ba9bd1a559e54edbb69ab76237f8958c/model"
+  }
+]
