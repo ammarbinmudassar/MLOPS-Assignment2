@@ -1,0 +1,30 @@
+{
+  "server": "Gunicorn",
+  "server_header": "gunicorn",
+  "health": {
+    "database_ready": true,
+    "debug": false,
+    "history_backend": "sqlite",
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2",
+    "status": "ok",
+    "threshold": 0.5
+  },
+  "flask_result_survives_restart": true,
+  "new_prediction_status": 303,
+  "new_result_url": "http://127.0.0.1:8000/result/1d494573d40a46a5bfe2963ed8ddcad3",
+  "failure_cases": [
+    {
+      "file": "wrong_type.txt",
+      "status": 415
+    },
+    {
+      "file": "oversized.png",
+      "status": 413
+    },
+    {
+      "file": "fake_image.png",
+      "status": 422
+    }
+  ]
+}

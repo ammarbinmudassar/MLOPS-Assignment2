@@ -1,0 +1,10 @@
+{
+  "frontend": "HTML/CSS with native image upload",
+  "history_backend": "SQLite",
+  "desktop_browser_verified": true,
+  "mobile_browser_verified": true,
+  "mobile_viewport_width": 390,
+  "database_restart_persistence_verified": true,
+  "uploaded_image_storage": "memory only",
+  "finish_review": "SHIP"
+}

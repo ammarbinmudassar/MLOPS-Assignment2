@@ -21,7 +21,7 @@ def main():
     config = settings_from_env()
     if args.server == "flask":
         from task4.app import create_app
-        create_app().run(host=config["APP_HOST"], port=config["APP_PORT"], debug=False, use_reloader=False)
+        create_app().run(host=config["APP_HOST"], port=config["APP_PORT"], debug=False, use_reloader=False, load_dotenv=False)
     else:
         workers = int(os.environ.get("WEB_WORKERS", "1"))
         threads = int(os.environ.get("WEB_THREADS", "2"))

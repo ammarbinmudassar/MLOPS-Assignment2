@@ -1,0 +1,4 @@
+{
+  "findings": [],
+  "note": "Mechanical detector ran once on task4/templates and task4/static. It could not resolve the Jinja stylesheet URL, so color/property rules from that link were incomplete; the stylesheet was also passed as a changed target."
+}

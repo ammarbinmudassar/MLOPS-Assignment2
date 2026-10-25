@@ -1,0 +1,40 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792957828.517193       3 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792957829.089001       3 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792957833.359193       3 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+E0000 00:00:1792957837.983531       3 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+test_credentials_cannot_be_embedded_in_url (test_dagshub_config.DagsHubConfigurationTests.test_credentials_cannot_be_embedded_in_url) ... ok
+test_credentials_cannot_be_sent_to_another_host (test_dagshub_config.DagsHubConfigurationTests.test_credentials_cannot_be_sent_to_another_host) ... ok
+test_https_dagshub_endpoint_is_accepted (test_dagshub_config.DagsHubConfigurationTests.test_https_dagshub_endpoint_is_accepted) ... ok
+test_invalid_port_is_not_echoed (test_dagshub_config.DagsHubConfigurationTests.test_invalid_port_is_not_echoed) ... ok
+test_missing_token_identifies_variable_without_echoing_credentials (test_dagshub_config.DagsHubConfigurationTests.test_missing_token_identifies_variable_without_echoing_credentials) ... ok
+test_model_hash_mismatch_fails_before_loading (test_inference.InferenceTests.test_model_hash_mismatch_fails_before_loading) ... ok
+test_reuses_model_and_keeps_raw_letterboxed_pixels (test_inference.InferenceTests.test_reuses_model_and_keeps_raw_letterboxed_pixels) ... ok
+test_fake_image_is_rejected_before_prediction (test_routes.RouteTests.test_fake_image_is_rejected_before_prediction) ... ok
+test_file_and_total_request_size_are_bounded (test_routes.RouteTests.test_file_and_total_request_size_are_bounded) ... ok
+test_format_mismatch_and_missing_upload (test_routes.RouteTests.test_format_mismatch_and_missing_upload) ... ok
+test_history_persists_when_app_restarts (test_routes.RouteTests.test_history_persists_when_app_restarts) ... ok
+test_large_dimensions_are_rejected (test_routes.RouteTests.test_large_dimensions_are_rejected) ... ok
+test_pages_health_and_empty_history (test_routes.RouteTests.test_pages_health_and_empty_history) ... ok
+test_same_predictor_handles_two_requests (test_routes.RouteTests.test_same_predictor_handles_two_requests) ... ok
+test_success_sanitizes_name_and_stores_only_metadata (test_routes.RouteTests.test_success_sanitizes_name_and_stores_only_metadata) ... ok
+test_unknown_result_has_friendly_error (test_routes.RouteTests.test_unknown_result_has_friendly_error) ... ok
+test_upload_stream_remains_in_memory (test_routes.RouteTests.test_upload_stream_remains_in_memory) ... ok
+test_valid_image_larger_than_parser_chunk_is_accepted (test_routes.RouteTests.test_valid_image_larger_than_parser_chunk_is_accepted) ... ok
+test_wrong_extension_is_rejected_before_prediction (test_routes.RouteTests.test_wrong_extension_is_rejected_before_prediction) ... ok
+test_letterbox_preserves_shape_and_padding (test_task2.Task2Tests.test_letterbox_preserves_shape_and_padding) ... ok
+test_overlap_is_rejected (test_task2.Task2Tests.test_overlap_is_rejected) ... ok
+test_saved_manifests_have_no_exact_duplicate_leakage (test_task2.Task2Tests.test_saved_manifests_have_no_exact_duplicate_leakage) ... ok
+test_threshold_can_reject_saturated_false_positive (test_task2.Task2Tests.test_threshold_can_reject_saturated_false_positive) ... ok
+test_threshold_respects_false_accusation_cost (test_task2.Task2Tests.test_threshold_respects_false_accusation_cost) ... ok
+test_transfer_preprocessing_and_batchnorm_policy (test_task2.Task2Tests.test_transfer_preprocessing_and_batchnorm_policy) ... ok
+test_bad_threshold_fails_at_startup (test_web_settings.WebSettingsTests.test_bad_threshold_fails_at_startup) ... ok
+test_flask_launcher_disables_debug_reload_and_implicit_dotenv (test_web_settings.WebSettingsTests.test_flask_launcher_disables_debug_reload_and_implicit_dotenv) ... ok
+test_settings_are_read_from_environment (test_web_settings.WebSettingsTests.test_settings_are_read_from_environment) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 4.058s
+
+OK

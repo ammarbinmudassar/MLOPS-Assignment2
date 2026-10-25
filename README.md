@@ -37,6 +37,12 @@ Task 4.1 local inference is in `task4/`; see [docs/TASK4_1.md](docs/TASK4_1.md).
 The local model package is ignored by Git. After preparation, inference works
 offline and reuses one loaded model for multiple predictions.
 
-Flask routes, database, Docker, CI and deployment tasks are not implemented yet.
-AI assistance was used to implement, test and document Tasks 2, 3 and 4.1;
+Tasks 4.2–4.4 provide validated uploads, a simple frontend, persistent SQLite
+history and environment-based settings. Run `.venv/bin/python -m task4.run
+--server gunicorn` and open http://127.0.0.1:8000. Use `.env.web.example` as the
+template for the ignored `.env.web` settings. Guides and screenshot mappings are
+in `docs/TASK4_2.md` through `docs/TASK4_4.md`.
+
+Docker, CI and public deployment are not implemented yet.
+AI assistance was used to implement, test and document Tasks 2, 3 and 4.1–4.4;
 the final submitted report must disclose that assistance.

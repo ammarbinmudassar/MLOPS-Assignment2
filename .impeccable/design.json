@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T19:49:33.730974+00:00",
+  "title": "Design System: VisionGuard",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#172a3a",
+        "tonalRamp": [
+          "oklch(15% 0.03884 245.25)",
+          "oklch(26% 0.03884 245.25)",
+          "oklch(38% 0.03884 245.25)",
+          "oklch(49% 0.03884 245.25)",
+          "oklch(61% 0.03884 245.25)",
+          "oklch(72% 0.03884 245.25)",
+          "oklch(84% 0.03884 245.25)",
+          "oklch(95% 0.03884 245.25)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#4d6070",
+        "tonalRamp": [
+          "oklch(15% 0.03475 243.99)",
+          "oklch(26% 0.03475 243.99)",
+          "oklch(38% 0.03475 243.99)",
+          "oklch(49% 0.03475 243.99)",
+          "oklch(61% 0.03475 243.99)",
+          "oklch(72% 0.03475 243.99)",
+          "oklch(84% 0.03475 243.99)",
+          "oklch(95% 0.03475 243.99)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "canonical": "#2056b8",
+        "tonalRamp": [
+          "oklch(15% 0.16549 261.16)",
+          "oklch(26% 0.16549 261.16)",
+          "oklch(38% 0.16549 261.16)",
+          "oklch(49% 0.16549 261.16)",
+          "oklch(61% 0.16549 261.16)",
+          "oklch(72% 0.16549 261.16)",
+          "oklch(84% 0.16549 261.16)",
+          "oklch(95% 0.16549 261.16)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Accent Hover",
+        "canonical": "#173f88",
+        "tonalRamp": [
+          "oklch(15% 0.13036 261.20)",
+          "oklch(26% 0.13036 261.20)",
+          "oklch(38% 0.13036 261.20)",
+          "oklch(49% 0.13036 261.20)",
+          "oklch(61% 0.13036 261.20)",
+          "oklch(72% 0.13036 261.20)",
+          "oklch(84% 0.13036 261.20)",
+          "oklch(95% 0.13036 261.20)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#d5dfe8",
+        "tonalRamp": [
+          "oklch(15% 0.01640 245.10)",
+          "oklch(26% 0.01640 245.10)",
+          "oklch(38% 0.01640 245.10)",
+          "oklch(49% 0.01640 245.10)",
+          "oklch(61% 0.01640 245.10)",
+          "oklch(72% 0.01640 245.10)",
+          "oklch(84% 0.01640 245.10)",
+          "oklch(95% 0.01640 245.10)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(26% 0.00000 89.88)",
+          "oklch(38% 0.00000 89.88)",
+          "oklch(49% 0.00000 89.88)",
+          "oklch(61% 0.00000 89.88)",
+          "oklch(72% 0.00000 89.88)",
+          "oklch(84% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Background",
+        "canonical": "#f4f7fa",
+        "tonalRamp": [
+          "oklch(15% 0.00513 247.88)",
+          "oklch(26% 0.00513 247.88)",
+          "oklch(38% 0.00513 247.88)",
+          "oklch(49% 0.00513 247.88)",
+          "oklch(61% 0.00513 247.88)",
+          "oklch(72% 0.00513 247.88)",
+          "oklch(84% 0.00513 247.88)",
+          "oklch(95% 0.00513 247.88)"
+        ]
+      },
+      "soft-blue": {
+        "role": "primary",
+        "displayName": "Soft Blue",
+        "canonical": "#edf3fc",
+        "tonalRamp": [
+          "oklch(15% 0.01368 258.34)",
+          "oklch(26% 0.01368 258.34)",
+          "oklch(38% 0.01368 258.34)",
+          "oklch(49% 0.01368 258.34)",
+          "oklch(61% 0.01368 258.34)",
+          "oklch(72% 0.01368 258.34)",
+          "oklch(84% 0.01368 258.34)",
+          "oklch(95% 0.01368 258.34)"
+        ]
+      },
+      "warning": {
+        "role": "secondary",
+        "displayName": "Warning",
+        "canonical": "#715016",
+        "tonalRamp": [
+          "oklch(15% 0.08435 77.14)",
+          "oklch(26% 0.08435 77.14)",
+          "oklch(38% 0.08435 77.14)",
+          "oklch(49% 0.08435 77.14)",
+          "oklch(61% 0.08435 77.14)",
+          "oklch(72% 0.08435 77.14)",
+          "oklch(84% 0.08435 77.14)",
+          "oklch(95% 0.08435 77.14)"
+        ]
+      },
+      "warning-bg": {
+        "role": "secondary",
+        "displayName": "Warning Bg",
+        "canonical": "#fff8e9",
+        "tonalRamp": [
+          "oklch(15% 0.02110 85.94)",
+          "oklch(26% 0.02110 85.94)",
+          "oklch(38% 0.02110 85.94)",
+          "oklch(49% 0.02110 85.94)",
+          "oklch(61% 0.02110 85.94)",
+          "oklch(72% 0.02110 85.94)",
+          "oklch(84% 0.02110 85.94)",
+          "oklch(95% 0.02110 85.94)"
+        ]
+      },
+      "error": {
+        "role": "secondary",
+        "displayName": "Error",
+        "canonical": "#962d34",
+        "tonalRamp": [
+          "oklch(15% 0.13974 20.94)",
+          "oklch(26% 0.13974 20.94)",
+          "oklch(38% 0.13974 20.94)",
+          "oklch(49% 0.13974 20.94)",
+          "oklch(61% 0.13974 20.94)",
+          "oklch(72% 0.13974 20.94)",
+          "oklch(84% 0.13974 20.94)",
+          "oklch(95% 0.13974 20.94)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "body": {
+        "displayName": "Body",
+        "purpose": "Body text."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Current page headings; inherited family is observational."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Title text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Label text."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Small text."
+      },
+      "prediction": {
+        "displayName": "Prediction",
+        "purpose": "AI/Real estimate emphasis."
+      },
+      "confidence": {
+        "displayName": "Confidence",
+        "purpose": "Confidence percentage with tabular numerals."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "action-transition",
+        "value": "background-color 150ms ease-out, border-color 150ms ease-out",
+        "purpose": "Primary and secondary hover; disabled under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "upload-stack",
+        "value": "760px"
+      },
+      {
+        "name": "narrow",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main image check or recovery action.",
+      "html": "<button class=\"ds-primary\">Check image</button>",
+      "css": ".ds-primary{font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:2.8rem;border:1px solid var(--accent);border-radius:7px;background:var(--accent);color:white;padding:.65rem 1.2rem;font-weight:650;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out;}.ds-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}.ds-primary:disabled{background:#647896;border-color:#647896;cursor:wait}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-file:focus-visible,.ds-nav a:focus-visible{outline:3px solid var(--accent);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Related history action.",
+      "html": "<a class=\"ds-secondary\" href=\"#history\">View history</a>",
+      "css": ".ds-secondary{font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:2.8rem;border:1px solid var(--accent);border-radius:7px;background:var(--accent);color:white;padding:.65rem 1.2rem;font-weight:650;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out;background:var(--surface);color:var(--accent);border-color:var(--line)}.ds-secondary:hover{background:var(--soft-blue)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-file:focus-visible,.ds-nav a:focus-visible{outline:3px solid var(--accent);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
+    },
+    {
+      "name": "File Input",
+      "kind": "input",
+      "refersTo": "file-field",
+      "description": "Native image chooser with visible label and help.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-image\">Choose an image</label><div class=\"ds-file-wrap\"><input class=\"ds-file\" id=\"ds-image\" type=\"file\" accept=\".png,.jpg,.jpeg\" aria-describedby=\"ds-help\" required><p id=\"ds-help\">PNG or JPEG \u00b7 up to the configured limit</p></div></div>",
+      "css": ".ds-field{font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;color:var(--ink)}.ds-field label{display:block;font-weight:650;margin-bottom:.7rem}.ds-file-wrap{padding:1.25rem;background:#f8faff;border:1px dashed #91a8ce;border-radius:8px}.ds-file{font:inherit;font-size:.9rem;display:block;width:100%;min-width:0;color:var(--ink)}.ds-file::file-selector-button{background:var(--soft-blue);color:var(--accent);border:1px solid #bdcde8;border-radius:6px;padding:.6rem .8rem;margin-right:.7rem;font:inherit;font-weight:600;cursor:pointer}.ds-file::file-selector-button:hover{background:#dce7f9}.ds-field p{font-size:.875rem;color:var(--muted);margin:.7rem 0 0}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-file:focus-visible,.ds-nav a:focus-visible{outline:3px solid var(--accent);outline-offset:4px;}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Two-page navigation with current-page underline.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#upload\" aria-current=\"page\">Upload</a><a href=\"#history\">History</a></nav>",
+      "css": ".ds-nav{font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:flex;gap:1.5rem}.ds-nav a{color:var(--muted);text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent}.ds-nav a[aria-current=\"page\"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:650}.ds-nav a:hover{color:var(--accent)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-file:focus-visible,.ds-nav a:focus-visible{outline:3px solid var(--accent);outline-offset:4px;}@media(max-width:480px){.ds-nav{gap:1rem;font-size:.9rem}}"
+    },
+    {
+      "name": "Content Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Flat result or message surface.",
+      "html": "<section class=\"ds-panel\"><h2>Image result</h2><p>The result and model version appear here.</p></section>",
+      "css": ".ds-panel{font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);padding:2rem;max-width:48rem}.ds-panel h2{font-size:1.15rem;line-height:1.4;margin:0 0 .6rem}.ds-panel p{margin:0;max-width:68ch}@media(max-width:480px){.ds-panel{padding:1.25rem}}"
+    },
+    {
+      "name": "Uncertainty Caveat",
+      "kind": "custom",
+      "refersTo": "caveat",
+      "description": "Persistent qualification beside the estimate.",
+      "html": "<div class=\"ds-caveat\"><p>This is a model estimate and may be wrong. Confidence scores are not calibrated.</p></div>",
+      "css": ".ds-caveat{font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;background:var(--warning-bg);color:var(--warning);border:1px solid #e5d5ab;border-radius:7px;padding:1rem;margin-bottom:1.5rem}.ds-caveat p{margin:0;max-width:68ch}"
+    }
+  ],
+  "narrative": {
+    "northStar": "VisionGuard coursework utility",
+    "overview": "VisionGuard uses a restrained coursework utility world: white content on a cool gray surround, dark blue-gray text, and blue actions. The interface keeps the image check, estimate, recovery path, and saved metadata easy to scan.\n\nFlat panels and fine borders provide structure. Native controls and concise explanations suit the confirmed direct HTML/CSS implementation; uncertainty stays visible beside the result.",
+    "keyCharacteristics": [
+      "Flat white panels and fine rules.",
+      "Blue actions with explicit keyboard focus.",
+      "Readable native forms and a horizontally scrollable history table.",
+      "Visible model uncertainty and provenance."
+    ],
+    "rules": [
+      {
+        "name": "The Action Blue Rule",
+        "body": "Use blue for actions, current navigation, and the prediction value; use warning and error colors for their corresponding messages.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Separate surfaces with background tone and fine borders; the shipped system uses no box shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the uncertainty caveat visible with the prediction and confidence.",
+      "Do preserve visible focus, the skip link, and semantic form and table labels.",
+      "Do let long metadata wrap and let history scroll within its own container.",
+      "Do use the established panel, button, and spacing tokens for extensions."
+    ],
+    "donts": [
+      "Don't use confidence as proof of image origin.",
+      "Don't hide history columns to fit a narrow viewport.",
+      "Don't add decorative illustration to this scoped coursework interface."
+    ]
+  }
+}
