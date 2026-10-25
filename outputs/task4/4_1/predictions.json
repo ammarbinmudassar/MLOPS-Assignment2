@@ -1,0 +1,24 @@
+[
+  {
+    "image": "AiArtData/AiArtData/1000_F_551420122_DMVybsWtGw1kS6ogwlk66jcm78PmUIgn.jpg",
+    "dataset_label": "AI",
+    "label": "AI",
+    "p_ai": 0.5534334182739258,
+    "confidence": 0.5534334182739258,
+    "threshold": 0.5,
+    "confidence_is_calibrated": false,
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2"
+  },
+  {
+    "image": "RealArt/RealArt/-man-sits-with-a-woman-on-her-phone-at-a-table-while-looking-at-a-computer_l.jpg",
+    "dataset_label": "Real",
+    "label": "AI",
+    "p_ai": 0.8622978329658508,
+    "confidence": 0.8622978329658508,
+    "threshold": 0.5,
+    "confidence_is_calibrated": false,
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2"
+  }
+]

@@ -1,0 +1,4 @@
+Prepared local 23L-0630_VisionGuard version 2
+Model: /home/cheema605/Documents/Work/FAST/MLOps/Assignments/Assignment 2/models/champion/model.keras
+SHA-256: 7e1e6be6c7ce3bca54675a92d53bf29296b35f778a2a2029a8713581efd2611e
+Inference can now run without DagsHub access.

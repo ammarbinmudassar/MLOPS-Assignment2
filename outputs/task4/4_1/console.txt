@@ -1,0 +1,14 @@
+Loaded local model once: 23L-0630_VisionGuard version 2
+
+Image: AiArtData/AiArtData/1000_F_551420122_DMVybsWtGw1kS6ogwlk66jcm78PmUIgn.jpg
+Dataset label: AI
+Prediction: AI | Confidence: 55.34%
+AI probability: 0.553433
+
+Image: RealArt/RealArt/-man-sits-with-a-woman-on-her-phone-at-a-table-while-looking-at-a-computer_l.jpg
+Dataset label: Real
+Prediction: AI | Confidence: 86.23%
+AI probability: 0.862298
+
+Two images used the same loaded model; network calls were blocked.
+Confidence is an uncalibrated model score.

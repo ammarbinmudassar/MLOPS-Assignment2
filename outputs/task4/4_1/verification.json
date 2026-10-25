@@ -1,0 +1,8 @@
+{
+  "model_load_count": 1,
+  "images_classified": 2,
+  "network_connections_blocked": true,
+  "all_predictions_completed": true,
+  "unit_tests_passed": 13,
+  "decisions_match_saved_test_predictions": true
+}

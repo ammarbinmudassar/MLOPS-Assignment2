@@ -1,0 +1,13 @@
+{
+  "model_name": "23L-0630_VisionGuard",
+  "model_version": "2",
+  "source_run_id": "36cdf49361924598b55143251cc26845",
+  "resolved_alias": "champion",
+  "source_uri": "models:/23L-0630_VisionGuard/2",
+  "sha256": "7e1e6be6c7ce3bca54675a92d53bf29296b35f778a2a2029a8713581efd2611e",
+  "threshold": 0.5,
+  "positive_class": "AI",
+  "image_size": 160,
+  "preprocessing": "rgb_letterbox_bilinear_antialias_uint8_v1",
+  "model_internal_scaling": "MobileNetV2 [-1,1]; input pixels remain [0,255]"
+}

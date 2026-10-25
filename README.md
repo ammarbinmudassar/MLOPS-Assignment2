@@ -33,6 +33,10 @@ The registered model is `23L-0630_VisionGuard`, with `champion` pointing to vers
 Run `bash run_gpu.sh python -m task3.predict_champion` to load it by alias and
 classify the first saved test image. Credentials come from the Git-ignored `.env`.
 
-Serving, database, Docker, CI and deployment tasks are not implemented yet.
-AI assistance was used to implement, test and document Tasks 2 and 3;
+Task 4.1 local inference is in `task4/`; see [docs/TASK4_1.md](docs/TASK4_1.md).
+The local model package is ignored by Git. After preparation, inference works
+offline and reuses one loaded model for multiple predictions.
+
+Flask routes, database, Docker, CI and deployment tasks are not implemented yet.
+AI assistance was used to implement, test and document Tasks 2, 3 and 4.1;
 the final submitted report must disclose that assistance.
