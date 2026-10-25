@@ -43,6 +43,9 @@ history and environment-based settings. Run `.venv/bin/python -m task4.run
 template for the ignored `.env.web` settings. Guides and screenshot mappings are
 in `docs/TASK4_2.md` through `docs/TASK4_4.md`.
 
+Task 5 verifies the persistent database trail; see [docs/TASK5.md](docs/TASK5.md)
+for the short explanation, query output and history screenshot.
+
 Docker, CI and public deployment are not implemented yet.
-AI assistance was used to implement, test and document Tasks 2, 3 and 4.1–4.4;
+AI assistance was used to implement, test and document Tasks 2, 3, 4 and 5;
 the final submitted report must disclose that assistance.

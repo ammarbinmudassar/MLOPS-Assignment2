@@ -1,0 +1,6 @@
+Database: var/visionguard.sqlite3
+Integrity: ok
+Saved predictions: 2
+
+coursework_Real.jpg | 2026-10-25T19:44:54+00:00 | AI | 86.23% | 23L-0630_VisionGuard v2
+coursework_AI.jpg | 2026-10-25T19:35:39+00:00 | AI | 55.34% | 23L-0630_VisionGuard v2
