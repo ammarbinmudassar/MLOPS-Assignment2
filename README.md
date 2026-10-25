@@ -46,6 +46,9 @@ in `docs/TASK4_2.md` through `docs/TASK4_4.md`.
 Task 5 verifies the persistent database trail; see [docs/TASK5.md](docs/TASK5.md)
 for the short explanation, query output and history screenshot.
 
+Task 6.1 Docker warm-up commands, definitions and evidence mappings are in
+[docs/TASK6_1.md](docs/TASK6_1.md). Actual command outputs are in `outputs/task6/6_1/`.
+
 Docker, CI and public deployment are not implemented yet.
-AI assistance was used to implement, test and document Tasks 2, 3, 4 and 5;
+AI assistance was used to implement, test and document Tasks 2, 3, 4, 5 and 6.1;
 the final submitted report must disclose that assistance.

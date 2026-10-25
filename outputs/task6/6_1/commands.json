@@ -1,0 +1,129 @@
+[
+  {
+    "step": "01_image",
+    "command": "docker pull nginx:alpine",
+    "output": "alpine: Pulling from library/nginx\nDigest: sha256:a3554c0d0b48177b1413c26e01f695334428020d9df01243fbae3e11cfd17417\nStatus: Image is up to date for nginx:alpine\ndocker.io/library/nginx:alpine\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:39+05:00"
+  },
+  {
+    "step": "01_image",
+    "command": "docker image inspect nginx:alpine --format 'Image: {{index .RepoTags 0}}\nDigest: {{index .RepoDigests 0}}\nSize: {{.Size}} bytes'",
+    "output": "Image: nginx:alpine\nDigest: nginx@sha256:a3554c0d0b48177b1413c26e01f695334428020d9df01243fbae3e11cfd17417\nSize: 94792317 bytes\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:39+05:00"
+  },
+  {
+    "step": "02_volume",
+    "command": "docker volume create --label coursework=visionguard-6.1 visionguard-61-data",
+    "output": "visionguard-61-data\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:39+05:00"
+  },
+  {
+    "step": "03_run",
+    "command": "docker run -d --name visionguard-61-web --label coursework=visionguard-6.1 -p 127.0.0.1:8081:80 --mount source=visionguard-61-data,target=/usr/share/nginx/html nginx:alpine",
+    "output": "35b69233cce63c57515fc7a094201b47a1503e0529cdfffce38c190d5d19008e\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "04_port",
+    "command": "docker port visionguard-61-web",
+    "output": "80/tcp -> 127.0.0.1:8081\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "04_port",
+    "command": "curl --retry 5 --retry-connrefused --retry-delay 1 --max-time 10 -I http://127.0.0.1:8081/",
+    "output": "  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current\n                                 Dload  Upload  Total   Spent   Left   Speed\n\n  0      0   0      0   0      0      0      0                              0\n  0    896   0      0   0      0      0      0                              0\n  0    896   0      0   0      0      0      0                              0\n  0    896   0      0   0      0      0      0                              0\nHTTP/1.1 200 OK\nServer: nginx/1.31.8\nDate: Sun, 25 Oct 2026 20:16:40 GMT\nContent-Type: text/html\nContent-Length: 896\nLast-Modified: Wed, 21 Oct 2026 17:54:44 GMT\nConnection: keep-alive\nETag: \"6ad8fc64-380\"\nAccept-Ranges: bytes\n\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "05_mount",
+    "command": "docker inspect visionguard-61-web --format '{{json .Mounts}}'",
+    "output": "[{\"Type\":\"volume\",\"Name\":\"visionguard-61-data\",\"Source\":\"/var/lib/docker/volumes/visionguard-61-data/_data\",\"Destination\":\"/usr/share/nginx/html\",\"Driver\":\"local\",\"Mode\":\"z\",\"RW\":true,\"Propagation\":\"\"}]\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "05_mount",
+    "command": "docker exec visionguard-61-web sh -c 'echo \"Task 6.1 volume survives container removal\" > /usr/share/nginx/html/persistence.txt; cat /usr/share/nginx/html/persistence.txt'",
+    "output": "Task 6.1 volume survives container removal\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "06_logs",
+    "command": "docker logs --tail 12 visionguard-61-web",
+    "output": "2026/10/25 20:16:40 [notice] 1#1: start worker process 31\n2026/10/25 20:16:40 [notice] 1#1: start worker process 32\n2026/10/25 20:16:40 [notice] 1#1: start worker process 33\n2026/10/25 20:16:40 [notice] 1#1: start worker process 34\n2026/10/25 20:16:40 [notice] 1#1: start worker process 35\n2026/10/25 20:16:40 [notice] 1#1: start worker process 36\n2026/10/25 20:16:40 [notice] 1#1: start worker process 37\n2026/10/25 20:16:40 [notice] 1#1: start worker process 38\n2026/10/25 20:16:40 [notice] 1#1: start worker process 39\n2026/10/25 20:16:40 [notice] 1#1: start worker process 40\n2026/10/25 20:16:40 [notice] 1#1: start worker process 41\n172.17.0.1 - - [25/Oct/2026:20:16:40 +0000] \"HEAD / HTTP/1.1\" 200 0 \"-\" \"curl/8.23.0\" \"-\"\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "07_shell",
+    "command": "docker exec -i visionguard-61-web sh",
+    "output": "root\n/\n3.24.3\n50x.html\nindex.html\npersistence.txt\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00",
+    "shell_input": "whoami\npwd\ncat /etc/alpine-release\nls /usr/share/nginx/html\nexit"
+  },
+  {
+    "step": "08_list",
+    "command": "docker ps -a --filter label=coursework=visionguard-6.1",
+    "output": "CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                  PORTS                    NAMES\n35b69233cce6   nginx:alpine   \"/docker-entrypoint.\u2026\"   1 second ago   Up Less than a second   127.0.0.1:8081->80/tcp   visionguard-61-web\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "08_list",
+    "command": "docker image ls nginx:alpine",
+    "output": "IMAGE          ID             DISK USAGE   CONTENT SIZE   EXTRA\nnginx:alpine   a3554c0d0b48       95.7MB         27.2MB   U    \n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "09_remove_container",
+    "command": "docker stop visionguard-61-web",
+    "output": "visionguard-61-web\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:40+05:00"
+  },
+  {
+    "step": "09_remove_container",
+    "command": "docker rm visionguard-61-web",
+    "output": "visionguard-61-web\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:41+05:00"
+  },
+  {
+    "step": "09_remove_container",
+    "command": "docker ps -a --filter label=coursework=visionguard-6.1",
+    "output": "CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:41+05:00"
+  },
+  {
+    "step": "10_persistence",
+    "command": "docker run --rm --name visionguard-61-read --label coursework=visionguard-6.1 --mount source=visionguard-61-data,target=/data,readonly nginx:alpine cat /data/persistence.txt",
+    "output": "Task 6.1 volume survives container removal\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:43+05:00"
+  },
+  {
+    "step": "11_remove_image",
+    "command": "docker image rm nginx:alpine",
+    "output": "Untagged: nginx:alpine\nDeleted: sha256:a3554c0d0b48177b1413c26e01f695334428020d9df01243fbae3e11cfd17417\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:43+05:00"
+  },
+  {
+    "step": "11_remove_image",
+    "command": "docker image ls nginx:alpine",
+    "output": "IMAGE   ID             DISK USAGE   CONTENT SIZE   EXTRA\n",
+    "exit_code": 0,
+    "time": "2026-10-26T01:16:43+05:00"
+  }
+]

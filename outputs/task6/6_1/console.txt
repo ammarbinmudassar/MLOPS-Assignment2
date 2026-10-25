@@ -1,0 +1,96 @@
+docker pull nginx:alpine
+alpine: Pulling from library/nginx
+Digest: sha256:a3554c0d0b48177b1413c26e01f695334428020d9df01243fbae3e11cfd17417
+Status: Image is up to date for nginx:alpine
+docker.io/library/nginx:alpine
+
+docker image inspect nginx:alpine --format 'Image: {{index .RepoTags 0}}
+Digest: {{index .RepoDigests 0}}
+Size: {{.Size}} bytes'
+Image: nginx:alpine
+Digest: nginx@sha256:a3554c0d0b48177b1413c26e01f695334428020d9df01243fbae3e11cfd17417
+Size: 94792317 bytes
+
+docker volume create --label coursework=visionguard-6.1 visionguard-61-data
+visionguard-61-data
+
+docker run -d --name visionguard-61-web --label coursework=visionguard-6.1 -p 127.0.0.1:8081:80 --mount source=visionguard-61-data,target=/usr/share/nginx/html nginx:alpine
+35b69233cce63c57515fc7a094201b47a1503e0529cdfffce38c190d5d19008e
+
+docker port visionguard-61-web
+80/tcp -> 127.0.0.1:8081
+
+curl --retry 5 --retry-connrefused --retry-delay 1 --max-time 10 -I http://127.0.0.1:8081/
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0    896   0      0   0      0      0      0                              0
+  0    896   0      0   0      0      0      0                              0
+  0    896   0      0   0      0      0      0                              0
+HTTP/1.1 200 OK
+Server: nginx/1.31.8
+Date: Sun, 25 Oct 2026 20:16:40 GMT
+Content-Type: text/html
+Content-Length: 896
+Last-Modified: Wed, 21 Oct 2026 17:54:44 GMT
+Connection: keep-alive
+ETag: "6ad8fc64-380"
+Accept-Ranges: bytes
+
+
+docker inspect visionguard-61-web --format '{{json .Mounts}}'
+[{"Type":"volume","Name":"visionguard-61-data","Source":"/var/lib/docker/volumes/visionguard-61-data/_data","Destination":"/usr/share/nginx/html","Driver":"local","Mode":"z","RW":true,"Propagation":""}]
+
+docker exec visionguard-61-web sh -c 'echo "Task 6.1 volume survives container removal" > /usr/share/nginx/html/persistence.txt; cat /usr/share/nginx/html/persistence.txt'
+Task 6.1 volume survives container removal
+
+docker logs --tail 12 visionguard-61-web
+2026/10/25 20:16:40 [notice] 1#1: start worker process 31
+2026/10/25 20:16:40 [notice] 1#1: start worker process 32
+2026/10/25 20:16:40 [notice] 1#1: start worker process 33
+2026/10/25 20:16:40 [notice] 1#1: start worker process 34
+2026/10/25 20:16:40 [notice] 1#1: start worker process 35
+2026/10/25 20:16:40 [notice] 1#1: start worker process 36
+2026/10/25 20:16:40 [notice] 1#1: start worker process 37
+2026/10/25 20:16:40 [notice] 1#1: start worker process 38
+2026/10/25 20:16:40 [notice] 1#1: start worker process 39
+2026/10/25 20:16:40 [notice] 1#1: start worker process 40
+2026/10/25 20:16:40 [notice] 1#1: start worker process 41
+172.17.0.1 - - [25/Oct/2026:20:16:40 +0000] "HEAD / HTTP/1.1" 200 0 "-" "curl/8.23.0" "-"
+
+docker exec -i visionguard-61-web sh
+root
+/
+3.24.3
+50x.html
+index.html
+persistence.txt
+
+docker ps -a --filter label=coursework=visionguard-6.1
+CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                  PORTS                    NAMES
+35b69233cce6   nginx:alpine   "/docker-entrypoint.…"   1 second ago   Up Less than a second   127.0.0.1:8081->80/tcp   visionguard-61-web
+
+docker image ls nginx:alpine
+IMAGE          ID             DISK USAGE   CONTENT SIZE   EXTRA
+nginx:alpine   a3554c0d0b48       95.7MB         27.2MB   U    
+
+docker stop visionguard-61-web
+visionguard-61-web
+
+docker rm visionguard-61-web
+visionguard-61-web
+
+docker ps -a --filter label=coursework=visionguard-6.1
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+docker run --rm --name visionguard-61-read --label coursework=visionguard-6.1 --mount source=visionguard-61-data,target=/data,readonly nginx:alpine cat /data/persistence.txt
+Task 6.1 volume survives container removal
+
+docker image rm nginx:alpine
+Untagged: nginx:alpine
+Deleted: sha256:a3554c0d0b48177b1413c26e01f695334428020d9df01243fbae3e11cfd17417
+
+docker image ls nginx:alpine
+IMAGE   ID             DISK USAGE   CONTENT SIZE   EXTRA
+

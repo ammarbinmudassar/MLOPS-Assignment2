@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><title>Task 6.1 05_mount</title><style>body{margin:32px;color:#16202c;background:#fff;font:16px system-ui}h1{font-size:26px}p{font-size:13px;color:#4a5565}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.45 monospace;background:#f1f3f5;padding:18px;border:1px solid #ccd1d8}section{margin:20px 0}</style><h1>Task 6.1 — 05 mount</h1><p>Actual Docker command output recorded during the warm-up · browser evidence sheet</p><section><p>2026-10-26T01:16:40+05:00 · exit 0</p><pre>$ docker inspect visionguard-61-web --format &#x27;{{json .Mounts}}&#x27;
+
+[{&quot;Type&quot;:&quot;volume&quot;,&quot;Name&quot;:&quot;visionguard-61-data&quot;,&quot;Source&quot;:&quot;/var/lib/docker/volumes/visionguard-61-data/_data&quot;,&quot;Destination&quot;:&quot;/usr/share/nginx/html&quot;,&quot;Driver&quot;:&quot;local&quot;,&quot;Mode&quot;:&quot;z&quot;,&quot;RW&quot;:true,&quot;Propagation&quot;:&quot;&quot;}]
+</pre></section><section><p>2026-10-26T01:16:40+05:00 · exit 0</p><pre>$ docker exec visionguard-61-web sh -c &#x27;echo &quot;Task 6.1 volume survives container removal&quot; &gt; /usr/share/nginx/html/persistence.txt; cat /usr/share/nginx/html/persistence.txt&#x27;
+
+Task 6.1 volume survives container removal
+</pre></section>
