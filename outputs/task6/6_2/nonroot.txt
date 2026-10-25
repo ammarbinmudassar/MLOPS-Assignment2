@@ -1,0 +1,2 @@
+$ docker exec visionguard-62-web id
+uid=10001(visionguard) gid=10001(visionguard) groups=10001(visionguard)

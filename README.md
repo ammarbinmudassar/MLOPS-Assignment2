@@ -49,6 +49,11 @@ for the short explanation, query output and history screenshot.
 Task 6.1 Docker warm-up commands, definitions and evidence mappings are in
 [docs/TASK6_1.md](docs/TASK6_1.md). Actual command outputs are in `outputs/task6/6_1/`.
 
-Docker, CI and public deployment are not implemented yet.
-AI assistance was used to implement, test and document Tasks 2, 3, 4, 5 and 6.1;
+Task 6.2 adds a slim, non-root CPU inference image with a health check and a
+runtime-only build context. Build with `docker build -t visionguard:6.2 .`;
+model mounting, startup and terminal evidence commands are in
+[docs/TASK6_2.md](docs/TASK6_2.md).
+
+Compose, CI and public deployment are not implemented yet.
+AI assistance was used to implement, test and document Tasks 2, 3, 4, 5, 6.1 and 6.2;
 the final submitted report must disclose that assistance.

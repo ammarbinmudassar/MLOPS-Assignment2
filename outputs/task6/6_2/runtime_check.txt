@@ -1,0 +1,22 @@
+{
+  "container_id": "c1596cc27e9d20598b8853474becaeabda9c8d24e9d59a089c84f6aaaac2b771",
+  "health": {
+    "database_ready": true,
+    "debug": false,
+    "history_backend": "sqlite",
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2",
+    "status": "ok",
+    "threshold": 0.5
+  },
+  "user": "uid=10001(visionguard) gid=10001(visionguard) groups=10001(visionguard)",
+  "uid": "10001",
+  "image_user": "10001:10001",
+  "ports": "8000/tcp -> 127.0.0.1:8082",
+  "prediction_status": 303,
+  "prediction_result_path": "/result/a1f231ebc2264774b91af67f88ae8fa3",
+  "prediction_and_database_history_verified": true,
+  "runtime_audit": "WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1792960257.594431      56 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1792960259.271554      56 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\ntensorflow-cpu: 2.21.0\nGPU devices: []\nNo credential files or dataset in /app",
+  "image_size_bytes": 2168532265,
+  "docker_health_status": "healthy"
+}

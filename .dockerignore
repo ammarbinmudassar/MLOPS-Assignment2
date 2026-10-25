@@ -1,0 +1,19 @@
+# Allow only the runtime build inputs. Credentials, datasets and models never
+# enter the build context. Mount the prepared model at runtime instead.
+**
+!Dockerfile
+!requirements-web.txt
+!task4/
+!task4/__init__.py
+!task4/app.py
+!task4/inference.py
+!task4/run.py
+!task4/settings.py
+!task4/storage.py
+!task4/templates/
+!task4/templates/**
+!task4/static/
+!task4/static/**
+!visionguard/
+!visionguard/__init__.py
+!visionguard/preprocessing.py
