@@ -23,10 +23,10 @@ RUN apt-get update \
 
 # Keep this dependency layer reusable when application source changes.
 COPY requirements-web.txt ./
-RUN python -m pip install --no-cache-dir -r requirements-web.txt
+RUN python -m pip install --no-cache-dir --no-compile -r requirements-web.txt
 
 COPY requirements-db.txt ./
-RUN python -m pip install --no-cache-dir -r requirements-db.txt
+RUN python -m pip install --no-cache-dir --no-compile -r requirements-db.txt
 
 COPY task4/ ./task4/
 COPY visionguard/ ./visionguard/

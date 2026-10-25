@@ -60,6 +60,10 @@ credentials belong in the ignored `.env`; see `.env.example`. Run
 `docker compose up -d --build --wait`, then open http://127.0.0.1:8083.
 See [docs/TASK6_3.md](docs/TASK6_3.md) for terminal evidence commands.
 
+Task 6.4 measures a 5.59% size reduction from disabling pip bytecode compilation.
+Compose uses the verified optimized image. See [docs/TASK6_4.md](docs/TASK6_4.md)
+for before/after sizes, largest layers and terminal screenshot commands.
+
 CI and public deployment are not implemented yet.
-AI assistance was used to implement, test and document Tasks 2, 3, 4, 5 and 6.1–6.3;
+AI assistance was used to implement, test and document Tasks 2, 3, 4, 5 and 6.1–6.4;
 the final submitted report must disclose that assistance.

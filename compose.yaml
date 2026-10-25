@@ -3,7 +3,7 @@ name: visionguard-assignment2
 services:
   web:
     build: .
-    image: visionguard:6.3
+    image: visionguard:6.4-after
     ports:
       - "127.0.0.1:${WEB_PORT:-8083}:8000"
     environment:

@@ -1,0 +1,39 @@
+{
+  "metric": "Docker image inspect .Size in bytes",
+  "optimization": "pip --no-compile in both dependency install layers",
+  "before_image": "visionguard:6.4-before",
+  "after_image": "visionguard:6.4-after",
+  "before_bytes": 2195762884,
+  "after_bytes": 2073027979,
+  "saved_bytes": 122734905,
+  "saved_percent": 5.589624721974306,
+  "package_versions_identical": true,
+  "health": {
+    "database_ready": true,
+    "debug": false,
+    "history_backend": "postgresql",
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2",
+    "status": "ok",
+    "threshold": 0.5
+  },
+  "docker_health": "healthy",
+  "prediction_status": 303,
+  "baseline_p_ai": 0.553433,
+  "optimized_p_ai": 0.553433,
+  "prediction_matches_baseline": true,
+  "largest_layers_after": [
+    {
+      "bytes": 1513775104,
+      "instruction": "/bin/sh -c python -m pip install --no-cache-dir --no-compile -r requirements-web.txt"
+    },
+    {
+      "bytes": 86650880,
+      "instruction": "# debian.sh --arch 'amd64' out/ 'trixie' '@1791158400'"
+    },
+    {
+      "bytes": 47431680,
+      "instruction": "RUN /bin/sh -c set -eux;   savedAptMark=\"$(apt-mark showmanual)\";  apt-get update;  apt-get install -y --no-install-recommends   dpkg-dev   g++   gcc   gnupg   libbluetooth-dev   libbz2-dev   libc6-dev   libdb-dev   libffi-dev   libgdbm-dev   liblzma-dev   libncursesw5-dev   libreadline-dev   libsqlite3-dev   libssl-dev   make   tk-dev   uuid-dev   wget   xz-utils   zlib1g-dev  ;   wget -O python.tar.xz \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz\";  echo \"$PYTHON_SHA256 *python.tar.xz\" | sha256sum -c -;  wget -O python.tar.xz.asc \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc\";  GNUPGHOME=\"$(mktemp -d)\"; export GNUPGHOME;  gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$GPG_KEY\";  gpg --batch --verify python.tar.xz.asc python.tar.xz;  gpgconf --kill all;  rm -rf \"$GNUPGHOME\" python.tar.xz.asc;  mkdir -p /usr/src/python;  tar --extract --directory /usr/src/python --strip-components=1 --file python.tar.xz;  rm python.tar.xz;   cd /usr/src/python;  gnuArch=\"$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)\";  ./configure   --build=\"$gnuArch\"   --enable-loadable-sqlite-extensions   --enable-optimizations   --enable-option-checking=fatal   --enable-shared   $(test \"${gnuArch%%-*}\" != 'riscv64' && echo '--with-lto')   --with-ensurepip  ;  nproc=\"$(nproc)\";  EXTRA_CFLAGS=\"$(dpkg-buildflags --get CFLAGS)\";  LDFLAGS=\"$(dpkg-buildflags --get LDFLAGS)\";  LDFLAGS=\"${LDFLAGS:-} -Wl,--strip-all\";  make -j \"$nproc\"   \"EXTRA_CFLAGS=${EXTRA_CFLAGS:-}\"   \"LDFLAGS=${LDFLAGS:-}\"  ;  rm python;  make -j \"$nproc\"   \"EXTRA_CFLAGS=${EXTRA_CFLAGS:-}\"   \"LDFLAGS=${LDFLAGS:-} -Wl,-rpath='\\$\\$ORIGIN/../lib'\"   python  ;  make install;   cd /;  rm -rf /usr/src/python;   find /usr/local -depth   \\(    \\( -type d -a \\( -name test -o -name tests -o -name idle_test \\) \\)    -o \\( -type f -a \\( -name '*.pyc' -o -name '*.pyo' -o -name 'libpython*.a' \\) \\)   \\) -exec rm -rf '{}' +  ;   ldconfig;   apt-mark auto '.*' > /dev/null;  apt-mark manual $savedAptMark;  find /usr/local -type f -executable -not \\( -name '*tkinter*' \\) -exec ldd '{}' ';'   | awk '/=>/ { so = $(NF-1); if (index(so, \"/usr/local/\") == 1) { next }; gsub(\"^/(usr/)?\", \"\", so); printf \"*%s\\n\", so }'   | sort -u   | xargs -rt dpkg-query --search   | awk 'sub(\":$\", \"\", $1) { print $1 }'   | sort -u   | xargs -r apt-mark manual  ;  apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;  apt-get dist-clean;   export PYTHONDONTWRITEBYTECODE=1;  python3 --version;   pip3 install   --disable-pip-version-check   --no-cache-dir   --no-compile   'setuptools==79.0.1'   'wheel==0.46.3'  ;  pip3 --version # buildkit"
+    }
+  ]
+}
