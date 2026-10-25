@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Recent results</h1>
+<p>The latest 100 results are available until this server restarts. Uploaded images are not retained.</p>
+{% if records %}
+<table>
+  <caption>Image checks</caption>
+  <thead><tr><th scope="col">Time (UTC)</th><th scope="col">File</th><th scope="col">Prediction</th><th scope="col">Confidence</th><th scope="col">Model version</th></tr></thead>
+  <tbody>
+    {% for result in records %}
+    <tr><td>{{ result.created_at }}</td><td><a href="{{ url_for('result', identifier=result.id) }}">{{ result.filename }}</a></td><td>{{ result.label }}</td><td>{{ '%.2f' | format(result.confidence * 100) }}%</td><td>{{ result.model_version }}</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No images checked yet. <a href="{{ url_for('upload') }}">Upload an image to start.</a></p>
+{% endif %}
+{% endblock %}

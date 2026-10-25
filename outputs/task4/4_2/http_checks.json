@@ -1,0 +1,29 @@
+{
+  "health": {
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2",
+    "status": "ok"
+  },
+  "successful_upload_status": 303,
+  "result_url": "http://127.0.0.1:8000/result/ab637dea4cd944c3a3111371b04771a8",
+  "result_status": 200,
+  "history_status": 200,
+  "sanitized_filename": "known_AI.jpg",
+  "failure_cases": [
+    {
+      "file": "wrong_type.txt",
+      "status": 415,
+      "title": "Unsupported file type"
+    },
+    {
+      "file": "oversized.png",
+      "status": 413,
+      "title": "Image too large"
+    },
+    {
+      "file": "fake_image.png",
+      "status": 422,
+      "title": "Image could not be opened"
+    }
+  ]
+}

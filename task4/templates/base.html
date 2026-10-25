@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title | default('VisionGuard') }} · VisionGuard</title>
+</head>
+<body>
+  <header>
+    <p><strong>VisionGuard</strong> — image checker</p>
+    <nav aria-label="Main navigation">
+      <a href="{{ url_for('upload') }}">Upload</a> ·
+      <a href="{{ url_for('history') }}">History</a> ·
+      <a href="{{ url_for('health') }}">Health</a>
+    </nav>
+    <hr>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>
