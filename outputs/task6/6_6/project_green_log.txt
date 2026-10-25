@@ -1,0 +1,889 @@
+checks	Set up job	﻿2026-10-25T21:12:56.3206863Z Current runner version: '2.338.0'
+checks	Set up job	2026-10-25T21:12:56.3233349Z ##[group]Runner Image Provisioner
+checks	Set up job	2026-10-25T21:12:56.3234316Z Hosted Compute Agent
+checks	Set up job	2026-10-25T21:12:56.3234970Z Version: 20261021.618
+checks	Set up job	2026-10-25T21:12:56.3235822Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+checks	Set up job	2026-10-25T21:12:56.3236573Z Build Date: 2026-10-21T00:45:21Z
+checks	Set up job	2026-10-25T21:12:56.3237329Z Worker ID: {5e6b6f2f-eafa-4287-b2e9-072d80a6c914}
+checks	Set up job	2026-10-25T21:12:56.3238051Z Region: eastus2
+checks	Set up job	2026-10-25T21:12:56.3238757Z Cloud: Azure
+checks	Set up job	2026-10-25T21:12:56.3239312Z ##[endgroup]
+checks	Set up job	2026-10-25T21:12:56.3240807Z ##[group]Operating System
+checks	Set up job	2026-10-25T21:12:56.3241544Z Ubuntu
+checks	Set up job	2026-10-25T21:12:56.3242107Z 24.04.5
+checks	Set up job	2026-10-25T21:12:56.3242605Z LTS
+checks	Set up job	2026-10-25T21:12:56.3243185Z ##[endgroup]
+checks	Set up job	2026-10-25T21:12:56.3243756Z ##[group]Runner Image
+checks	Set up job	2026-10-25T21:12:56.3244390Z Image: ubuntu-24.04
+checks	Set up job	2026-10-25T21:12:56.3245013Z Version: 20261012.334.1
+checks	Set up job	2026-10-25T21:12:56.3246837Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+checks	Set up job	2026-10-25T21:12:56.3248684Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+checks	Set up job	2026-10-25T21:12:56.3250076Z ##[endgroup]
+checks	Set up job	2026-10-25T21:12:56.3251280Z ##[group]GITHUB_TOKEN Permissions
+checks	Set up job	2026-10-25T21:12:56.3253526Z Contents: read
+checks	Set up job	2026-10-25T21:12:56.3254176Z Metadata: read
+checks	Set up job	2026-10-25T21:12:56.3254718Z ##[endgroup]
+checks	Set up job	2026-10-25T21:12:56.3257253Z Secret source: Actions
+checks	Set up job	2026-10-25T21:12:56.3258271Z Cache mode: write
+checks	Set up job	2026-10-25T21:12:56.3259431Z Prepare workflow directory
+checks	Set up job	2026-10-25T21:12:56.3647910Z Prepare all required actions
+checks	Set up job	2026-10-25T21:12:56.3696121Z Getting action download info
+checks	Set up job	2026-10-25T21:12:56.6012860Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+checks	Set up job	2026-10-25T21:12:56.6952589Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+checks	Set up job	2026-10-25T21:12:56.8766511Z Complete job name: checks
+checks	Run actions/checkout@v6	﻿2026-10-25T21:12:56.9772881Z ##[group]Run actions/checkout@v6
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9774021Z with:
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9774537Z   repository: ammarbinmudassar/MLOPS-Assignment2
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9778772Z   token: ***
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9779207Z   ssh-strict: true
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9779639Z   ssh-user: git
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9780080Z   persist-credentials: true
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9780559Z   clean: true
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9780997Z   sparse-checkout-cone-mode: true
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9781514Z   fetch-depth: 1
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9781939Z   fetch-tags: false
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9782379Z   show-progress: true
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9782818Z   lfs: false
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9783227Z   submodules: false
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9783674Z   set-safe-directory: true
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9784182Z   allow-unsafe-pr-checkout: false
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9784949Z env:
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9785634Z   CUDA_VISIBLE_DEVICES: -1
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9786151Z   TF_NUM_INTRAOP_THREADS: 2
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9786660Z   TF_NUM_INTEROP_THREADS: 2
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9787195Z   TF_CPP_MIN_LOG_LEVEL: 2
+checks	Run actions/checkout@v6	2026-10-25T21:12:56.9787666Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0781414Z Syncing repository: ammarbinmudassar/MLOPS-Assignment2
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0784058Z ##[group]Getting Git version info
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0785602Z Working directory is '/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2'
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0787447Z [command]/usr/bin/git version
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0859921Z git version 2.55.0
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0893367Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0904623Z Temporarily overriding HOME='/home/runner/work/_temp/4b324e99-98a8-45db-8978-4b49cad0d768' before making global git config changes
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0907237Z Adding repository directory to the temporary git global config as a safe directory
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0913187Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0973232Z Deleting the contents of '/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2'
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0976048Z ##[group]Determining repository object format
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0978337Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0979682Z ##[group]Initializing the repository
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.0981934Z [command]/usr/bin/git init /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1104084Z hint: Using 'master' as the name for the initial branch. This default branch name
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1106067Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1107749Z hint: to use in all of your new repositories, which will suppress this warning,
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1109128Z hint: call:
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1109840Z hint:
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1110439Z hint: 	git config --global init.defaultBranch <name>
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1111326Z hint:
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1112377Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1113981Z hint: 'development'. The just-created branch can be renamed via this command:
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1115543Z hint:
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1116309Z hint: 	git branch -m <name>
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1117065Z hint:
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1117721Z hint: Disable this message with "git config set advice.defaultBranchName false"
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1119405Z Initialized empty Git repository in /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git/
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1122315Z [command]/usr/bin/git remote add origin https://github.com/ammarbinmudassar/MLOPS-Assignment2
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1186192Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1187587Z ##[group]Disabling automatic garbage collection
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1191040Z [command]/usr/bin/git config --local gc.auto 0
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1231571Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1233582Z ##[group]Setting up auth
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1234906Z Removing SSH command configuration
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1243882Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1275889Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1663481Z Removing HTTP extra header
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1671390Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1712299Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1933402Z Removing includeIf entries pointing to credentials config files
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1941206Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.1980136Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.2207268Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.2249377Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git.path /home/runner/work/_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.2284943Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.2324853Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.2361332Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.2401198Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.2402664Z ##[group]Fetching the repository
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.2411095Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45d7c176f143319d8c0311f9550b742c9ab84e5d:refs/remotes/origin/main
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7730563Z From https://github.com/ammarbinmudassar/MLOPS-Assignment2
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7732715Z  * [new ref]         45d7c176f143319d8c0311f9550b742c9ab84e5d -> origin/main
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7743861Z [command]/usr/bin/git branch --list --remote origin/main
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7773469Z   origin/main
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7786295Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7812845Z 45d7c176f143319d8c0311f9550b742c9ab84e5d
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7824833Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7826241Z ##[group]Determining the checkout info
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7827959Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7828934Z [command]/usr/bin/git sparse-checkout disable
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7885451Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7920257Z ##[group]Checking out the ref
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.7923767Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.8524085Z Switched to a new branch 'main'
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.8529243Z branch 'main' set up to track 'origin/main'.
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.8586191Z ##[endgroup]
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.8589581Z [command]/usr/bin/git log -1 --format=%H
+checks	Run actions/checkout@v6	2026-10-25T21:12:57.8618531Z 45d7c176f143319d8c0311f9550b742c9ab84e5d
+checks	Run actions/setup-python@v6	﻿2026-10-25T21:12:57.9006091Z ##[group]Run actions/setup-python@v6
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9007462Z with:
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9008415Z   python-version: 3.11
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9009505Z   cache: pip
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9011235Z   cache-dependency-path: requirements-ci.txt
+checks	Run actions/setup-python@v6	requirements-web.txt
+checks	Run actions/setup-python@v6	requirements-db.txt
+checks	Run actions/setup-python@v6	
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9013359Z   check-latest: false
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9024297Z   token: ***
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9025454Z   update-environment: true
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9026623Z   allow-prereleases: false
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9027760Z   freethreaded: false
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9028750Z env:
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9029657Z   CUDA_VISIBLE_DEVICES: -1
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9030781Z   TF_NUM_INTRAOP_THREADS: 2
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9031894Z   TF_NUM_INTEROP_THREADS: 2
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9032991Z   TF_CPP_MIN_LOG_LEVEL: 2
+checks	Run actions/setup-python@v6	2026-10-25T21:12:57.9034029Z ##[endgroup]
+checks	Run actions/setup-python@v6	2026-10-25T21:12:58.0322179Z ##[group]Installed versions
+checks	Run actions/setup-python@v6	2026-10-25T21:12:58.0523889Z Successfully set up CPython (3.11.17)
+checks	Run actions/setup-python@v6	2026-10-25T21:12:58.0527743Z ##[endgroup]
+checks	Run actions/setup-python@v6	2026-10-25T21:12:58.0794349Z [command]/opt/hostedtoolcache/Python/3.11.17/x64/bin/pip cache dir
+checks	Run actions/setup-python@v6	2026-10-25T21:12:58.3953112Z /home/runner/.cache/pip
+checks	Run actions/setup-python@v6	2026-10-25T21:12:58.4821517Z pip cache is not found
+checks	Install dependencies	﻿2026-10-25T21:12:58.4960631Z ##[group]Run python -m pip install -r requirements-ci.txt
+checks	Install dependencies	2026-10-25T21:12:58.4961254Z ^[[36;1mpython -m pip install -r requirements-ci.txt^[[0m
+checks	Install dependencies	2026-10-25T21:12:58.5255838Z shell: /usr/bin/bash -e {0}
+checks	Install dependencies	2026-10-25T21:12:58.5256282Z env:
+checks	Install dependencies	2026-10-25T21:12:58.5256599Z   CUDA_VISIBLE_DEVICES: -1
+checks	Install dependencies	2026-10-25T21:12:58.5256984Z   TF_NUM_INTRAOP_THREADS: 2
+checks	Install dependencies	2026-10-25T21:12:58.5257338Z   TF_NUM_INTEROP_THREADS: 2
+checks	Install dependencies	2026-10-25T21:12:58.5257685Z   TF_CPP_MIN_LOG_LEVEL: 2
+checks	Install dependencies	2026-10-25T21:12:58.5258097Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Install dependencies	2026-10-25T21:12:58.5258704Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Install dependencies	2026-10-25T21:12:58.5259283Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Install dependencies	2026-10-25T21:12:58.5259802Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Install dependencies	2026-10-25T21:12:58.5260333Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Install dependencies	2026-10-25T21:12:58.5260904Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Install dependencies	2026-10-25T21:12:58.5261404Z ##[endgroup]
+checks	Install dependencies	2026-10-25T21:12:59.7868926Z Collecting tensorflow-cpu==2.21.0 (from -r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:00.0027962Z   Downloading tensorflow_cpu-2.21.0-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (4.4 kB)
+checks	Install dependencies	2026-10-25T21:13:00.0836977Z Collecting keras==3.15.1 (from -r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:00.1420303Z   Downloading keras-3.15.1-py3-none-any.whl.metadata (6.4 kB)
+checks	Install dependencies	2026-10-25T21:13:00.4952725Z Collecting numpy==2.4.6 (from -r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 4))
+checks	Install dependencies	2026-10-25T21:13:00.5537603Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+checks	Install dependencies	2026-10-25T21:13:00.6254219Z Collecting Flask==3.1.3 (from -r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:00.6828418Z   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+checks	Install dependencies	2026-10-25T21:13:00.7561756Z Collecting gunicorn==26.2.0 (from -r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:00.8136671Z   Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+checks	Install dependencies	2026-10-25T21:13:01.0737000Z Collecting pillow==13.0.0 (from -r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 7))
+checks	Install dependencies	2026-10-25T21:13:01.1312842Z   Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+checks	Install dependencies	2026-10-25T21:13:01.2053159Z Collecting python-dotenv==1.2.4 (from -r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 8))
+checks	Install dependencies	2026-10-25T21:13:01.2782833Z   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+checks	Install dependencies	2026-10-25T21:13:01.3805854Z Collecting tzdata==2026.5 (from -r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 9))
+checks	Install dependencies	2026-10-25T21:13:01.4414459Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+checks	Install dependencies	2026-10-25T21:13:01.5167074Z Collecting psycopg==3.3.2 (from psycopg[binary]==3.3.2->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-db.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:01.5850474Z   Downloading psycopg-3.3.2-py3-none-any.whl.metadata (4.3 kB)
+checks	Install dependencies	2026-10-25T21:13:01.7548325Z Collecting pandas==3.1.0 (from -r requirements-ci.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:01.8133396Z   Downloading pandas-3.1.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (18 kB)
+checks	Install dependencies	2026-10-25T21:13:02.0147668Z Collecting matplotlib==3.11.2 (from -r requirements-ci.txt (line 4))
+checks	Install dependencies	2026-10-25T21:13:02.0717840Z   Downloading matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+checks	Install dependencies	2026-10-25T21:13:02.2789733Z Collecting scikit-learn==1.9.1 (from -r requirements-ci.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:02.3403529Z   Downloading scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+checks	Install dependencies	2026-10-25T21:13:02.4187885Z Collecting mlflow-skinny==3.17.2 (from -r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:02.4759686Z   Downloading mlflow_skinny-3.17.2-py3-none-any.whl.metadata (51 kB)
+checks	Install dependencies	2026-10-25T21:13:02.9087340Z Collecting ruff==0.14.0 (from -r requirements-ci.txt (line 7))
+checks	Install dependencies	2026-10-25T21:13:02.9673467Z   Downloading ruff-0.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (25 kB)
+checks	Install dependencies	2026-10-25T21:13:03.0428638Z Collecting keras-tuner==1.4.8 (from -r requirements-ci.txt (line 9))
+checks	Install dependencies	2026-10-25T21:13:03.1009998Z   Downloading keras_tuner-1.4.8-py3-none-any.whl.metadata (5.6 kB)
+checks	Install dependencies	2026-10-25T21:13:03.1737027Z Collecting tensorboard==2.21.0 (from -r requirements-ci.txt (line 10))
+checks	Install dependencies	2026-10-25T21:13:03.2314037Z   Downloading tensorboard-2.21.0-py3-none-any.whl.metadata (1.8 kB)
+checks	Install dependencies	2026-10-25T21:13:03.3080822Z Collecting absl-py>=1.0.0 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:03.3659319Z   Downloading absl_py-2.5.1-py3-none-any.whl.metadata (3.3 kB)
+checks	Install dependencies	2026-10-25T21:13:03.4327092Z Collecting astunparse>=1.6.0 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:03.4898720Z   Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+checks	Install dependencies	2026-10-25T21:13:03.5572110Z Collecting flatbuffers>=25.9.23 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:03.6146006Z   Downloading flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+checks	Install dependencies	2026-10-25T21:13:03.6809951Z Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:03.7380423Z   Downloading gast-0.7.0-py3-none-any.whl.metadata (1.5 kB)
+checks	Install dependencies	2026-10-25T21:13:03.8044564Z Collecting google_pasta>=0.1.1 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:03.8632514Z   Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+checks	Install dependencies	2026-10-25T21:13:03.9371424Z Collecting libclang>=13.0.0 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:03.9940474Z   Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+checks	Install dependencies	2026-10-25T21:13:04.0596045Z Collecting opt_einsum>=2.3.2 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:04.1169513Z   Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+checks	Install dependencies	2026-10-25T21:13:04.2027596Z Collecting packaging (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:04.2604421Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+checks	Install dependencies	2026-10-25T21:13:04.4679280Z Collecting protobuf<8.0.0,>=6.31.1 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:04.5261580Z   Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+checks	Install dependencies	2026-10-25T21:13:04.6022753Z Collecting requests<3,>=2.21.0 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:04.6592074Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+checks	Install dependencies	2026-10-25T21:13:04.6635686Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2)) (79.0.1)
+checks	Install dependencies	2026-10-25T21:13:04.7283764Z Collecting six>=1.12.0 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:04.7852131Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+checks	Install dependencies	2026-10-25T21:13:04.8512956Z Collecting termcolor>=1.1.0 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:04.9079859Z   Downloading termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+checks	Install dependencies	2026-10-25T21:13:04.9814130Z Collecting typing_extensions>=3.6.6 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:05.0407324Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+checks	Install dependencies	2026-10-25T21:13:05.4219489Z Collecting wrapt>=1.11.0 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:05.4795887Z   Downloading wrapt-2.5.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (7.6 kB)
+checks	Install dependencies	2026-10-25T21:13:06.0553579Z Collecting grpcio<2.0,>=1.24.3 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:06.1131494Z   Downloading grpcio-1.84.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+checks	Install dependencies	2026-10-25T21:13:06.2086871Z Collecting h5py<3.15.0,>=3.11.0 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:06.2688827Z   Downloading h5py-3.14.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.7 kB)
+checks	Install dependencies	2026-10-25T21:13:06.3499571Z Collecting ml_dtypes<1.0.0,>=0.5.1 (from tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:06.4076367Z   Downloading ml_dtypes-0.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+checks	Install dependencies	2026-10-25T21:13:06.4976400Z Collecting rich (from keras==3.15.1->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:06.5549081Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+checks	Install dependencies	2026-10-25T21:13:06.6239204Z Collecting namex (from keras==3.15.1->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:06.6809218Z   Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+checks	Install dependencies	2026-10-25T21:13:06.8224639Z Collecting optree (from keras==3.15.1->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:06.8813658Z   Downloading optree-0.20.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (32 kB)
+checks	Install dependencies	2026-10-25T21:13:06.9763202Z Collecting blinker>=1.9.0 (from Flask==3.1.3->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:07.0339140Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+checks	Install dependencies	2026-10-25T21:13:07.1086376Z Collecting click>=8.1.3 (from Flask==3.1.3->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:07.1659568Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+checks	Install dependencies	2026-10-25T21:13:07.2312223Z Collecting itsdangerous>=2.2.0 (from Flask==3.1.3->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:07.2891303Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+checks	Install dependencies	2026-10-25T21:13:07.3566822Z Collecting jinja2>=3.1.2 (from Flask==3.1.3->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:07.4144669Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+checks	Install dependencies	2026-10-25T21:13:07.5207252Z Collecting markupsafe>=2.1.1 (from Flask==3.1.3->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:07.5784584Z   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+checks	Install dependencies	2026-10-25T21:13:07.6499890Z Collecting werkzeug>=3.1.0 (from Flask==3.1.3->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:07.7077837Z   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+checks	Install dependencies	2026-10-25T21:13:07.7793244Z Collecting python-dateutil>=2.9.0 (from pandas==3.1.0->-r requirements-ci.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:07.8364010Z   Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+checks	Install dependencies	2026-10-25T21:13:07.9529114Z Collecting contourpy>=1.0.1 (from matplotlib==3.11.2->-r requirements-ci.txt (line 4))
+checks	Install dependencies	2026-10-25T21:13:08.0102628Z   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+checks	Install dependencies	2026-10-25T21:13:08.0761482Z Collecting cycler>=0.10 (from matplotlib==3.11.2->-r requirements-ci.txt (line 4))
+checks	Install dependencies	2026-10-25T21:13:08.1336854Z   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+checks	Install dependencies	2026-10-25T21:13:08.3671246Z Collecting fonttools>=4.28.2 (from matplotlib==3.11.2->-r requirements-ci.txt (line 4))
+checks	Install dependencies	2026-10-25T21:13:08.4252619Z   Downloading fonttools-4.67.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (137 kB)
+checks	Install dependencies	2026-10-25T21:13:08.6089975Z Collecting kiwisolver>=1.3.1 (from matplotlib==3.11.2->-r requirements-ci.txt (line 4))
+checks	Install dependencies	2026-10-25T21:13:08.6670915Z   Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+checks	Install dependencies	2026-10-25T21:13:08.7458068Z Collecting pyparsing>=3 (from matplotlib==3.11.2->-r requirements-ci.txt (line 4))
+checks	Install dependencies	2026-10-25T21:13:08.8052593Z   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+checks	Install dependencies	2026-10-25T21:13:08.9886654Z Collecting scipy>=1.10.0 (from scikit-learn==1.9.1->-r requirements-ci.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:09.0464600Z   Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+checks	Install dependencies	2026-10-25T21:13:09.1346253Z Collecting joblib>=1.4.0 (from scikit-learn==1.9.1->-r requirements-ci.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:09.1919650Z   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+checks	Install dependencies	2026-10-25T21:13:09.2762490Z Collecting narwhals>=2.0.1 (from scikit-learn==1.9.1->-r requirements-ci.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:09.3334345Z   Downloading narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)
+checks	Install dependencies	2026-10-25T21:13:09.4009269Z Collecting threadpoolctl>=3.5.0 (from scikit-learn==1.9.1->-r requirements-ci.txt (line 5))
+checks	Install dependencies	2026-10-25T21:13:09.4588394Z   Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+checks	Install dependencies	2026-10-25T21:13:09.5341576Z Collecting anyio!=4.15.0,<5,>=3.6.2 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:09.5914702Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+checks	Install dependencies	2026-10-25T21:13:09.6711289Z Collecting cachetools<8,>=5.0.0 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:09.7312014Z   Downloading cachetools-7.2.5-py3-none-any.whl.metadata (5.5 kB)
+checks	Install dependencies	2026-10-25T21:13:09.8012211Z Collecting cloudpickle<4 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:09.8583532Z   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+checks	Install dependencies	2026-10-25T21:13:09.9433706Z Collecting databricks-sdk<1,>=0.20.0 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:10.0005695Z   Downloading databricks_sdk-0.157.0-py3-none-any.whl.metadata (44 kB)
+checks	Install dependencies	2026-10-25T21:13:10.1115312Z Collecting fastapi<1 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:10.1695589Z   Downloading fastapi-0.162.0-py3-none-any.whl.metadata (26 kB)
+checks	Install dependencies	2026-10-25T21:13:10.2499450Z Collecting gitpython<4,>=3.1.9 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:10.3074126Z   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+checks	Install dependencies	2026-10-25T21:13:10.3871835Z Collecting importlib_metadata!=4.7.0,<10,>=3.7.0 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:10.4453843Z   Downloading importlib_metadata-9.1.0-py3-none-any.whl.metadata (4.5 kB)
+checks	Install dependencies	2026-10-25T21:13:10.5202879Z Collecting opentelemetry-api<3,>=1.9.0 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:10.5789114Z   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+checks	Install dependencies	2026-10-25T21:13:10.6504813Z Collecting opentelemetry-proto<3,>=1.9.0 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:10.7086629Z   Downloading opentelemetry_proto-1.45.1-py3-none-any.whl.metadata (2.3 kB)
+checks	Install dependencies	2026-10-25T21:13:10.7813228Z Collecting opentelemetry-sdk<3,>=1.9.0 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:10.8402750Z   Downloading opentelemetry_sdk-1.45.1-py3-none-any.whl.metadata (1.6 kB)
+checks	Install dependencies	2026-10-25T21:13:11.0548735Z Collecting pydantic<3,>=2.0.0 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:11.1156486Z   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+checks	Install dependencies	2026-10-25T21:13:11.2225972Z Collecting pyyaml<7,>=5.1 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:11.2819385Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+checks	Install dependencies	2026-10-25T21:13:11.3504709Z Collecting sqlparse<1,>=0.4.0 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:11.4089653Z   Downloading sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
+checks	Install dependencies	2026-10-25T21:13:11.4884294Z Collecting starlette<2 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:11.5468598Z   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+checks	Install dependencies	2026-10-25T21:13:11.6291305Z Collecting uvicorn<1 (from mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:11.6866509Z   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+checks	Install dependencies	2026-10-25T21:13:11.7552897Z Collecting kt-legacy (from keras-tuner==1.4.8->-r requirements-ci.txt (line 9))
+checks	Install dependencies	2026-10-25T21:13:11.8173484Z   Downloading kt_legacy-1.0.5-py3-none-any.whl.metadata (221 bytes)
+checks	Install dependencies	2026-10-25T21:13:11.8943058Z Collecting markdown>=2.6.8 (from tensorboard==2.21.0->-r requirements-ci.txt (line 10))
+checks	Install dependencies	2026-10-25T21:13:11.9529647Z   Downloading markdown-3.11.2-py3-none-any.whl.metadata (5.1 kB)
+checks	Install dependencies	2026-10-25T21:13:12.0234479Z Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard==2.21.0->-r requirements-ci.txt (line 10))
+checks	Install dependencies	2026-10-25T21:13:12.0816188Z   Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+checks	Install dependencies	2026-10-25T21:13:12.2789756Z Collecting psycopg-binary==3.3.2 (from psycopg[binary]==3.3.2->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-db.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:12.3400216Z   Downloading psycopg_binary-3.3.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+checks	Install dependencies	2026-10-25T21:13:12.4095036Z Collecting idna>=2.8 (from anyio!=4.15.0,<5,>=3.6.2->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:12.4665001Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+checks	Install dependencies	2026-10-25T21:13:12.5414072Z Collecting certifi>=2026.10.19 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:12.5985365Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+checks	Install dependencies	2026-10-25T21:13:12.6894538Z Collecting google-auth~=2.0 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:12.7474337Z   Downloading google_auth-2.62.0-py3-none-any.whl.metadata (6.0 kB)
+checks	Install dependencies	2026-10-25T21:13:12.8322587Z Collecting urllib3<3,>=1.26 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:12.8898206Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+checks	Install dependencies	2026-10-25T21:13:12.9624586Z Collecting typing-inspection>=0.4.2 (from fastapi<1->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:13.0196227Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+checks	Install dependencies	2026-10-25T21:13:13.0848891Z Collecting annotated-doc>=0.0.2 (from fastapi<1->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:13.1421577Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+checks	Install dependencies	2026-10-25T21:13:13.2629629Z Collecting gitdb<5,>=4.0.1 (from gitpython<4,>=3.1.9->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:13.3273482Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+checks	Install dependencies	2026-10-25T21:13:13.3941070Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:13.4698206Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+checks	Install dependencies	2026-10-25T21:13:13.5427473Z Collecting pyasn1-modules>=0.2.1 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:13.6006548Z   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+checks	Install dependencies	2026-10-25T21:13:13.8791759Z Collecting cryptography>=38.0.3 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:13.9369579Z   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+checks	Install dependencies	2026-10-25T21:13:14.0795781Z Collecting zipp>=3.20 (from importlib_metadata!=4.7.0,<10,>=3.7.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:14.1391340Z   Downloading zipp-4.1.2-py3-none-any.whl.metadata (3.6 kB)
+checks	Install dependencies	2026-10-25T21:13:14.5264527Z Collecting opentelemetry-semantic-conventions==0.66b1 (from opentelemetry-sdk<3,>=1.9.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:14.5836164Z   Downloading opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl.metadata (2.4 kB)
+checks	Install dependencies	2026-10-25T21:13:15.1211661Z Collecting annotated-types>=0.6.0 (from pydantic<3,>=2.0.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:15.1786069Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+checks	Install dependencies	2026-10-25T21:13:15.9989226Z Collecting pydantic-core==2.50.1 (from pydantic<3,>=2.0.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:16.0560974Z   Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+checks	Install dependencies	2026-10-25T21:13:16.2342305Z Collecting charset_normalizer<4,>=2 (from requests<3,>=2.21.0->tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:16.2913645Z   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+checks	Install dependencies	2026-10-25T21:13:16.4448115Z Collecting h11>=0.8 (from uvicorn<1->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:16.5021052Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+checks	Install dependencies	2026-10-25T21:13:16.5776003Z Collecting wheel<1.0,>=0.23.0 (from astunparse>=1.6.0->tensorflow-cpu==2.21.0->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 2))
+checks	Install dependencies	2026-10-25T21:13:16.6397725Z   Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+checks	Install dependencies	2026-10-25T21:13:16.7949550Z Collecting cffi>=2.0.0 (from cryptography>=38.0.3->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:16.8519172Z   Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+checks	Install dependencies	2026-10-25T21:13:16.9177866Z Collecting pycparser (from cffi>=2.0.0->cryptography>=38.0.3->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:16.9753534Z   Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+checks	Install dependencies	2026-10-25T21:13:17.0627898Z Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.2->-r requirements-ci.txt (line 6))
+checks	Install dependencies	2026-10-25T21:13:17.1226268Z   Downloading pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+checks	Install dependencies	2026-10-25T21:13:17.2089491Z Collecting markdown-it-py>=2.2.0 (from rich->keras==3.15.1->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:17.2663279Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+checks	Install dependencies	2026-10-25T21:13:17.3428512Z Collecting pygments<3.0.0,>=2.13.0 (from rich->keras==3.15.1->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:17.4004483Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+checks	Install dependencies	2026-10-25T21:13:17.4659662Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras==3.15.1->-r /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/requirements-web.txt (line 3))
+checks	Install dependencies	2026-10-25T21:13:17.5230947Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+checks	Install dependencies	2026-10-25T21:13:17.5919372Z Downloading tensorflow_cpu-2.21.0-cp311-cp311-manylinux_2_27_x86_64.whl (273.8 MB)
+checks	Install dependencies	2026-10-25T21:13:21.7464726Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 273.8/273.8 MB 70.9 MB/s  0:00:04
+checks	Install dependencies	2026-10-25T21:13:21.8091808Z Downloading keras-3.15.1-py3-none-any.whl (2.4 MB)
+checks	Install dependencies	2026-10-25T21:13:21.8280779Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 130.8 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:21.8876169Z Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+checks	Install dependencies	2026-10-25T21:13:22.0035912Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 147.1 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:22.0618065Z Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+checks	Install dependencies	2026-10-25T21:13:22.1224155Z Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
+checks	Install dependencies	2026-10-25T21:13:22.1838307Z Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+checks	Install dependencies	2026-10-25T21:13:22.2259311Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 173.4 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:22.2882836Z Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+checks	Install dependencies	2026-10-25T21:13:22.3474595Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+checks	Install dependencies	2026-10-25T21:13:22.4419047Z Downloading psycopg-3.3.2-py3-none-any.whl (212 kB)
+checks	Install dependencies	2026-10-25T21:13:22.5091951Z Downloading pandas-3.1.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.3 MB)
+checks	Install dependencies	2026-10-25T21:13:22.6033649Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 132.6 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:22.6757607Z Downloading matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+checks	Install dependencies	2026-10-25T21:13:22.8977226Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 47.5 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:22.9570040Z Downloading scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.3 MB)
+checks	Install dependencies	2026-10-25T21:13:23.0418657Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 115.2 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:23.0994428Z Downloading mlflow_skinny-3.17.2-py3-none-any.whl (4.1 MB)
+checks	Install dependencies	2026-10-25T21:13:23.1295841Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 MB 146.6 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:23.1931159Z Downloading ruff-0.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.4 MB)
+checks	Install dependencies	2026-10-25T21:13:23.3260020Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.4/13.4 MB 101.1 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:23.3868861Z Downloading keras_tuner-1.4.8-py3-none-any.whl (129 kB)
+checks	Install dependencies	2026-10-25T21:13:23.4622595Z Downloading tensorboard-2.21.0-py3-none-any.whl (5.5 MB)
+checks	Install dependencies	2026-10-25T21:13:23.5424287Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 70.5 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:23.6079667Z Downloading psycopg_binary-3.3.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.2 MB)
+checks	Install dependencies	2026-10-25T21:13:23.6813685Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 68.9 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:23.7384549Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+checks	Install dependencies	2026-10-25T21:13:23.7997770Z Downloading cachetools-7.2.5-py3-none-any.whl (19 kB)
+checks	Install dependencies	2026-10-25T21:13:23.8630658Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+checks	Install dependencies	2026-10-25T21:13:23.9224292Z Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+checks	Install dependencies	2026-10-25T21:13:23.9815531Z Downloading databricks_sdk-0.157.0-py3-none-any.whl (1.1 MB)
+checks	Install dependencies	2026-10-25T21:13:23.9893506Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 153.2 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:24.0490193Z Downloading fastapi-0.162.0-py3-none-any.whl (148 kB)
+checks	Install dependencies	2026-10-25T21:13:24.1088789Z Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+checks	Install dependencies	2026-10-25T21:13:24.1693376Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+checks	Install dependencies	2026-10-25T21:13:24.2287396Z Downloading google_auth-2.62.0-py3-none-any.whl (267 kB)
+checks	Install dependencies	2026-10-25T21:13:24.2889980Z Downloading grpcio-1.84.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.2 MB)
+checks	Install dependencies	2026-10-25T21:13:24.3783143Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 85.7 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:24.4465807Z Downloading h5py-3.14.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.5 MB)
+checks	Install dependencies	2026-10-25T21:13:24.4948049Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 93.2 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:24.5535843Z Downloading importlib_metadata-9.1.0-py3-none-any.whl (28 kB)
+checks	Install dependencies	2026-10-25T21:13:24.6145014Z Downloading ml_dtypes-0.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (412 kB)
+checks	Install dependencies	2026-10-25T21:13:24.6752290Z Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+checks	Install dependencies	2026-10-25T21:13:24.7353711Z Downloading opentelemetry_proto-1.45.1-py3-none-any.whl (72 kB)
+checks	Install dependencies	2026-10-25T21:13:24.7992516Z Downloading opentelemetry_sdk-1.45.1-py3-none-any.whl (140 kB)
+checks	Install dependencies	2026-10-25T21:13:24.8585221Z Downloading opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl (206 kB)
+checks	Install dependencies	2026-10-25T21:13:24.9190104Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+checks	Install dependencies	2026-10-25T21:13:24.9783881Z Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+checks	Install dependencies	2026-10-25T21:13:25.0380356Z Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+checks	Install dependencies	2026-10-25T21:13:25.0990472Z Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+checks	Install dependencies	2026-10-25T21:13:25.1116377Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 194.0 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:25.1728565Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+checks	Install dependencies	2026-10-25T21:13:25.1798119Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 115.7 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:25.2369976Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+checks	Install dependencies	2026-10-25T21:13:25.3321086Z Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+checks	Install dependencies	2026-10-25T21:13:25.3985632Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+checks	Install dependencies	2026-10-25T21:13:25.4576422Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+checks	Install dependencies	2026-10-25T21:13:25.5168258Z Downloading sqlparse-0.6.0-py3-none-any.whl (50 kB)
+checks	Install dependencies	2026-10-25T21:13:25.5791952Z Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+checks	Install dependencies	2026-10-25T21:13:25.6454129Z Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+checks	Install dependencies	2026-10-25T21:13:25.7057073Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 118.2 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:25.7658234Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+checks	Install dependencies	2026-10-25T21:13:25.8250129Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+checks	Install dependencies	2026-10-25T21:13:25.8847514Z Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+checks	Install dependencies	2026-10-25T21:13:25.9442103Z Downloading absl_py-2.5.1-py3-none-any.whl (137 kB)
+checks	Install dependencies	2026-10-25T21:13:26.0042956Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+checks	Install dependencies	2026-10-25T21:13:26.0636557Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+checks	Install dependencies	2026-10-25T21:13:26.1264337Z Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+checks	Install dependencies	2026-10-25T21:13:26.1857384Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+checks	Install dependencies	2026-10-25T21:13:26.2448509Z Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+checks	Install dependencies	2026-10-25T21:13:26.3041690Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+checks	Install dependencies	2026-10-25T21:13:26.3645905Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+checks	Install dependencies	2026-10-25T21:13:26.4252336Z Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+checks	Install dependencies	2026-10-25T21:13:26.4852389Z Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+checks	Install dependencies	2026-10-25T21:13:26.5130063Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 176.3 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:26.5704392Z Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+checks	Install dependencies	2026-10-25T21:13:26.6305406Z Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+checks	Install dependencies	2026-10-25T21:13:26.6896739Z Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+checks	Install dependencies	2026-10-25T21:13:26.7486240Z Downloading fonttools-4.67.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.5 MB)
+checks	Install dependencies	2026-10-25T21:13:26.7800182Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 180.4 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:26.8385354Z Downloading gast-0.7.0-py3-none-any.whl (22 kB)
+checks	Install dependencies	2026-10-25T21:13:26.8980664Z Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+checks	Install dependencies	2026-10-25T21:13:26.9579233Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+checks	Install dependencies	2026-10-25T21:13:27.0181472Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+checks	Install dependencies	2026-10-25T21:13:27.0788042Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+checks	Install dependencies	2026-10-25T21:13:27.1386497Z Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+checks	Install dependencies	2026-10-25T21:13:27.2026331Z Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+checks	Install dependencies	2026-10-25T21:13:27.2116896Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 175.1 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:27.2727486Z Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl (24.5 MB)
+checks	Install dependencies	2026-10-25T21:13:27.5817425Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.5/24.5 MB 79.2 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:27.6402474Z Downloading markdown-3.11.2-py3-none-any.whl (114 kB)
+checks	Install dependencies	2026-10-25T21:13:27.6997024Z Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+checks	Install dependencies	2026-10-25T21:13:27.7591997Z Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)
+checks	Install dependencies	2026-10-25T21:13:27.8199138Z Downloading opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+checks	Install dependencies	2026-10-25T21:13:27.8793709Z Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+checks	Install dependencies	2026-10-25T21:13:27.9427204Z Downloading pyasn1-0.6.4-py3-none-any.whl (84 kB)
+checks	Install dependencies	2026-10-25T21:13:28.0017102Z Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+checks	Install dependencies	2026-10-25T21:13:28.0613666Z Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+checks	Install dependencies	2026-10-25T21:13:28.1215897Z Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+checks	Install dependencies	2026-10-25T21:13:28.3396343Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 163.3 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:28.3968488Z Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+checks	Install dependencies	2026-10-25T21:13:28.4579758Z Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+checks	Install dependencies	2026-10-25T21:13:28.5171352Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+checks	Install dependencies	2026-10-25T21:13:28.5773588Z Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+checks	Install dependencies	2026-10-25T21:13:28.6375030Z Downloading wrapt-2.5.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (240 kB)
+checks	Install dependencies	2026-10-25T21:13:28.7004063Z Downloading zipp-4.1.2-py3-none-any.whl (10 kB)
+checks	Install dependencies	2026-10-25T21:13:28.7622118Z Downloading kt_legacy-1.0.5-py3-none-any.whl (9.6 kB)
+checks	Install dependencies	2026-10-25T21:13:28.8209441Z Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+checks	Install dependencies	2026-10-25T21:13:28.8863822Z Downloading optree-0.20.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (477 kB)
+checks	Install dependencies	2026-10-25T21:13:28.9472964Z Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+checks	Install dependencies	2026-10-25T21:13:29.0069176Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+checks	Install dependencies	2026-10-25T21:13:29.0668833Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+checks	Install dependencies	2026-10-25T21:13:29.0752762Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 169.1 MB/s  0:00:00
+checks	Install dependencies	2026-10-25T21:13:29.1322194Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+checks	Install dependencies	2026-10-25T21:13:29.1911272Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+checks	Install dependencies	2026-10-25T21:13:30.1202948Z Installing collected packages: namex, libclang, kt-legacy, flatbuffers, zipp, wrapt, urllib3, tzdata, typing_extensions, threadpoolctl, termcolor, tensorboard-data-server, sqlparse, smmap, six, ruff, pyyaml, python-dotenv, pyparsing, pygments, pycparser, pyasn1, psycopg-binary, protobuf, pillow, packaging, opt_einsum, numpy, narwhals, mdurl, markupsafe, markdown, kiwisolver, itsdangerous, idna, h11, gunicorn, gast, fonttools, cycler, cloudpickle, click, charset_normalizer, certifi, cachetools, blinker, annotated-types, annotated-doc, absl-py, wheel, werkzeug, uvicorn, typing-inspection, scipy, requests, python-dateutil, pydantic-core, pyasn1-modules, psycopg, optree, opentelemetry-proto, opentelemetry-api, ml_dtypes, markdown-it-py, joblib, jinja2, importlib_metadata, h5py, grpcio, google_pasta, gitdb, contourpy, cffi, anyio, tensorboard, starlette, scikit-learn, rich, pydantic, pandas, opentelemetry-semantic-conventions, matplotlib, gitpython, Flask, cryptography, astunparse, opentelemetry-sdk, keras, google-auth, fastapi, tensorflow-cpu, keras-tuner, databricks-sdk, mlflow-skinny
+checks	Install dependencies	2026-10-25T21:14:05.2006939Z 
+checks	Install dependencies	2026-10-25T21:14:05.2050473Z Successfully installed Flask-3.1.3 absl-py-2.5.1 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 astunparse-1.6.3 blinker-1.9.0 cachetools-7.2.5 certifi-2026.10.23 cffi-2.1.1 charset_normalizer-3.5.2 click-8.5.0 cloudpickle-3.1.2 contourpy-1.3.3 cryptography-50.0.2 cycler-0.12.1 databricks-sdk-0.157.0 fastapi-0.162.0 flatbuffers-25.12.19 fonttools-4.67.0 gast-0.7.0 gitdb-4.0.12 gitpython-3.2.1 google-auth-2.62.0 google_pasta-0.2.0 grpcio-1.84.1 gunicorn-26.2.0 h11-0.16.0 h5py-3.14.0 idna-3.20 importlib_metadata-9.1.0 itsdangerous-2.2.0 jinja2-3.1.6 joblib-1.6.0 keras-3.15.1 keras-tuner-1.4.8 kiwisolver-1.5.1 kt-legacy-1.0.5 libclang-18.1.1 markdown-3.11.2 markdown-it-py-4.2.0 markupsafe-3.0.4 matplotlib-3.11.2 mdurl-0.1.2 ml_dtypes-0.6.0 mlflow-skinny-3.17.2 namex-0.1.0 narwhals-2.27.1 numpy-2.4.6 opentelemetry-api-1.45.1 opentelemetry-proto-1.45.1 opentelemetry-sdk-1.45.1 opentelemetry-semantic-conventions-0.66b1 opt_einsum-3.4.0 optree-0.20.0 packaging-26.3 pandas-3.1.0 pillow-13.0.0 protobuf-7.36.2 psycopg-3.3.2 psycopg-binary-3.3.2 pyasn1-0.6.4 pyasn1-modules-0.4.2 pycparser-3.12 pydantic-2.14.1 pydantic-core-2.50.1 pygments-2.21.0 pyparsing-3.3.3 python-dateutil-3.0.0 python-dotenv-1.2.4 pyyaml-6.0.3 requests-2.34.2 rich-15.0.0 ruff-0.14.0 scikit-learn-1.9.1 scipy-1.17.1 six-1.17.0 smmap-5.0.3 sqlparse-0.6.0 starlette-1.10.0 tensorboard-2.21.0 tensorboard-data-server-0.7.2 tensorflow-cpu-2.21.0 termcolor-3.3.0 threadpoolctl-3.7.0 typing-inspection-0.4.4 typing_extensions-4.16.0 tzdata-2026.5 urllib3-2.8.0 uvicorn-0.54.0 werkzeug-3.1.9 wheel-0.48.0 wrapt-2.5.1 zipp-4.1.2
+checks	Install dependencies	2026-10-25T21:14:05.2063128Z 
+checks	Install dependencies	2026-10-25T21:14:05.2063530Z [notice] A new release of pip is available: 26.2.1 -> 26.2.2
+checks	Install dependencies	2026-10-25T21:14:05.2064214Z [notice] To update, run: pip install --upgrade pip
+checks	Lint	﻿2026-10-25T21:14:05.5393237Z ##[group]Run ruff check .
+checks	Lint	2026-10-25T21:14:05.5393544Z ^[[36;1mruff check .^[[0m
+checks	Lint	2026-10-25T21:14:05.5459395Z shell: /usr/bin/bash -e {0}
+checks	Lint	2026-10-25T21:14:05.5459647Z env:
+checks	Lint	2026-10-25T21:14:05.5459853Z   CUDA_VISIBLE_DEVICES: -1
+checks	Lint	2026-10-25T21:14:05.5460100Z   TF_NUM_INTRAOP_THREADS: 2
+checks	Lint	2026-10-25T21:14:05.5460336Z   TF_NUM_INTEROP_THREADS: 2
+checks	Lint	2026-10-25T21:14:05.5460566Z   TF_CPP_MIN_LOG_LEVEL: 2
+checks	Lint	2026-10-25T21:14:05.5460859Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Lint	2026-10-25T21:14:05.5461302Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Lint	2026-10-25T21:14:05.5461738Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Lint	2026-10-25T21:14:05.5462114Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Lint	2026-10-25T21:14:05.5462509Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Lint	2026-10-25T21:14:05.5462897Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Lint	2026-10-25T21:14:05.5463234Z ##[endgroup]
+checks	Lint	2026-10-25T21:14:05.5657121Z All checks passed!
+checks	Run tests without credentials, datasets or model downloads	﻿2026-10-25T21:14:05.5718044Z ##[group]Run python -m unittest discover -s tests -v
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5718476Z ^[[36;1mpython -m unittest discover -s tests -v^[[0m
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5783157Z shell: /usr/bin/bash -e {0}
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5783421Z env:
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5783620Z   CUDA_VISIBLE_DEVICES: -1
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5783862Z   TF_NUM_INTRAOP_THREADS: 2
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5784092Z   TF_NUM_INTEROP_THREADS: 2
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5784314Z   TF_CPP_MIN_LOG_LEVEL: 2
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5784604Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5785033Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5785785Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5786361Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5786750Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5787148Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:05.5787503Z ##[endgroup]
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.4636467Z test_credentials_cannot_be_embedded_in_url (test_dagshub_config.DagsHubConfigurationTests.test_credentials_cannot_be_embedded_in_url) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.4651199Z test_credentials_cannot_be_sent_to_another_host (test_dagshub_config.DagsHubConfigurationTests.test_credentials_cannot_be_sent_to_another_host) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.4666418Z test_https_dagshub_endpoint_is_accepted (test_dagshub_config.DagsHubConfigurationTests.test_https_dagshub_endpoint_is_accepted) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.4679451Z test_invalid_port_is_not_echoed (test_dagshub_config.DagsHubConfigurationTests.test_invalid_port_is_not_echoed) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.4692104Z test_missing_token_identifies_variable_without_echoing_credentials (test_dagshub_config.DagsHubConfigurationTests.test_missing_token_identifies_variable_without_echoing_credentials) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.4703512Z test_model_hash_mismatch_fails_before_loading (test_inference.InferenceTests.test_model_hash_mismatch_fails_before_loading) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.5121821Z test_reuses_model_and_keeps_raw_letterboxed_pixels (test_inference.InferenceTests.test_reuses_model_and_keeps_raw_letterboxed_pixels) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.5970663Z test_fake_image_is_rejected_before_prediction (test_routes.RouteTests.test_fake_image_is_rejected_before_prediction) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.6096465Z test_file_and_total_request_size_are_bounded (test_routes.RouteTests.test_file_and_total_request_size_are_bounded) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.6214532Z test_format_mismatch_and_missing_upload (test_routes.RouteTests.test_format_mismatch_and_missing_upload) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.6437838Z test_history_persists_when_app_restarts (test_routes.RouteTests.test_history_persists_when_app_restarts) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.6547644Z test_large_dimensions_are_rejected (test_routes.RouteTests.test_large_dimensions_are_rejected) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.6691688Z test_pages_health_and_empty_history (test_routes.RouteTests.test_pages_health_and_empty_history) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.6832915Z test_same_predictor_handles_two_requests (test_routes.RouteTests.test_same_predictor_handles_two_requests) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.7022646Z test_success_sanitizes_name_and_stores_only_metadata (test_routes.RouteTests.test_success_sanitizes_name_and_stores_only_metadata) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.7129213Z test_unknown_result_has_friendly_error (test_routes.RouteTests.test_unknown_result_has_friendly_error) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.7217321Z test_upload_stream_remains_in_memory (test_routes.RouteTests.test_upload_stream_remains_in_memory) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.7564046Z test_valid_image_larger_than_parser_chunk_is_accepted (test_routes.RouteTests.test_valid_image_larger_than_parser_chunk_is_accepted) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.7670921Z test_wrong_extension_is_rejected_before_prediction (test_routes.RouteTests.test_wrong_extension_is_rejected_before_prediction) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.7737934Z test_letterbox_preserves_shape_and_padding (test_task2.Task2Tests.test_letterbox_preserves_shape_and_padding) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.7745411Z test_overlap_is_rejected (test_task2.Task2Tests.test_overlap_is_rejected) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.7795558Z test_saved_manifests_have_no_exact_duplicate_leakage (test_task2.Task2Tests.test_saved_manifests_have_no_exact_duplicate_leakage) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.8797287Z test_threshold_can_reject_saturated_false_positive (test_task2.Task2Tests.test_threshold_can_reject_saturated_false_positive) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:10.9436640Z test_threshold_respects_false_accusation_cost (test_task2.Task2Tests.test_threshold_respects_false_accusation_cost) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4853463Z test_transfer_preprocessing_and_batchnorm_policy (test_task2.Task2Tests.test_transfer_preprocessing_and_batchnorm_policy) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4862037Z test_bad_threshold_fails_at_startup (test_web_settings.WebSettingsTests.test_bad_threshold_fails_at_startup) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4870319Z test_compose_credentials_use_service_name_and_escape_reserved_characters (test_web_settings.WebSettingsTests.test_compose_credentials_use_service_name_and_escape_reserved_characters) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4893572Z test_flask_launcher_disables_debug_reload_and_implicit_dotenv (test_web_settings.WebSettingsTests.test_flask_launcher_disables_debug_reload_and_implicit_dotenv) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4901697Z test_settings_are_read_from_environment (test_web_settings.WebSettingsTests.test_settings_are_read_from_environment) ... ok
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4902387Z 
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4902597Z ----------------------------------------------------------------------
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4903046Z Ran 29 tests in 1.806s
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4903237Z 
+checks	Run tests without credentials, datasets or model downloads	2026-10-25T21:14:11.4903341Z OK
+checks	Build Docker image	﻿2026-10-25T21:14:12.3609260Z ##[group]Run docker build -t visionguard:ci .
+checks	Build Docker image	2026-10-25T21:14:12.3609669Z ^[[36;1mdocker build -t visionguard:ci .^[[0m
+checks	Build Docker image	2026-10-25T21:14:12.3675675Z shell: /usr/bin/bash -e {0}
+checks	Build Docker image	2026-10-25T21:14:12.3675951Z env:
+checks	Build Docker image	2026-10-25T21:14:12.3676160Z   CUDA_VISIBLE_DEVICES: -1
+checks	Build Docker image	2026-10-25T21:14:12.3676404Z   TF_NUM_INTRAOP_THREADS: 2
+checks	Build Docker image	2026-10-25T21:14:12.3676670Z   TF_NUM_INTEROP_THREADS: 2
+checks	Build Docker image	2026-10-25T21:14:12.3676896Z   TF_CPP_MIN_LOG_LEVEL: 2
+checks	Build Docker image	2026-10-25T21:14:12.3677209Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Build Docker image	2026-10-25T21:14:12.3677653Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Build Docker image	2026-10-25T21:14:12.3678094Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Build Docker image	2026-10-25T21:14:12.3678478Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Build Docker image	2026-10-25T21:14:12.3678854Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Build Docker image	2026-10-25T21:14:12.3679234Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Build Docker image	2026-10-25T21:14:12.3679583Z ##[endgroup]
+checks	Build Docker image	2026-10-25T21:14:13.0653593Z #0 building with "default" instance using docker driver
+checks	Build Docker image	2026-10-25T21:14:13.0654094Z 
+checks	Build Docker image	2026-10-25T21:14:13.0654319Z #1 [internal] load build definition from Dockerfile
+checks	Build Docker image	2026-10-25T21:14:13.0654859Z #1 transferring dockerfile: 1.40kB done
+checks	Build Docker image	2026-10-25T21:14:13.0655621Z #1 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:13.0655876Z 
+checks	Build Docker image	2026-10-25T21:14:13.0656147Z #2 [auth] library/python:pull token for registry-1.docker.io
+checks	Build Docker image	2026-10-25T21:14:13.0656684Z #2 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:13.0656860Z 
+checks	Build Docker image	2026-10-25T21:14:13.0657154Z #3 [internal] load metadata for docker.io/library/python:3.11-slim
+checks	Build Docker image	2026-10-25T21:14:13.3167560Z #3 DONE 0.4s
+checks	Build Docker image	2026-10-25T21:14:13.4385639Z 
+checks	Build Docker image	2026-10-25T21:14:13.4388727Z #4 [internal] load .dockerignore
+checks	Build Docker image	2026-10-25T21:14:13.4389380Z #4 transferring context: 501B done
+checks	Build Docker image	2026-10-25T21:14:13.4389723Z #4 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:13.4389874Z 
+checks	Build Docker image	2026-10-25T21:14:13.4389999Z #5 [internal] load build context
+checks	Build Docker image	2026-10-25T21:14:13.4390519Z #5 transferring context: 68.64kB done
+checks	Build Docker image	2026-10-25T21:14:13.4390857Z #5 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:13.4391017Z 
+checks	Build Docker image	2026-10-25T21:14:13.4391657Z #6 [1/9] FROM docker.io/library/python:3.11-slim@sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377
+checks	Build Docker image	2026-10-25T21:14:13.4392942Z #6 resolve docker.io/library/python:3.11-slim@sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377 done
+checks	Build Docker image	2026-10-25T21:14:13.4394092Z #6 sha256:90d47cf54851a8d83f33db71f0025a8ba367c12fb24817259dd9736098cb305b 1.29MB / 1.29MB 0.1s
+checks	Build Docker image	2026-10-25T21:14:13.4395062Z #6 sha256:6d9af71a343efe2a00fdfc9507db3bdf3530bf3f8cf2975eb1be235a7eb70128 0B / 14.46MB 0.1s
+checks	Build Docker image	2026-10-25T21:14:13.5801286Z #6 sha256:90d47cf54851a8d83f33db71f0025a8ba367c12fb24817259dd9736098cb305b 1.29MB / 1.29MB 0.1s done
+checks	Build Docker image	2026-10-25T21:14:13.5804083Z #6 sha256:6d9af71a343efe2a00fdfc9507db3bdf3530bf3f8cf2975eb1be235a7eb70128 14.46MB / 14.46MB 0.2s
+checks	Build Docker image	2026-10-25T21:14:13.5805947Z #6 sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377 10.37kB / 10.37kB done
+checks	Build Docker image	2026-10-25T21:14:13.5807529Z #6 sha256:b95327ce1439e687237841b0210677aeadd62d55a060a5f6bcb9c15bf6251dd3 1.75kB / 1.75kB done
+checks	Build Docker image	2026-10-25T21:14:13.5808625Z #6 sha256:b4403f3b7acf5e0700a5dd4e7ab01456d62b557a208a04f8a42d3470d93b5730 5.49kB / 5.49kB done
+checks	Build Docker image	2026-10-25T21:14:13.5809601Z #6 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 29.84MB / 29.84MB 0.2s
+checks	Build Docker image	2026-10-25T21:14:13.5811105Z #6 sha256:b0aec4a98ced1e92f1d50c37aa89c78d60e3dc6a52d61f8134afda24b185ad06 249B / 249B 0.2s
+checks	Build Docker image	2026-10-25T21:14:13.7181878Z #6 sha256:6d9af71a343efe2a00fdfc9507db3bdf3530bf3f8cf2975eb1be235a7eb70128 14.46MB / 14.46MB 0.2s done
+checks	Build Docker image	2026-10-25T21:14:13.7183396Z #6 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 29.84MB / 29.84MB 0.2s done
+checks	Build Docker image	2026-10-25T21:14:13.7184657Z #6 sha256:b0aec4a98ced1e92f1d50c37aa89c78d60e3dc6a52d61f8134afda24b185ad06 249B / 249B 0.2s done
+checks	Build Docker image	2026-10-25T21:14:13.7186095Z #6 extracting sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 0.1s
+checks	Build Docker image	2026-10-25T21:14:14.5556246Z #6 extracting sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 0.9s done
+checks	Build Docker image	2026-10-25T21:14:14.5558298Z #6 extracting sha256:90d47cf54851a8d83f33db71f0025a8ba367c12fb24817259dd9736098cb305b
+checks	Build Docker image	2026-10-25T21:14:14.8058176Z #6 extracting sha256:90d47cf54851a8d83f33db71f0025a8ba367c12fb24817259dd9736098cb305b 0.1s done
+checks	Build Docker image	2026-10-25T21:14:17.2746402Z #6 extracting sha256:6d9af71a343efe2a00fdfc9507db3bdf3530bf3f8cf2975eb1be235a7eb70128
+checks	Build Docker image	2026-10-25T21:14:18.0412344Z #6 extracting sha256:6d9af71a343efe2a00fdfc9507db3bdf3530bf3f8cf2975eb1be235a7eb70128 0.7s done
+checks	Build Docker image	2026-10-25T21:14:18.0413354Z #6 extracting sha256:b0aec4a98ced1e92f1d50c37aa89c78d60e3dc6a52d61f8134afda24b185ad06 done
+checks	Build Docker image	2026-10-25T21:14:18.0414258Z #6 DONE 4.7s
+checks	Build Docker image	2026-10-25T21:14:18.2007862Z 
+checks	Build Docker image	2026-10-25T21:14:18.2008297Z #7 [2/9] WORKDIR /app
+checks	Build Docker image	2026-10-25T21:14:18.2008625Z #7 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:18.2008766Z 
+checks	Build Docker image	2026-10-25T21:14:18.2009985Z #8 [3/9] RUN apt-get update     && apt-get install -y --no-install-recommends libgomp1     && rm -rf /var/lib/apt/lists/*     && groupadd --gid 10001 visionguard     && useradd --uid 10001 --gid visionguard --no-create-home visionguard     && mkdir -p /data /models/champion     && chown visionguard:visionguard /data
+checks	Build Docker image	2026-10-25T21:14:18.2141210Z #8 0.164 Hit:1 http://deb.debian.org/debian trixie InRelease
+checks	Build Docker image	2026-10-25T21:14:18.2142674Z #8 0.164 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+checks	Build Docker image	2026-10-25T21:14:18.4644478Z #8 0.173 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+checks	Build Docker image	2026-10-25T21:14:18.4645529Z #8 0.185 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+checks	Build Docker image	2026-10-25T21:14:18.4646211Z #8 0.262 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+checks	Build Docker image	2026-10-25T21:14:18.4646963Z #8 0.264 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [270 kB]
+checks	Build Docker image	2026-10-25T21:14:18.9552667Z #8 0.905 Fetched 10.0 MB in 1s (13.2 MB/s)
+checks	Build Docker image	2026-10-25T21:14:19.4093139Z #8 0.905 Reading package lists...
+checks	Build Docker image	2026-10-25T21:14:19.8741435Z #8 1.375 Reading package lists...
+checks	Build Docker image	2026-10-25T21:14:20.0038509Z #8 1.832 Building dependency tree...
+checks	Build Docker image	2026-10-25T21:14:20.1459795Z #8 1.953 Reading state information...
+checks	Build Docker image	2026-10-25T21:14:20.1460898Z #8 2.095 The following NEW packages will be installed:
+checks	Build Docker image	2026-10-25T21:14:20.3158310Z #8 2.096   libgomp1
+checks	Build Docker image	2026-10-25T21:14:20.3166154Z #8 2.154 0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+checks	Build Docker image	2026-10-25T21:14:20.3166824Z #8 2.154 Need to get 137 kB of archives.
+checks	Build Docker image	2026-10-25T21:14:20.3167368Z #8 2.154 After this operation, 377 kB of additional disk space will be used.
+checks	Build Docker image	2026-10-25T21:14:20.3167955Z #8 2.154 Get:1 http://deb.debian.org/debian trixie/main amd64 libgomp1 amd64 14.2.0-19 [137 kB]
+checks	Build Docker image	2026-10-25T21:14:20.3168620Z #8 2.265 debconf: unable to initialize frontend: Dialog
+checks	Build Docker image	2026-10-25T21:14:20.3169044Z #8 2.265 debconf: (TERM is not set, so the dialog frontend is not usable.)
+checks	Build Docker image	2026-10-25T21:14:20.3169475Z #8 2.265 debconf: falling back to frontend: Readline
+checks	Build Docker image	2026-10-25T21:14:20.4716041Z #8 2.266 debconf: unable to initialize frontend: Readline
+checks	Build Docker image	2026-10-25T21:14:20.4718904Z #8 2.266 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 1.)
+checks	Build Docker image	2026-10-25T21:14:20.4720953Z #8 2.266 debconf: falling back to frontend: Teletype
+checks	Build Docker image	2026-10-25T21:14:20.4721388Z #8 2.271 debconf: unable to initialize frontend: Teletype
+checks	Build Docker image	2026-10-25T21:14:20.4721838Z #8 2.271 debconf: (This frontend requires a controlling tty.)
+checks	Build Docker image	2026-10-25T21:14:20.4722288Z #8 2.271 debconf: falling back to frontend: Noninteractive
+checks	Build Docker image	2026-10-25T21:14:20.8001003Z #8 2.750 Fetched 137 kB in 0s (2239 kB/s)
+checks	Build Docker image	2026-10-25T21:14:20.9019062Z #8 2.761 Selecting previously unselected package libgomp1:amd64.
+checks	Build Docker image	2026-10-25T21:14:20.9020128Z #8 2.761 (Reading database ... 
+checks	Build Docker image	2026-10-25T21:14:20.9020564Z (Reading database ... 5%
+checks	Build Docker image	2026-10-25T21:14:20.9020966Z (Reading database ... 10%
+checks	Build Docker image	2026-10-25T21:14:20.9021364Z (Reading database ... 15%
+checks	Build Docker image	2026-10-25T21:14:20.9021748Z (Reading database ... 20%
+checks	Build Docker image	2026-10-25T21:14:20.9022123Z (Reading database ... 25%
+checks	Build Docker image	2026-10-25T21:14:20.9022503Z (Reading database ... 30%
+checks	Build Docker image	2026-10-25T21:14:20.9022881Z (Reading database ... 35%
+checks	Build Docker image	2026-10-25T21:14:20.9023260Z (Reading database ... 40%
+checks	Build Docker image	2026-10-25T21:14:20.9023638Z (Reading database ... 45%
+checks	Build Docker image	2026-10-25T21:14:20.9024012Z (Reading database ... 50%
+checks	Build Docker image	2026-10-25T21:14:20.9024395Z (Reading database ... 55%
+checks	Build Docker image	2026-10-25T21:14:20.9024772Z (Reading database ... 60%
+checks	Build Docker image	2026-10-25T21:14:20.9025162Z (Reading database ... 65%
+checks	Build Docker image	2026-10-25T21:14:20.9025764Z (Reading database ... 70%
+checks	Build Docker image	2026-10-25T21:14:20.9026152Z (Reading database ... 75%
+checks	Build Docker image	2026-10-25T21:14:20.9026527Z (Reading database ... 80%
+checks	Build Docker image	2026-10-25T21:14:20.9026921Z (Reading database ... 85%
+checks	Build Docker image	2026-10-25T21:14:20.9027309Z (Reading database ... 90%
+checks	Build Docker image	2026-10-25T21:14:20.9027685Z (Reading database ... 95%
+checks	Build Docker image	2026-10-25T21:14:20.9028066Z (Reading database ... 100%
+checks	Build Docker image	2026-10-25T21:14:20.9028632Z (Reading database ... 5658 files and directories currently installed.)
+checks	Build Docker image	2026-10-25T21:14:20.9029396Z #8 2.767 Preparing to unpack .../libgomp1_14.2.0-19_amd64.deb ...
+checks	Build Docker image	2026-10-25T21:14:20.9030026Z #8 2.769 Unpacking libgomp1:amd64 (14.2.0-19) ...
+checks	Build Docker image	2026-10-25T21:14:20.9030575Z #8 2.787 Setting up libgomp1:amd64 (14.2.0-19) ...
+checks	Build Docker image	2026-10-25T21:14:20.9031180Z #8 2.789 Processing triggers for libc-bin (2.41-12+deb13u4) ...
+checks	Build Docker image	2026-10-25T21:14:20.9031725Z #8 DONE 2.9s
+checks	Build Docker image	2026-10-25T21:14:21.0682814Z 
+checks	Build Docker image	2026-10-25T21:14:21.0683633Z #9 [4/9] COPY requirements-web.txt ./
+checks	Build Docker image	2026-10-25T21:14:21.0684372Z #9 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:21.0684775Z 
+checks	Build Docker image	2026-10-25T21:14:21.0685637Z #10 [5/9] RUN python -m pip install --no-cache-dir --no-compile -r requirements-web.txt
+checks	Build Docker image	2026-10-25T21:14:22.6460502Z #10 1.729 Collecting tensorflow-cpu==2.21.0 (from -r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:22.8348255Z #10 1.917   Downloading tensorflow_cpu-2.21.0-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (4.4 kB)
+checks	Build Docker image	2026-10-25T21:14:22.9406345Z #10 2.022 Collecting keras==3.15.1 (from -r requirements-web.txt (line 3))
+checks	Build Docker image	2026-10-25T21:14:23.1477742Z #10 2.080   Downloading keras-3.15.1-py3-none-any.whl.metadata (6.4 kB)
+checks	Build Docker image	2026-10-25T21:14:23.4676794Z #10 2.550 Collecting numpy==2.4.6 (from -r requirements-web.txt (line 4))
+checks	Build Docker image	2026-10-25T21:14:23.6215120Z #10 2.608   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+checks	Build Docker image	2026-10-25T21:14:23.6216523Z #10 2.704 Collecting Flask==3.1.3 (from -r requirements-web.txt (line 5))
+checks	Build Docker image	2026-10-25T21:14:23.7751050Z #10 2.761   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+checks	Build Docker image	2026-10-25T21:14:23.7752026Z #10 2.857 Collecting gunicorn==26.2.0 (from -r requirements-web.txt (line 6))
+checks	Build Docker image	2026-10-25T21:14:23.9830762Z #10 2.915   Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+checks	Build Docker image	2026-10-25T21:14:24.2012411Z #10 3.284 Collecting pillow==13.0.0 (from -r requirements-web.txt (line 7))
+checks	Build Docker image	2026-10-25T21:14:24.3518277Z #10 3.341   Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+checks	Build Docker image	2026-10-25T21:14:24.3519197Z #10 3.434 Collecting python-dotenv==1.2.4 (from -r requirements-web.txt (line 8))
+checks	Build Docker image	2026-10-25T21:14:24.5200266Z #10 3.494   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+checks	Build Docker image	2026-10-25T21:14:24.5202320Z #10 3.603 Collecting tzdata==2026.5 (from -r requirements-web.txt (line 9))
+checks	Build Docker image	2026-10-25T21:14:24.6865596Z #10 3.659   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+checks	Build Docker image	2026-10-25T21:14:24.6867020Z #10 3.769 Collecting absl-py>=1.0.0 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:24.8268665Z #10 3.827   Downloading absl_py-2.5.1-py3-none-any.whl.metadata (3.3 kB)
+checks	Build Docker image	2026-10-25T21:14:24.8269839Z #10 3.909 Collecting astunparse>=1.6.0 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:24.9688150Z #10 3.966   Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+checks	Build Docker image	2026-10-25T21:14:24.9689412Z #10 4.051 Collecting flatbuffers>=25.9.23 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:25.1151052Z #10 4.109   Downloading flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+checks	Build Docker image	2026-10-25T21:14:25.1152244Z #10 4.198 Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:25.2544831Z #10 4.254   Downloading gast-0.7.0-py3-none-any.whl.metadata (1.5 kB)
+checks	Build Docker image	2026-10-25T21:14:25.2546478Z #10 4.337 Collecting google_pasta>=0.1.1 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:25.4058179Z #10 4.402   Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+checks	Build Docker image	2026-10-25T21:14:25.4059362Z #10 4.488 Collecting libclang>=13.0.0 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:25.5468454Z #10 4.545   Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+checks	Build Docker image	2026-10-25T21:14:25.5469983Z #10 4.629 Collecting opt_einsum>=2.3.2 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:25.7636588Z #10 4.693   Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+checks	Build Docker image	2026-10-25T21:14:25.7637731Z #10 4.696 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2)) (26.3)
+checks	Build Docker image	2026-10-25T21:14:25.9070388Z #10 4.990 Collecting protobuf<8.0.0,>=6.31.1 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:26.0726711Z #10 5.047   Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+checks	Build Docker image	2026-10-25T21:14:26.0728083Z #10 5.155 Collecting requests<3,>=2.21.0 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:26.2200825Z #10 5.215   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+checks	Build Docker image	2026-10-25T21:14:26.2202544Z #10 5.218 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2)) (79.0.1)
+checks	Build Docker image	2026-10-25T21:14:26.2204154Z #10 5.303 Collecting six>=1.12.0 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:26.3616014Z #10 5.359   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+checks	Build Docker image	2026-10-25T21:14:26.3617339Z #10 5.444 Collecting termcolor>=1.1.0 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:26.5126647Z #10 5.501   Downloading termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+checks	Build Docker image	2026-10-25T21:14:26.5127849Z #10 5.595 Collecting typing_extensions>=3.6.6 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:26.7202769Z #10 5.652   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+checks	Build Docker image	2026-10-25T21:14:27.1256746Z #10 6.208 Collecting wrapt>=1.11.0 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:27.3329840Z #10 6.265   Downloading wrapt-2.5.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (7.6 kB)
+checks	Build Docker image	2026-10-25T21:14:27.9285416Z #10 7.011 Collecting grpcio<2.0,>=1.24.3 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:28.1155070Z #10 7.068   Downloading grpcio-1.84.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+checks	Build Docker image	2026-10-25T21:14:28.1156820Z #10 7.198 Collecting h5py<3.15.0,>=3.11.0 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:28.2767451Z #10 7.255   Downloading h5py-3.14.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.7 kB)
+checks	Build Docker image	2026-10-25T21:14:28.2768973Z #10 7.359 Collecting ml_dtypes<1.0.0,>=0.5.1 (from tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:28.4809352Z #10 7.421   Downloading ml_dtypes-0.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+checks	Build Docker image	2026-10-25T21:14:28.4811120Z #10 7.563 Collecting rich (from keras==3.15.1->-r requirements-web.txt (line 3))
+checks	Build Docker image	2026-10-25T21:14:28.6284501Z #10 7.621   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+checks	Build Docker image	2026-10-25T21:14:28.6286412Z #10 7.711 Collecting namex (from keras==3.15.1->-r requirements-web.txt (line 3))
+checks	Build Docker image	2026-10-25T21:14:28.8402370Z #10 7.772   Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+checks	Build Docker image	2026-10-25T21:14:28.8541549Z #10 7.937 Collecting optree (from keras==3.15.1->-r requirements-web.txt (line 3))
+checks	Build Docker image	2026-10-25T21:14:29.0165812Z #10 7.994   Downloading optree-0.20.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (32 kB)
+checks	Build Docker image	2026-10-25T21:14:29.0167204Z #10 8.099 Collecting blinker>=1.9.0 (from Flask==3.1.3->-r requirements-web.txt (line 5))
+checks	Build Docker image	2026-10-25T21:14:29.1669443Z #10 8.156   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+checks	Build Docker image	2026-10-25T21:14:29.1670674Z #10 8.249 Collecting click>=8.1.3 (from Flask==3.1.3->-r requirements-web.txt (line 5))
+checks	Build Docker image	2026-10-25T21:14:29.3080853Z #10 8.306   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+checks	Build Docker image	2026-10-25T21:14:29.3082594Z #10 8.391 Collecting itsdangerous>=2.2.0 (from Flask==3.1.3->-r requirements-web.txt (line 5))
+checks	Build Docker image	2026-10-25T21:14:29.4568174Z #10 8.449   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+checks	Build Docker image	2026-10-25T21:14:29.4569294Z #10 8.539 Collecting jinja2>=3.1.2 (from Flask==3.1.3->-r requirements-web.txt (line 5))
+checks	Build Docker image	2026-10-25T21:14:29.6648374Z #10 8.597   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+checks	Build Docker image	2026-10-25T21:14:29.7116742Z #10 8.794 Collecting markupsafe>=2.1.1 (from Flask==3.1.3->-r requirements-web.txt (line 5))
+checks	Build Docker image	2026-10-25T21:14:29.8744689Z #10 8.853   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+checks	Build Docker image	2026-10-25T21:14:29.8747064Z #10 8.957 Collecting werkzeug>=3.1.0 (from Flask==3.1.3->-r requirements-web.txt (line 5))
+checks	Build Docker image	2026-10-25T21:14:30.1192630Z #10 9.015   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+checks	Build Docker image	2026-10-25T21:14:30.1194316Z #10 9.051 Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.11/site-packages (from astunparse>=1.6.0->tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2)) (0.46.3)
+checks	Build Docker image	2026-10-25T21:14:30.2536982Z #10 9.336 Collecting charset_normalizer<4,>=2 (from requests<3,>=2.21.0->tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:30.4227600Z #10 9.395   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+checks	Build Docker image	2026-10-25T21:14:30.4228950Z #10 9.412      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.4/46.4 kB 3.0 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:30.4229683Z #10 9.505 Collecting idna<4,>=2.5 (from requests<3,>=2.21.0->tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:30.5953158Z #10 9.562   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+checks	Build Docker image	2026-10-25T21:14:30.5955180Z #10 9.678 Collecting urllib3<3,>=1.26 (from requests<3,>=2.21.0->tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:30.7500275Z #10 9.735   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+checks	Build Docker image	2026-10-25T21:14:30.7501798Z #10 9.833 Collecting certifi>=2023.5.7 (from requests<3,>=2.21.0->tensorflow-cpu==2.21.0->-r requirements-web.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:30.9576765Z #10 9.889   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+checks	Build Docker image	2026-10-25T21:14:30.9698662Z #10 10.05 Collecting markdown-it-py>=2.2.0 (from rich->keras==3.15.1->-r requirements-web.txt (line 3))
+checks	Build Docker image	2026-10-25T21:14:31.1300216Z #10 10.11   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+checks	Build Docker image	2026-10-25T21:14:31.1301485Z #10 10.21 Collecting pygments<3.0.0,>=2.13.0 (from rich->keras==3.15.1->-r requirements-web.txt (line 3))
+checks	Build Docker image	2026-10-25T21:14:31.3387144Z #10 10.27   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+checks	Build Docker image	2026-10-25T21:14:31.3388830Z #10 10.42 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras==3.15.1->-r requirements-web.txt (line 3))
+checks	Build Docker image	2026-10-25T21:14:31.4860839Z #10 10.48   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+checks	Build Docker image	2026-10-25T21:14:31.4861914Z #10 10.57 Downloading tensorflow_cpu-2.21.0-cp311-cp311-manylinux_2_27_x86_64.whl (273.8 MB)
+checks	Build Docker image	2026-10-25T21:14:34.5311806Z #10 13.48    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 273.8/273.8 MB 126.2 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:34.5312756Z #10 13.54 Downloading keras-3.15.1-py3-none-any.whl (2.4 MB)
+checks	Build Docker image	2026-10-25T21:14:34.5313815Z #10 13.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 243.6 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:34.5314957Z #10 13.61 Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+checks	Build Docker image	2026-10-25T21:14:34.7657526Z #10 13.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 217.8 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:34.7658539Z #10 13.79 Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+checks	Build Docker image	2026-10-25T21:14:34.7659478Z #10 13.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.4/103.4 kB 273.9 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:34.7660363Z #10 13.85 Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
+checks	Build Docker image	2026-10-25T21:14:34.9093846Z #10 13.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.4/228.4 kB 263.1 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:34.9095563Z #10 13.91 Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+checks	Build Docker image	2026-10-25T21:14:34.9097127Z #10 13.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 294.1 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:34.9098281Z #10 13.99 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+checks	Build Docker image	2026-10-25T21:14:35.0279844Z #10 14.05 Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+checks	Build Docker image	2026-10-25T21:14:35.0281269Z #10 14.05    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.0/348.0 kB 318.4 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:35.0282435Z #10 14.11 Downloading absl_py-2.5.1-py3-none-any.whl (137 kB)
+checks	Build Docker image	2026-10-25T21:14:35.1446471Z #10 14.11    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.7/137.7 kB 264.3 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:35.1447927Z #10 14.17 Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+checks	Build Docker image	2026-10-25T21:14:35.1448789Z #10 14.23 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+checks	Build Docker image	2026-10-25T21:14:35.2681855Z #10 14.29 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+checks	Build Docker image	2026-10-25T21:14:35.2683271Z #10 14.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 315.7 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:35.2684268Z #10 14.35 Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+checks	Build Docker image	2026-10-25T21:14:35.3825547Z #10 14.41 Downloading gast-0.7.0-py3-none-any.whl (22 kB)
+checks	Build Docker image	2026-10-25T21:14:35.3826781Z #10 14.47 Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+checks	Build Docker image	2026-10-25T21:14:35.5290863Z #10 14.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.5/57.5 kB 203.8 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:35.5292831Z #10 14.52 Downloading grpcio-1.84.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.2 MB)
+checks	Build Docker image	2026-10-25T21:14:35.5293681Z #10 14.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 290.8 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:35.5294877Z #10 14.61 Downloading h5py-3.14.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.5 MB)
+checks	Build Docker image	2026-10-25T21:14:35.6453136Z #10 14.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 79.7 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:35.6454070Z #10 14.73 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+checks	Build Docker image	2026-10-25T21:14:35.7623305Z #10 14.79 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+checks	Build Docker image	2026-10-25T21:14:35.7624596Z #10 14.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 313.1 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:35.7626108Z #10 14.84 Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl (24.5 MB)
+checks	Build Docker image	2026-10-25T21:14:36.0459876Z #10 15.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.5/24.5 MB 140.7 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.0461092Z #10 15.07 Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+checks	Build Docker image	2026-10-25T21:14:36.0463023Z #10 15.13 Downloading ml_dtypes-0.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (412 kB)
+checks	Build Docker image	2026-10-25T21:14:36.1670411Z #10 15.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 412.0/412.0 kB 308.1 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.1671333Z #10 15.19 Downloading opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+checks	Build Docker image	2026-10-25T21:14:36.1672067Z #10 15.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.9/71.9 kB 256.0 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.1672679Z #10 15.25 Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+checks	Build Docker image	2026-10-25T21:14:36.2857505Z #10 15.25    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.2/343.2 kB 327.1 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.2858145Z #10 15.31 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+checks	Build Docker image	2026-10-25T21:14:36.2858781Z #10 15.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 276.9 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.2859292Z #10 15.37 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+checks	Build Docker image	2026-10-25T21:14:36.3998072Z #10 15.43 Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+checks	Build Docker image	2026-10-25T21:14:36.3999378Z #10 15.48 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+checks	Build Docker image	2026-10-25T21:14:36.5199060Z #10 15.48    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 198.6 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.5199957Z #10 15.54 Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+checks	Build Docker image	2026-10-25T21:14:36.5201092Z #10 15.54    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.7/228.7 kB 330.6 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.5202242Z #10 15.60 Downloading wrapt-2.5.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (240 kB)
+checks	Build Docker image	2026-10-25T21:14:36.6399746Z #10 15.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.1/240.1 kB 314.5 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.6402813Z #10 15.66 Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+checks	Build Docker image	2026-10-25T21:14:36.6403982Z #10 15.72 Downloading optree-0.20.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (477 kB)
+checks	Build Docker image	2026-10-25T21:14:36.7625827Z #10 15.73    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 477.9/477.9 kB 298.7 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.7627079Z #10 15.78 Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+checks	Build Docker image	2026-10-25T21:14:36.7628129Z #10 15.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 329.1 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.7629070Z #10 15.85 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+checks	Build Docker image	2026-10-25T21:14:36.8839620Z #10 15.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.1/135.1 kB 252.2 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.8841363Z #10 15.91 Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+checks	Build Docker image	2026-10-25T21:14:36.8843186Z #10 15.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 270.0/270.0 kB 323.3 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:36.8844338Z #10 15.97 Downloading idna-3.20-py3-none-any.whl (69 kB)
+checks	Build Docker image	2026-10-25T21:14:37.0038853Z #10 15.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 178.8 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:37.0039831Z #10 16.03 Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+checks	Build Docker image	2026-10-25T21:14:37.0041233Z #10 16.03    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 300.4 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:37.0042067Z #10 16.09 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+checks	Build Docker image	2026-10-25T21:14:37.1258076Z #10 16.09    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 317.0 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:37.1258646Z #10 16.15 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+checks	Build Docker image	2026-10-25T21:14:37.1259216Z #10 16.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.7/135.7 kB 316.4 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:37.1259694Z #10 16.21 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+checks	Build Docker image	2026-10-25T21:14:37.9055737Z #10 16.99 Installing collected packages: namex, libclang, flatbuffers, wrapt, urllib3, tzdata, typing_extensions, termcolor, six, python-dotenv, pygments, protobuf, pillow, opt_einsum, numpy, mdurl, markupsafe, itsdangerous, idna, gunicorn, gast, click, charset_normalizer, certifi, blinker, absl-py, werkzeug, requests, optree, ml_dtypes, markdown-it-py, jinja2, h5py, grpcio, google_pasta, astunparse, rich, Flask, keras, tensorflow-cpu
+checks	Build Docker image	2026-10-25T21:14:45.5501089Z #10 24.63 Successfully installed Flask-3.1.3 absl-py-2.5.1 astunparse-1.6.3 blinker-1.9.0 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.0 flatbuffers-25.12.19 gast-0.7.0 google_pasta-0.2.0 grpcio-1.84.1 gunicorn-26.2.0 h5py-3.14.0 idna-3.20 itsdangerous-2.2.0 jinja2-3.1.6 keras-3.15.1 libclang-18.1.1 markdown-it-py-4.2.0 markupsafe-3.0.4 mdurl-0.1.2 ml_dtypes-0.6.0 namex-0.1.0 numpy-2.4.6 opt_einsum-3.4.0 optree-0.20.0 pillow-13.0.0 protobuf-7.36.2 pygments-2.21.0 python-dotenv-1.2.4 requests-2.34.2 rich-15.0.0 six-1.17.0 tensorflow-cpu-2.21.0 termcolor-3.3.0 typing_extensions-4.16.0 tzdata-2026.5 urllib3-2.8.0 werkzeug-3.1.9 wrapt-2.5.1
+checks	Build Docker image	2026-10-25T21:14:45.7006911Z #10 24.63 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+checks	Build Docker image	2026-10-25T21:14:49.2750466Z #10 DONE 28.4s
+checks	Build Docker image	2026-10-25T21:14:49.4439170Z 
+checks	Build Docker image	2026-10-25T21:14:49.4439609Z #11 [6/9] COPY requirements-db.txt ./
+checks	Build Docker image	2026-10-25T21:14:49.4440103Z #11 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:49.4440310Z 
+checks	Build Docker image	2026-10-25T21:14:49.4440599Z #12 [7/9] RUN python -m pip install --no-cache-dir --no-compile -r requirements-db.txt
+checks	Build Docker image	2026-10-25T21:14:50.8187324Z #12 1.526 Collecting psycopg==3.3.2 (from psycopg[binary]==3.3.2->-r requirements-db.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:51.0053245Z #12 1.712   Downloading psycopg-3.3.2-py3-none-any.whl.metadata (4.3 kB)
+checks	Build Docker image	2026-10-25T21:14:51.1768241Z #12 1.733 Requirement already satisfied: typing-extensions>=4.6 in /usr/local/lib/python3.11/site-packages (from psycopg==3.3.2->psycopg[binary]==3.3.2->-r requirements-db.txt (line 2)) (4.16.0)
+checks	Build Docker image	2026-10-25T21:14:51.4442021Z #12 2.151 Collecting psycopg-binary==3.3.2 (from psycopg[binary]==3.3.2->-r requirements-db.txt (line 2))
+checks	Build Docker image	2026-10-25T21:14:51.5710662Z #12 2.218   Downloading psycopg_binary-3.3.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+checks	Build Docker image	2026-10-25T21:14:51.5712138Z #12 2.278 Downloading psycopg-3.3.2-py3-none-any.whl (212 kB)
+checks	Build Docker image	2026-10-25T21:14:51.9165534Z #12 2.414    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.8/212.8 kB 1.6 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:51.9166467Z #12 2.473 Downloading psycopg_binary-3.3.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.2 MB)
+checks	Build Docker image	2026-10-25T21:14:52.3536465Z #12 2.910    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 11.8 MB/s eta 0:00:00
+checks	Build Docker image	2026-10-25T21:14:52.4165229Z #12 3.123 Installing collected packages: psycopg-binary, psycopg
+checks	Build Docker image	2026-10-25T21:14:52.6200788Z #12 3.220 Successfully installed psycopg-3.3.2 psycopg-binary-3.3.2
+checks	Build Docker image	2026-10-25T21:14:52.6203102Z #12 3.220 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+checks	Build Docker image	2026-10-25T21:14:52.6204879Z #12 DONE 3.3s
+checks	Build Docker image	2026-10-25T21:14:52.8141309Z 
+checks	Build Docker image	2026-10-25T21:14:52.8143660Z #13 [8/9] COPY task4/ ./task4/
+checks	Build Docker image	2026-10-25T21:14:52.8144402Z #13 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:52.8144621Z 
+checks	Build Docker image	2026-10-25T21:14:52.8144840Z #14 [9/9] COPY visionguard/ ./visionguard/
+checks	Build Docker image	2026-10-25T21:14:52.8145557Z #14 DONE 0.0s
+checks	Build Docker image	2026-10-25T21:14:52.8145823Z 
+checks	Build Docker image	2026-10-25T21:14:52.8145983Z #15 exporting to image
+checks	Build Docker image	2026-10-25T21:14:52.8146350Z #15 exporting layers
+checks	Build Docker image	2026-10-25T21:14:58.3910557Z #15 exporting layers 5.7s done
+checks	Build Docker image	2026-10-25T21:14:58.4074026Z #15 writing image sha256:b6c919c125120ededa4476fe135ea1f6baf9d4226614eeeca0a254f712c8a773 done
+checks	Build Docker image	2026-10-25T21:14:58.4075495Z #15 naming to docker.io/library/visionguard:ci done
+checks	Build Docker image	2026-10-25T21:14:58.4076093Z #15 DONE 5.7s
+checks	Post Run actions/setup-python@v6	﻿2026-10-25T21:14:58.4235067Z Post job cleanup.
+checks	Post Run actions/setup-python@v6	2026-10-25T21:14:58.5710344Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2 --files-from manifest.txt --use-compress-program zstdmt
+checks	Post Run actions/setup-python@v6	2026-10-25T21:15:00.4113080Z Sent 331397286 of 465615014 (71.2%), 315.7 MBs/sec
+checks	Post Run actions/setup-python@v6	2026-10-25T21:15:00.4806805Z Sent 465615014 of 465615014 (100.0%), 415.0 MBs/sec
+checks	Post Run actions/setup-python@v6	2026-10-25T21:15:00.6147452Z Cache saved with the key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.17-pip-3f881d50c276a51d224092a53da1f64533d707b7bfcce448cfceb2329593b271
+checks	Post Run actions/checkout@v6	﻿2026-10-25T21:15:00.6308383Z Post job cleanup.
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7168237Z [command]/usr/bin/git version
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7212179Z git version 2.55.0
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7255703Z Temporarily overriding HOME='/home/runner/work/_temp/d83cdb42-a2dd-47db-a5f4-313946cc1075' before making global git config changes
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7257164Z Adding repository directory to the temporary git global config as a safe directory
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7262178Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7296474Z Removing SSH command configuration
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7316298Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7365826Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7624875Z Removing HTTP extra header
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7631857Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7670329Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7948632Z Removing includeIf entries pointing to credentials config files
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7958065Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7993572Z includeif.gitdir:/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git.path
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7994923Z includeif.gitdir:/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git/worktrees/*.path
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7996332Z includeif.gitdir:/github/workspace/.git.path
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.7997128Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8003950Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git.path
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8032390Z /home/runner/work/_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8049759Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git.path /home/runner/work/_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8093539Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git/worktrees/*.path
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8120553Z /home/runner/work/_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8131379Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/MLOPS-Assignment2/MLOPS-Assignment2/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8167556Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8193481Z /github/runner_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8202254Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8239280Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8264420Z /github/runner_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8278112Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8325930Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks	Post Run actions/checkout@v6	2026-10-25T21:15:00.8583546Z Removing credentials config '/home/runner/work/_temp/git-credentials-19869110-ec52-421b-999b-d30cc7ecabbd.config'
+checks	Complete job	﻿2026-10-25T21:15:00.8735907Z Cleaning up orphan processes

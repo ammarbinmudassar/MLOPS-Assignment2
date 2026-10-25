@@ -1,0 +1,141 @@
+{
+  "conclusion": "failure",
+  "headSha": "fe9e15b89bda8587c67f8994521d64fc08bfed8e",
+  "jobs": [
+    {
+      "completedAt": "2026-10-25T21:10:59Z",
+      "conclusion": "failure",
+      "databaseId": 121292335894,
+      "name": "test (3.12)",
+      "startedAt": "2026-10-25T21:10:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-25T21:10:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-25T21:10:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "startedAt": "2026-10-25T21:10:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v6",
+          "number": 3,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "failure",
+          "name": "Run python -m unittest discover -v",
+          "number": 4,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v6",
+          "number": 7,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 8,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026/actions/runs/40234262579/job/121292335894"
+    },
+    {
+      "completedAt": "2026-10-25T21:10:59Z",
+      "conclusion": "failure",
+      "databaseId": 121292336080,
+      "name": "test (3.11)",
+      "startedAt": "2026-10-25T21:10:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-25T21:10:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-25T21:10:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "startedAt": "2026-10-25T21:10:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v6",
+          "number": 3,
+          "startedAt": "2026-10-25T21:10:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "failure",
+          "name": "Run python -m unittest discover -v",
+          "number": 4,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v6",
+          "number": 7,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 8,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-25T21:10:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-25T21:10:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026/actions/runs/40234262579/job/121292336080"
+    }
+  ],
+  "url": "https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026/actions/runs/40234262579"
+}

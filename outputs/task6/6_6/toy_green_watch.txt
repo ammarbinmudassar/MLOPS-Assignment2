@@ -1,0 +1,58 @@
+Refreshing run status every 15 seconds. Press Ctrl+C to quit.
+
+* main Toy CI · 40234357760
+Triggered via push less than a minute ago
+
+JOBS
+✓ test (3.12) in 6s (ID 121292627287)
+  ✓ Set up job
+  ✓ Run actions/checkout@v6
+  ✓ Run actions/setup-python@v6
+  ✓ Run python -m unittest discover -v
+  ✓ Post Run actions/setup-python@v6
+  ✓ Post Run actions/checkout@v6
+  ✓ Complete job
+✓ test (3.11) in 5s (ID 121292627535)
+  ✓ Set up job
+  ✓ Run actions/checkout@v6
+  ✓ Run actions/setup-python@v6
+  ✓ Run python -m unittest discover -v
+  ✓ Post Run actions/setup-python@v6
+  ✓ Post Run actions/checkout@v6
+  ✓ Complete job
+
+ANNOTATIONS
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+test (3.12): .github#1
+
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+test (3.11): .github#1
+
+✓ main Toy CI · 40234357760
+Triggered via push less than a minute ago
+
+JOBS
+✓ test (3.12) in 6s (ID 121292627287)
+  ✓ Set up job
+  ✓ Run actions/checkout@v6
+  ✓ Run actions/setup-python@v6
+  ✓ Run python -m unittest discover -v
+  ✓ Post Run actions/setup-python@v6
+  ✓ Post Run actions/checkout@v6
+  ✓ Complete job
+✓ test (3.11) in 5s (ID 121292627535)
+  ✓ Set up job
+  ✓ Run actions/checkout@v6
+  ✓ Run actions/setup-python@v6
+  ✓ Run python -m unittest discover -v
+  ✓ Post Run actions/setup-python@v6
+  ✓ Post Run actions/checkout@v6
+  ✓ Complete job
+
+ANNOTATIONS
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+test (3.12): .github#1
+
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+test (3.11): .github#1
+

@@ -1,0 +1,3 @@
+Confirmed intentional red result on both Python versions.
+Pushed toy fix; watching run 40234357760
+Confirmed toy green result on both Python versions: https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026/actions/runs/40234357760

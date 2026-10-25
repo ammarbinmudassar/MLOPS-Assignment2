@@ -1,0 +1,52 @@
+test (3.12)	Run python -m unittest discover -v	﻿2026-10-25T21:10:56.2144472Z ##[group]Run python -m unittest discover -v
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2146692Z ^[[36;1mpython -m unittest discover -v^[[0m
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2548006Z shell: /usr/bin/bash -e {0}
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2549143Z env:
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2550231Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2552061Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2554059Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2555681Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2557309Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2558950Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.2560306Z ##[endgroup]
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4265081Z test_adds_two_numbers (test_calculator.CalculatorTests.test_adds_two_numbers) ... FAIL
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4267958Z 
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4268927Z ======================================================================
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4272026Z FAIL: test_adds_two_numbers (test_calculator.CalculatorTests.test_adds_two_numbers)
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4275437Z ----------------------------------------------------------------------
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4277901Z Traceback (most recent call last):
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4289836Z   File "/home/runner/work/MLOPS-Assignment2-CI-Toy-20261026/MLOPS-Assignment2-CI-Toy-20261026/test_calculator.py", line 7, in test_adds_two_numbers
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4294976Z     self.assertEqual(add(2, 3), 5)
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4296799Z AssertionError: -1 != 5
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4298010Z 
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4299093Z ----------------------------------------------------------------------
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4301374Z Ran 1 test in 0.001s
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4302397Z 
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4303137Z FAILED (failures=1)
+test (3.12)	Run python -m unittest discover -v	2026-10-25T21:10:56.4365865Z ##[error]Process completed with exit code 1.
+test (3.11)	Run python -m unittest discover -v	﻿2026-10-25T21:10:56.1594351Z ##[group]Run python -m unittest discover -v
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1595805Z ^[[36;1mpython -m unittest discover -v^[[0m
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1980424Z shell: /usr/bin/bash -e {0}
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1981088Z env:
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1981659Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1982520Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1983367Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1984127Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1984884Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1985967Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.1986672Z ##[endgroup]
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4423173Z test_adds_two_numbers (test_calculator.CalculatorTests.test_adds_two_numbers) ... FAIL
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4446686Z 
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4456950Z ======================================================================
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4459677Z FAIL: test_adds_two_numbers (test_calculator.CalculatorTests.test_adds_two_numbers)
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4471711Z ----------------------------------------------------------------------
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4474242Z Traceback (most recent call last):
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4484401Z   File "/home/runner/work/MLOPS-Assignment2-CI-Toy-20261026/MLOPS-Assignment2-CI-Toy-20261026/test_calculator.py", line 7, in test_adds_two_numbers
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4489426Z     self.assertEqual(add(2, 3), 5)
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4491219Z AssertionError: -1 != 5
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4492244Z 
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4495479Z ----------------------------------------------------------------------
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4498349Z Ran 1 test in 0.001s
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4499643Z 
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4500426Z FAILED (failures=1)
+test (3.11)	Run python -m unittest discover -v	2026-10-25T21:10:56.4544544Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,28 @@
+{
+  "toy_repo": "https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026",
+  "toy_red": "https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026/actions/runs/40234262579",
+  "toy_red_conclusion": "failure",
+  "toy_green": "https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026/actions/runs/40234357760",
+  "toy_green_conclusion": "success",
+  "toy_matrix": [
+    "3.11",
+    "3.12"
+  ],
+  "project_green": "https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/runs/40234424776",
+  "project_green_conclusion": "success",
+  "project_test_count": 29,
+  "verified_code_sha": "45d7c176f143319d8c0311f9550b742c9ab84e5d",
+  "project_steps": {
+    "Set up job": "success",
+    "Run actions/checkout@v6": "success",
+    "Run actions/setup-python@v6": "success",
+    "Install dependencies": "success",
+    "Lint": "success",
+    "Run tests without credentials, datasets or model downloads": "success",
+    "Build Docker image": "success",
+    "Post Run actions/setup-python@v6": "success",
+    "Post Run actions/checkout@v6": "success",
+    "Complete job": "success"
+  },
+  "badge": "https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/workflows/ci.yml/badge.svg?branch=main"
+}

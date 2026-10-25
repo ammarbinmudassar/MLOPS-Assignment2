@@ -8,8 +8,9 @@ builds the Docker image. It requires no real credentials, dataset images or
 champion download. The split manifests used by the audit test are tracked in Git.
 The README contains the normal GitHub Actions status badge.
 
-Local checks: Ruff passed; all 29 tests passed. Hosted evidence is pending GitHub
-sign-in and publication; a local pass is not a hosted green run.
+Local and hosted checks passed: Ruff, all 29 tests and the Docker image build.
+The initial hosted run exposed missing Keras Tuner/TensorBoard imports; these
+CI dependencies were declared explicitly, with no tests skipped.
 
 ## Toy workflow
 
@@ -40,3 +41,16 @@ mock credentials and needs no project secrets.
 
 Sources: [Python CI](https://docs.github.com/en/actions/tutorials/build-and-test-code/python)
 and [Actions secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets).
+
+## Verified hosted runs
+
+- [Toy red — both Python versions failed as intended](https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026/actions/runs/40234262579)
+- [Toy green — both Python versions passed](https://github.com/ammarbinmudassar/MLOPS-Assignment2-CI-Toy-20261026/actions/runs/40234357760)
+- [VisionGuard green — lint, 29 tests and Docker build](https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/runs/40234424776)
+
+Screenshot these three real run pages and the README badge. The toy repository
+is private and accessible to the signed-in owner.
+
+Verified project code: `45d7c176f143319d8c0311f9550b742c9ab84e5d`. The final evidence-only
+commit uses `[skip ci]` because it changes reports and saved logs, not executable
+code or workflow requirements.
