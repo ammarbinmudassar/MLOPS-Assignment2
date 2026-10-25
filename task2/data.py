@@ -11,6 +11,7 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
 from task2.common import BATCH_SIZE, IMAGE_SIZE, OUT, ROOT, SEED, write_json
+from visionguard.preprocessing import decode_resize_bytes
 
 
 def prepare_splits():
@@ -73,11 +74,8 @@ def read_split(name):
 
 
 def decode_resize(path, label):
-    image = tf.io.decode_image(tf.io.read_file(path), channels=3, expand_animations=False)
-    image.set_shape([None, None, 3])
-    # Letterboxing preserves aspect ratio. Cache uint8, then cast before augmentation.
-    image = tf.image.resize_with_pad(image, IMAGE_SIZE, IMAGE_SIZE, antialias=True)
-    return tf.cast(tf.clip_by_value(image, 0, 255), tf.uint8), tf.cast(label, tf.float32)
+    image = decode_resize_bytes(tf.io.read_file(path), IMAGE_SIZE)
+    return image, tf.cast(label, tf.float32)
 
 
 def augmentation():
