@@ -1,0 +1,20 @@
+{
+  "name": "no_augmentation",
+  "learning_rate": 0.0001,
+  "augmentation": false,
+  "dropout": 0.3,
+  "unfrozen_layers": 0,
+  "changed_setting": "augmentation",
+  "selected_phase": "adapt",
+  "run_id": "7951c99fecf04e08969ec480f70dcbad",
+  "experiment_id": "0",
+  "model_uri": "runs:/7951c99fecf04e08969ec480f70dcbad/model",
+  "selection_val_loss": 0.5379088521003723,
+  "selection_val_accuracy": 0.7123287671232876,
+  "selection_val_precision": 0.7468354430379747,
+  "selection_val_recall": 0.7283950617283951,
+  "selection_val_f1": 0.7375,
+  "selection_val_roc_auc": 0.8049382716049382,
+  "epochs_run": 16,
+  "training_seconds": 105.81710196700078
+}

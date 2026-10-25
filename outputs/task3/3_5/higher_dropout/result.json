@@ -1,0 +1,20 @@
+{
+  "name": "higher_dropout",
+  "learning_rate": 0.0001,
+  "augmentation": true,
+  "dropout": 0.5,
+  "unfrozen_layers": 0,
+  "changed_setting": "dropout",
+  "selected_phase": "adapt",
+  "run_id": "decb7dbf0da74c08b528d0cf37a195b9",
+  "experiment_id": "0",
+  "model_uri": "runs:/decb7dbf0da74c08b528d0cf37a195b9/model",
+  "selection_val_loss": 0.5437335968017578,
+  "selection_val_accuracy": 0.7054794520547946,
+  "selection_val_precision": 0.7261904761904762,
+  "selection_val_recall": 0.7530864197530864,
+  "selection_val_f1": 0.7393939393939394,
+  "selection_val_roc_auc": 0.7903133903133903,
+  "epochs_run": 16,
+  "training_seconds": 131.37245915399944
+}

@@ -167,7 +167,7 @@ def select_and_evaluate(runs, frames):
     if lock_file.exists():
         assert json.loads(lock_file.read_text()) == lock
     else:
-        write_json(lock_file, lock)  # Lock selection BEFORE opening the test set.
+        write_json(lock_file, lock)  # Lock selection BEFORE test evaluation.
     result_file = OUT / "champion_test_metrics.json"
     if result_file.exists():
         return winner, json.loads(result_file.read_text())

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "lower_lr",
+    "common_head_history_matches_reference": true
+  },
+  {
+    "name": "unfreeze_4",
+    "common_head_history_matches_reference": true
+  },
+  {
+    "name": "unfreeze_8",
+    "common_head_history_matches_reference": true
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "unfreeze_8",
+  "run_id": "36cdf49361924598b55143251cc26845",
+  "model_uri": "runs:/36cdf49361924598b55143251cc26845/model",
+  "selection_rule": "minimum validation binary cross-entropy; ROC-AUC breaks ties",
+  "decision_threshold": 0.5,
+  "test_consulted_for_selection": false
+}

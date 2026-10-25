@@ -1,0 +1,56 @@
+[
+  {
+    "name": "reference",
+    "run_id": "86129a92bc2844e58d3d9ced0830d433",
+    "status": "FINISHED",
+    "epochs_verified": 16,
+    "validation_metrics_verified": true,
+    "remote_model_present": true,
+    "changed_setting": "reference"
+  },
+  {
+    "name": "lower_lr",
+    "run_id": "ef767d2d4d754505962a043640232c72",
+    "status": "FINISHED",
+    "epochs_verified": 16,
+    "validation_metrics_verified": true,
+    "remote_model_present": true,
+    "changed_setting": "learning_rate"
+  },
+  {
+    "name": "no_augmentation",
+    "run_id": "7951c99fecf04e08969ec480f70dcbad",
+    "status": "FINISHED",
+    "epochs_verified": 16,
+    "validation_metrics_verified": true,
+    "remote_model_present": true,
+    "changed_setting": "augmentation"
+  },
+  {
+    "name": "higher_dropout",
+    "run_id": "decb7dbf0da74c08b528d0cf37a195b9",
+    "status": "FINISHED",
+    "epochs_verified": 16,
+    "validation_metrics_verified": true,
+    "remote_model_present": true,
+    "changed_setting": "dropout"
+  },
+  {
+    "name": "unfreeze_4",
+    "run_id": "93f7b0553b60447085968c9822b038b5",
+    "status": "FINISHED",
+    "epochs_verified": 16,
+    "validation_metrics_verified": true,
+    "remote_model_present": true,
+    "changed_setting": "unfrozen_layers"
+  },
+  {
+    "name": "unfreeze_8",
+    "run_id": "36cdf49361924598b55143251cc26845",
+    "status": "FINISHED",
+    "epochs_verified": 16,
+    "validation_metrics_verified": true,
+    "remote_model_present": true,
+    "changed_setting": "unfrozen_layers"
+  }
+]

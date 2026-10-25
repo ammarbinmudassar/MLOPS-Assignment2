@@ -1,0 +1,20 @@
+{
+  "name": "lower_lr",
+  "learning_rate": 3e-05,
+  "augmentation": true,
+  "dropout": 0.3,
+  "unfrozen_layers": 0,
+  "changed_setting": "learning_rate",
+  "selected_phase": "adapt",
+  "run_id": "ef767d2d4d754505962a043640232c72",
+  "experiment_id": "0",
+  "model_uri": "runs:/ef767d2d4d754505962a043640232c72/model",
+  "selection_val_loss": 0.5445244908332825,
+  "selection_val_accuracy": 0.7054794520547946,
+  "selection_val_precision": 0.7159090909090909,
+  "selection_val_recall": 0.7777777777777778,
+  "selection_val_f1": 0.7455621301775148,
+  "selection_val_roc_auc": 0.7895536562203229,
+  "epochs_run": 16,
+  "training_seconds": 169.7149158910015
+}
