@@ -2,6 +2,8 @@
 
 import argparse
 import json
+from pathlib import Path
+import tempfile
 from importlib.metadata import version
 
 from task2.common import ROOT, SEED, git_commit, setup
@@ -66,9 +68,19 @@ def save_plot(history, destination):
 
 
 def main():
+    global OUT
     parser = argparse.ArgumentParser()
     parser.add_argument("--tracking-uri", default="http://127.0.0.1:5000")
+    parser.add_argument("--dagshub", action="store_true", help="Task 3.2: use the ignored .env settings")
     args = parser.parse_args()
+    phase = "3.2" if args.dagshub else "3.1"
+    if args.dagshub:
+        from task3.dagshub_config import configure_dagshub
+        try:
+            args.tracking_uri = configure_dagshub()
+        except ValueError as error:
+            raise SystemExit(str(error)) from None
+        OUT = ROOT / "outputs/task3/3_2"
     setup()
     OUT.mkdir(parents=True, exist_ok=True)
     mlflow.set_tracking_uri(args.tracking_uri)
@@ -83,7 +95,7 @@ def main():
     for learning_rate in [0.001, 0.0001]:
         tf.keras.backend.clear_session()
         tf.keras.utils.set_random_seed(SEED)
-        name = f"3.1_fashion_lr_{learning_rate}"
+        name = f"{phase}_fashion_lr_{learning_rate}"
         run_dir = OUT / name
         run_dir.mkdir(exist_ok=True)
         model = build_model(learning_rate)
@@ -94,8 +106,9 @@ def main():
                 "dataset": "Fashion-MNIST", "train_samples": len(train),
                 "validation_samples": len(validation),
             })
-            mlflow.set_tags({"task": "3.1", "logging": "manual_callback",
-                             "git_commit": git_commit(), "purpose": "local_tool_lab"})
+            mlflow.set_tags({"task": phase, "logging": "manual_callback",
+                             "git_commit": git_commit(),
+                             "purpose": "remote_tool_lab" if args.dagshub else "local_tool_lab"})
             history = model.fit(
                 dataset(images[train], labels[train], True),
                 validation_data=dataset(images[validation], labels[validation], False),
@@ -114,14 +127,24 @@ def main():
             # model directory. Keep the example as a separate run artifact.
             mlflow.log_dict({"shape": list(example.shape), "values": example.tolist()},
                             "input_example.json")
-            logged_model = mlflow.keras.log_model(
-                model, name="model",
-                signature=infer_signature(example, probabilities),
-                pip_requirements=[f"tensorflow=={version('tensorflow')}",
-                                  f"keras=={version('keras')}", f"numpy=={version('numpy')}"],
-            )
+            model_options = {
+                "signature": infer_signature(example, probabilities),
+                "pip_requirements": [f"tensorflow=={version('tensorflow')}",
+                                     f"keras=={version('keras')}", f"numpy=={version('numpy')}"],
+            }
+            if args.dagshub:
+                # Use a run artifact so the hosted server need not implement
+                # MLflow 3's separate logged-model endpoints.
+                with tempfile.TemporaryDirectory() as temporary:
+                    model_path = Path(temporary) / "model"
+                    mlflow.keras.save_model(model, str(model_path), **model_options)
+                    mlflow.log_artifacts(str(model_path), "model")
+                model_uri = f"runs:/{run.info.run_id}/model"
+            else:
+                logged_model = mlflow.keras.log_model(model, name="model", **model_options)
+                model_uri = logged_model.model_uri
             # Verify the stored MLflow model can actually be loaded and used.
-            restored = mlflow.keras.load_model(logged_model.model_uri)
+            restored = mlflow.keras.load_model(model_uri)
             np.testing.assert_allclose(
                 restored.predict(example, verbose=0), probabilities, rtol=1e-5, atol=1e-6,
             )
@@ -131,7 +154,7 @@ def main():
                               "learning_rate": learning_rate,
                               "final_val_loss": history["val_loss"][-1],
                               "final_val_accuracy": history["val_accuracy"][-1],
-                              "model_uri": logged_model.model_uri})
+                              "model_uri": model_uri})
     summary = pd.DataFrame(summaries)
     summary.to_csv(OUT / "comparison.csv", index=False)
     (OUT / "runs.json").write_text(json.dumps(summaries, indent=2) + "\n")
