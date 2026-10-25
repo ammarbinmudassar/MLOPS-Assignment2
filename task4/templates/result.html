@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Image result</h1>
-<p>File: {{ result.filename }}</p>
-<dl>
-  <dt>Prediction</dt><dd>{{ result.label }}</dd>
-  <dt>Confidence</dt><dd>{{ '%.2f' | format(result.confidence * 100) }}%</dd>
-  <dt>Model version</dt><dd>{{ result.model_version }}</dd>
-</dl>
-<p>This is a model estimate and may be wrong. Confidence scores are not calibrated.</p>
-<p>Your uploaded image was not saved.</p>
-<p><a href="{{ url_for('upload') }}">Check another image</a></p>
+<section class="result-panel" aria-label="Prediction result">
+  <div class="result-top">
+    <div><p class="result-label">Prediction</p><p class="prediction-value">{{ result.label }}</p></div>
+    <div><p class="result-label">Confidence</p><p class="confidence-value">{{ '%.2f' | format(result.confidence * 100) }}%</p></div>
+  </div>
+  <div class="caveat"><p>This is a model estimate and may be wrong. Confidence scores are not calibrated.</p></div>
+  <dl class="details">
+    <dt>File</dt><dd>{{ result.filename }}</dd>
+    <dt>Model version</dt><dd>{{ result.model_version }}</dd>
+    <dt>Checked at</dt><dd>{{ result.created_at | local_time }}</dd>
+  </dl>
+  <p class="small">Your uploaded image was not saved.</p>
+  <div class="actions"><a class="button" href="{{ url_for('upload') }}">Check another image</a><a class="button secondary" href="{{ url_for('history') }}">View history</a></div>
+</section>
 {% endblock %}

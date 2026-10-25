@@ -13,7 +13,7 @@ from visionguard.preprocessing import PREPROCESSING_ID, decode_resize_bytes
 class VisionGuardPredictor:
     """Construct once at app startup and reuse for every request. No network calls."""
 
-    def __init__(self, model_dir):
+    def __init__(self, model_dir, threshold=None):
         directory = Path(model_dir)
         self.metadata = json.loads((directory / "metadata.json").read_text())
         if self.metadata["preprocessing"] != PREPROCESSING_ID:
@@ -21,7 +21,7 @@ class VisionGuardPredictor:
         path = directory / "model.keras"
         if hashlib.sha256(path.read_bytes()).hexdigest() != self.metadata["sha256"]:
             raise ValueError("Local model hash does not match its metadata.")
-        self.threshold = float(self.metadata["threshold"])
+        self.threshold = float(self.metadata["threshold"] if threshold is None else threshold)
         if not 0 <= self.threshold <= 1 or self.metadata["positive_class"] != "AI":
             raise ValueError("Invalid model decision settings.")
         self.image_size = int(self.metadata["image_size"])

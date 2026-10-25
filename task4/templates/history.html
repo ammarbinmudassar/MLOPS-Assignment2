@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Recent results</h1>
-<p>The latest 100 results are available until this server restarts. Uploaded images are not retained.</p>
+<p class="lead">Your latest 100 saved checks, including the model version behind each result. Uploaded images are not retained.</p>
 {% if records %}
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable image check history"><table>
   <caption>Image checks</caption>
-  <thead><tr><th scope="col">Time (UTC)</th><th scope="col">File</th><th scope="col">Prediction</th><th scope="col">Confidence</th><th scope="col">Model version</th></tr></thead>
+  <thead><tr><th scope="col">Time</th><th scope="col">File</th><th scope="col">Prediction</th><th scope="col">Confidence</th><th scope="col">Model version</th></tr></thead>
   <tbody>
     {% for result in records %}
-    <tr><td>{{ result.created_at }}</td><td><a href="{{ url_for('result', identifier=result.id) }}">{{ result.filename }}</a></td><td>{{ result.label }}</td><td>{{ '%.2f' | format(result.confidence * 100) }}%</td><td>{{ result.model_version }}</td></tr>
+    <tr><td class="nowrap">{{ result.created_at | local_time }}</td><td><a class="filename" href="{{ url_for('result', identifier=result.id) }}" title="{{ result.filename }}">{{ result.filename }}</a></td><td>{{ result.label }}</td><td>{{ '%.2f' | format(result.confidence * 100) }}%</td><td>{{ result.model_version }}</td></tr>
     {% endfor %}
   </tbody>
-</table>
+</table></div>
 {% else %}
-<p>No images checked yet. <a href="{{ url_for('upload') }}">Upload an image to start.</a></p>
+<div class="empty-state"><h2>No images checked yet</h2><p>Upload an image to save your first result here.</p><a class="button" href="{{ url_for('upload') }}">Upload an image</a></div>
 {% endif %}
 {% endblock %}

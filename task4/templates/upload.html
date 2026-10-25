@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Check an image</h1>
-<p>Upload a PNG or JPEG, up to 5 MB. Your image is processed in memory and is not saved.</p>
-<form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
-  <p><label for="image">Choose an image</label></p>
-  <p><input id="image" name="image" type="file" accept=".png,.jpg,.jpeg" required></p>
-  <button type="submit">Check image</button>
-</form>
-<p>The result is a model estimate and may be wrong. Confidence scores are not calibrated.</p>
+<p class="lead">Get an AI or Real estimate for an image. Read the confidence alongside the result, then find the check in your history.</p>
+<div class="upload-grid">
+  <form class="upload-form" action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data" data-upload-form>
+    <label class="field-label" for="image">Choose an image</label>
+    <div class="file-field">
+      <input id="image" name="image" type="file" accept=".png,.jpg,.jpeg" aria-describedby="file-help" required>
+      <p class="help" id="file-help">PNG or JPEG · up to {{ upload_limit_mb }} MB</p>
+    </div>
+    <button type="submit">Check image</button>
+    <p class="small loading-status" aria-live="polite" data-upload-status></p>
+  </form>
+  <aside class="upload-aside" aria-label="Before you upload">
+    <section><h2>A helpful estimate</h2><p>This model can make mistakes. Its confidence is a model score, not proof of how an image was made.</p></section>
+    <section><h2>Images are not saved</h2><p>The image is processed in memory and is not saved. History keeps the result and model version.</p></section>
+  </aside>
+</div>
 {% endblock %}

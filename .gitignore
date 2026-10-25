@@ -4,6 +4,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+!.env.web.example
 dataset/
 dvc-toy/
 .cache/
@@ -21,4 +22,5 @@ outputs/task3/3_5/**/*.keras
 outputs/task3/3_5/training.log
 models/
 outputs/task4/4_2/fixtures/oversized.png
+var/
 

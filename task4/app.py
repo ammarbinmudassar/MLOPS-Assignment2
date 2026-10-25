@@ -1,20 +1,20 @@
 """Task 4.2: Flask routes, memory-only uploads and friendly validation errors."""
 
-from collections import deque
 from datetime import datetime, timezone
 from io import BytesIO
 from pathlib import Path
-from threading import Lock
 from uuid import uuid4
+from zoneinfo import ZoneInfo
 import warnings
 
 from flask import Flask, Request, jsonify, redirect, render_template, request, url_for
 from PIL import Image, UnidentifiedImageError
 from werkzeug.exceptions import RequestEntityTooLarge
 from werkzeug.utils import secure_filename
+from task4.settings import settings_from_env
+from task4.storage import ResultStore
 
 ROOT = Path(__file__).resolve().parents[1]
-MAX_FILE_BYTES = 5 * 1024 * 1024
 FORMATS = {".png": "PNG", ".jpg": "JPEG", ".jpeg": "JPEG"}
 
 
@@ -24,48 +24,34 @@ class MemoryUploadRequest(Request):
         return BytesIO()
 
 
-class RecentResults:
-    """Bounded, thread-safe metadata history; Task 5 will provide persistence."""
-
-    def __init__(self):
-        self.records = deque(maxlen=100)
-        self.lock = Lock()
-
-    def add(self, record):
-        with self.lock:
-            self.records.appendleft(record)
-
-    def list(self):
-        with self.lock:
-            return list(self.records)
-
-    def get(self, identifier):
-        return next((row for row in self.list() if row["id"] == identifier), None)
-
-
 def create_app(test_config=None, predictor=None):
     app = Flask(__name__)
     app.request_class = MemoryUploadRequest
-    app.config.update(
-        MAX_FILE_BYTES=MAX_FILE_BYTES,
-        MAX_CONTENT_LENGTH=MAX_FILE_BYTES + 64 * 1024,
-        MAX_FORM_MEMORY_SIZE=512 * 1024, MAX_FORM_PARTS=4,
-        MAX_IMAGE_PIXELS=16_000_000,
-    )
+    app.config.update(settings_from_env())
     if test_config:
         app.config.update(test_config)
     if predictor is None:
         from task4.inference import VisionGuardPredictor
-        predictor = VisionGuardPredictor(ROOT / "models/champion")
+        predictor = VisionGuardPredictor(app.config["MODEL_DIR"], threshold=app.config["DECISION_THRESHOLD"])
     app.extensions["predictor"] = predictor
-    app.extensions["recent_results"] = RecentResults()
+    app.extensions["recent_results"] = ResultStore(app.config["DATABASE_URL"])
+
+    @app.context_processor
+    def shared_view_data():
+        return {"model_version": predictor.metadata["model_version"],
+                "upload_limit_mb": f"{app.config['MAX_FILE_BYTES'] / (1024 * 1024):g}"}
+
+    @app.template_filter("local_time")
+    def local_time(timestamp):
+        return datetime.fromisoformat(timestamp).astimezone(ZoneInfo(app.config["APP_TIMEZONE"])).strftime("%d %b %Y, %I:%M %p %Z")
 
     def error_page(title, message, status):
         return render_template("error.html", title=title, message=message), status
 
     @app.errorhandler(RequestEntityTooLarge)
     def too_large(error):
-        return error_page("Image too large", "Choose an image smaller than 5 MB and try again.", 413)
+        limit = app.config["MAX_FILE_BYTES"] / (1024 * 1024)
+        return error_page("Image too large", f"Choose an image smaller than {limit:g} MB and try again.", 413)
 
     @app.errorhandler(404)
     def not_found(error):
@@ -104,7 +90,8 @@ def create_app(test_config=None, predictor=None):
                     if image.format != FORMATS[extension]:
                         return error_page("Image format mismatch", "Save the image as PNG or JPEG with the matching file extension.", 422)
                     if image.width * image.height > app.config["MAX_IMAGE_PIXELS"]:
-                        return error_page("Image dimensions too large", "Resize the image to 16 million pixels or fewer and try again.", 422)
+                        limit = app.config["MAX_IMAGE_PIXELS"]
+                        return error_page("Image dimensions too large", f"Resize the image to {limit:,} pixels or fewer and try again.", 422)
                     image.verify()
                 # verify() alone does not fully decode every JPEG.
                 with Image.open(BytesIO(contents)) as image:
@@ -118,7 +105,11 @@ def create_app(test_config=None, predictor=None):
             return error_page("Image check unavailable", "We could not check this image. Please try again with another image.", 503)
         record = {"id": uuid4().hex, "filename": filename,
                   "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), **result}
-        app.extensions["recent_results"].add(record)
+        try:
+            app.extensions["recent_results"].add(record)
+        except Exception:
+            app.logger.exception("Prediction history write failed")
+            return error_page("Result could not be saved", "Please try again in a moment.", 503)
         return redirect(url_for("result", identifier=record["id"]), code=303)
 
     @app.get("/result/<identifier>")
@@ -135,6 +126,12 @@ def create_app(test_config=None, predictor=None):
     @app.get("/health")
     def health():
         metadata = app.extensions["predictor"].metadata
-        return jsonify(status="ok", model_name=metadata["model_name"], model_version=metadata["model_version"])
+        try:
+            ready = app.extensions["recent_results"].ping()
+        except Exception:
+            ready = False
+        return jsonify(status="ok" if ready else "unavailable", model_name=metadata["model_name"],
+                       model_version=metadata["model_version"], threshold=predictor.threshold,
+                       history_backend="sqlite", database_ready=ready, debug=app.debug), (200 if ready else 503)
 
     return app

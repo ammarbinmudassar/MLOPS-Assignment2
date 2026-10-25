@@ -1,5 +1,7 @@
 from io import BytesIO
 import random
+from pathlib import Path
+import tempfile
 import unittest
 from unittest.mock import Mock
 
@@ -17,12 +19,15 @@ def png():
 
 class RouteTests(unittest.TestCase):
     def setUp(self):
-        self.predictor = Mock(metadata={"model_name": "test", "model_version": "2"})
+        self.directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.directory.cleanup)
+        self.database_url = f"sqlite:///{Path(self.directory.name) / 'history.sqlite3'}"
+        self.predictor = Mock(metadata={"model_name": "test", "model_version": "2"}, threshold=.5)
         self.predictor.predict_bytes.return_value = {
             "label": "AI", "confidence": .8, "p_ai": .8, "threshold": .5,
             "model_name": "test", "model_version": "2", "confidence_is_calibrated": False,
         }
-        self.app = create_app({"TESTING": True}, predictor=self.predictor)
+        self.app = create_app({"TESTING": True, "DATABASE_URL": self.database_url}, predictor=self.predictor)
         self.client = self.app.test_client()
 
     def post(self, contents, filename):
@@ -96,6 +101,13 @@ class RouteTests(unittest.TestCase):
         response = self.client.get("/result/missing")
         self.assertEqual(response.status_code, 404)
         self.assertIn(b"Page or result not found", response.data)
+
+    def test_history_persists_when_app_restarts(self):
+        result = self.post(png(), "persisted.png")
+        restarted = create_app({"TESTING": True, "DATABASE_URL": self.database_url}, predictor=self.predictor)
+        client = restarted.test_client()
+        self.assertIn(b"persisted.png", client.get("/history").data)
+        self.assertEqual(client.get(result.location).status_code, 200)
 
 
 if __name__ == "__main__":
