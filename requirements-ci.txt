@@ -7,3 +7,4 @@ mlflow-skinny==3.17.2
 ruff==0.14.0
 
 keras-tuner==1.4.8
+tensorboard==2.21.0
