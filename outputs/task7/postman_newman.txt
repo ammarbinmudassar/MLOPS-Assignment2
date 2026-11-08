@@ -1,0 +1,52 @@
+newman
+
+VisionGuard hosted API
+
+→ Health
+  GET https://visionguard-a2-api.vercel.app/health [200 OK, 525B, 503ms]
+  ✓  HTTP 200
+
+→ Unauthorized history
+  GET https://visionguard-a2-api.vercel.app/history [401 Unauthorized, 372B, 287ms]
+  ✓  HTTP 401
+
+→ Predict
+  POST https://visionguard-a2-api.vercel.app/predict [201 Created, 693B, 1149ms]
+  ✓  HTTP 201
+
+→ Saved result
+  GET https://visionguard-a2-api.vercel.app/results/e02360616d344712a4fc44ea810acf70 [200 OK, 692B, 301ms]
+  ✓  HTTP 200
+
+→ History
+  GET https://visionguard-a2-api.vercel.app/history [200 OK, 3.65kB, 309ms]
+  ✓  HTTP 200
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                   5 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                   5 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   0 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                   5 │                   0 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 2.6s                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 4.2kB (approx)                                 │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 509ms [min: 287ms, max: 1149ms, s.d.: 329ms] │
+└─────────────────────────────────────────────────────────────────────┘
+
+npm warn deprecated har-validator@5.1.5: this library is no longer supported
+npm warn deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated @faker-js/faker@5.5.3: Please update to a newer version.
+npm notice run npx
+npm notice run 'newman' run postman/VisionGuard.postman_collection.json -e /tmp/visionguard-newman-bxu2qevn.json --reporters cli --timeout-request 60000 --color off
+(node:29887) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)

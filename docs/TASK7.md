@@ -55,12 +55,12 @@ Confidence is an uncalibrated model score.
 | Evidence | File/view |
 |---|---|
 | Neon project | `outputs/task7/screenshots/neon_project.jpg` |
-| Vercel build | `outputs/task7/deployment.log`, `build_inspect.txt` |
+| Vercel build | `outputs/task7/screenshots/vercel_ready.jpg`, `build_inspect.txt` |
 | Live API health | `outputs/task7/screenshots/public_health.jpg` |
 | Three predictions + persisted history | `outputs/task7/public_api_check.json` |
 | Quantization validation | `outputs/task7/validation.json` |
 | Postman collection tests | `outputs/task7/postman_newman.txt` |
-| Another network | GitHub Actions → Hosted API check → public-access |
+| Another network | [Successful GitHub runner check](https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/runs/42481179553), `outputs/task7/external_network_job.log` |
 
 The hosted check tests public health and authentication from a GitHub runner.
 Workstation prediction tests are separate. If the rubric requires prediction

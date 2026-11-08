@@ -1,0 +1,48 @@
+npm notice run npx
+npm notice run 'vc' inspect https://visionguard-a2-api.vercel.app --cwd deploy/vercel_api
+Vercel CLI 65.12.1
+> Fetched deployment "visionguard-a2-afe63j241-me-8544.vercel.app" in me-8544 [490ms]
+
+  General
+
+    id		dpl_7LtpxNAvR7cdy1T5U7U6je52ZNxS
+    name	visionguard-a2-api
+    target	production
+    status	● Ready
+    url		https://visionguard-a2-afe63j241-me-8544.vercel.app
+    created	Sun Nov 08 2026 17:39:19 GMT+0500 (Pakistan Standard Time) [52s ago]
+
+
+  Build Machine
+
+    requested build machine basic
+    actual assigned cores   2 vCPU (actual assignment)
+    memory                  8192 MiB
+    selection type          fixed
+    selection source        plan-default
+
+
+  Build Cache
+
+    size       52.34 MiB / 1.5 GiB limit
+    file count ~2,391 (approx., paths selected for packing)
+
+
+  Duration
+
+    build duration	19s
+    post-build duration	unavailable
+    billable duration	unavailable
+    CPU Minutes Usage	unavailable
+
+
+  Aliases
+
+    ╶ https://visionguard-a2-api.vercel.app
+    ╶ https://visionguard-a2-api-me-8544.vercel.app
+
+
+  Builds
+
+    ┌ .        [0ms]
+    └── λ flask (65.39MB) [iad1]

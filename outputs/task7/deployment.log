@@ -1,0 +1,48 @@
+npm notice run npx
+npm notice run 'vc' deploy --prod --yes --cwd deploy/vercel_api
+Vercel CLI 65.12.1
+  Inspect         https://vercel.com/me-8544/visionguard-a2-api/BoswszRsaoKDkXRhWyU3gqYt3YCh
+  Production      https://visionguard-a2-9qbgi5rb8-me-8544.vercel.app
+▲ Aliased         https://visionguard-a2-api.vercel.app
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_BoswszRsaoKDkXRhWyU3gqYt3YCh",
+    "url": "https://visionguard-a2-9qbgi5rb8-me-8544.vercel.app",
+    "productionUrl": "https://visionguard-a2-api.vercel.app",
+    "inspectorUrl": "https://vercel.com/me-8544/visionguard-a2-api/BoswszRsaoKDkXRhWyU3gqYt3YCh",
+    "readyState": "READY",
+    "target": "production",
+    "environment": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_BoswszRsaoKDkXRhWyU3gqYt3YCh",
+    "buildMachine": {
+      "cores": 2,
+      "memory": 8192,
+      "machine": "basic",
+      "selectionType": "fixed",
+      "selectionSource": "plan-default"
+    },
+    "deploymentProtection": [
+      "vercel_authentication"
+    ]
+  },
+  "message": "Deployment visionguard-a2-9qbgi5rb8-me-8544.vercel.app ready. Production URL: https://visionguard-a2-api.vercel.app",
+  "next": [
+    {
+      "command": "vercel git connect --cwd deploy/vercel_api",
+      "when": "Automatically deploy changes on every push"
+    },
+    {
+      "command": "vercel curl https://visionguard-a2-api.vercel.app",
+      "when": "Verify deployment, including when Deployment Protection is enabled"
+    },
+    {
+      "command": "vercel inspect visionguard-a2-9qbgi5rb8-me-8544.vercel.app --cwd deploy/vercel_api",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod --cwd deploy/vercel_api",
+      "when": "Promote to production"
+    }
+  ]
+}

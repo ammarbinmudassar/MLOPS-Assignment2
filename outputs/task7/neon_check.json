@@ -1,0 +1,7 @@
+{
+  "database_ready": true,
+  "backend": "Neon PostgreSQL",
+  "pooled_connection": true,
+  "ssl_required": true,
+  "connection_seconds": 6.126
+}

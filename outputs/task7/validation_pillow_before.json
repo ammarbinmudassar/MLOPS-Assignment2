@@ -1,0 +1,33 @@
+{
+  "split": "validation only",
+  "count": 146,
+  "threshold": 0.5,
+  "preprocessing_note": "Pillow RGB bilinear letterbox is a measured deployment variant, not claimed pixel-identical to TensorFlow.",
+  "keras": {
+    "accuracy": 0.8287671232876712,
+    "roc_auc": 0.8757834757834758,
+    "mean_absolute_probability_drift": 0.0,
+    "max_probability_drift": 0.0,
+    "decision_agreement": 1.0
+  },
+  "lite_same_tf_pixels": {
+    "accuracy": 0.821917808219178,
+    "roc_auc": 0.8746438746438747,
+    "mean_absolute_probability_drift": 0.00206268979364062,
+    "max_probability_drift": 0.014925122261047363,
+    "decision_agreement": 0.9931506849315068
+  },
+  "lite_pillow": {
+    "accuracy": 0.815068493150685,
+    "roc_auc": 0.8831908831908831,
+    "mean_absolute_probability_drift": 0.020777704098504293,
+    "max_probability_drift": 0.21869248151779175,
+    "decision_agreement": 0.9863013698630136
+  },
+  "acceptance_gate": {
+    "max_accuracy_drop": 0.01,
+    "min_decision_agreement": 0.97,
+    "max_quantization_mae": 0.005,
+    "passed": false
+  }
+}

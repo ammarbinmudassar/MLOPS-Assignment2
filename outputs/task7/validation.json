@@ -1,0 +1,33 @@
+{
+  "split": "validation only",
+  "count": 146,
+  "threshold": 0.5,
+  "preprocessing_note": "Pillow RGB decode plus NumPy antialiased bilinear resize/uint8 letterbox. JPEG decoder differences are measured, not claimed identical.",
+  "keras": {
+    "accuracy": 0.8287671232876712,
+    "roc_auc": 0.8757834757834758,
+    "mean_absolute_probability_drift": 0.0,
+    "max_probability_drift": 0.0,
+    "decision_agreement": 1.0
+  },
+  "lite_same_tf_pixels": {
+    "accuracy": 0.821917808219178,
+    "roc_auc": 0.8746438746438747,
+    "mean_absolute_probability_drift": 0.00206268979364062,
+    "max_probability_drift": 0.014925122261047363,
+    "decision_agreement": 0.9931506849315068
+  },
+  "lite_pillow": {
+    "accuracy": 0.821917808219178,
+    "roc_auc": 0.8831908831908831,
+    "mean_absolute_probability_drift": 0.02025971464710693,
+    "max_probability_drift": 0.20680540800094604,
+    "decision_agreement": 0.9794520547945206
+  },
+  "acceptance_gate": {
+    "max_accuracy_drop": 0.01,
+    "min_decision_agreement": 0.97,
+    "max_quantization_mae": 0.005,
+    "passed": true
+  }
+}

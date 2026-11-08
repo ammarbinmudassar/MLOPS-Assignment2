@@ -1,0 +1,10 @@
+{
+  "database_ready": true,
+  "debug": false,
+  "history_backend": "postgresql",
+  "model_name": "23L-0630_VisionGuard",
+  "model_version": "2-fp16",
+  "runtime": "LiteRT float16",
+  "status": "ok",
+  "threshold": 0.5
+}

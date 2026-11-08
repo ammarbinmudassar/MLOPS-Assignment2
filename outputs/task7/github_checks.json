@@ -1,0 +1,24 @@
+{
+  "code_commit": "58d7ff99fac3efadf942abf6bceabf854d130a51",
+  "public_api": "https://visionguard-a2-api.vercel.app",
+  "ci": {
+    "run_id": 42481179754,
+    "conclusion": "success",
+    "url": "https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/runs/42481179754",
+    "checks": [
+      "lint",
+      "37 unit tests",
+      "Docker build"
+    ]
+  },
+  "external_network": {
+    "run_id": 42481179553,
+    "conclusion": "success",
+    "url": "https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/runs/42481179553",
+    "checks": [
+      "public health from Azure eastus GitHub runner",
+      "unauthenticated history returns 401"
+    ],
+    "limitation": "Authenticated prediction was verified from the workstation; no hotspot prediction claim."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "health": {
+    "database_ready": true,
+    "debug": false,
+    "history_backend": "postgresql",
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2-fp16",
+    "runtime": "LiteRT float16",
+    "status": "ok",
+    "threshold": 0.5
+  },
+  "unauthorized_history_status": 401,
+  "predictions": [
+    {
+      "dataset_label": "AI",
+      "response": {
+        "confidence": 0.8800420165061951,
+        "confidence_is_calibrated": false,
+        "created_at": "2026-11-08T12:24:43+00:00",
+        "filename": "validation_1.jpg",
+        "id": "cff09588fc2f44908bc3cc0c9706886f",
+        "label": "AI",
+        "model_name": "23L-0630_VisionGuard",
+        "model_version": "2-fp16",
+        "p_ai": 0.8800420165061951,
+        "threshold": 0.5
+      }
+    },
+    {
+      "dataset_label": "Real",
+      "response": {
+        "confidence": 0.5679346323013306,
+        "confidence_is_calibrated": false,
+        "created_at": "2026-11-08T12:24:47+00:00",
+        "filename": "validation_2.jpg",
+        "id": "ed16959633bc4d5eb805a518f3b2ae9b",
+        "label": "AI",
+        "model_name": "23L-0630_VisionGuard",
+        "model_version": "2-fp16",
+        "p_ai": 0.5679346323013306,
+        "threshold": 0.5
+      }
+    },
+    {
+      "dataset_label": "AI",
+      "response": {
+        "confidence": 0.9903510808944702,
+        "confidence_is_calibrated": false,
+        "created_at": "2026-11-08T12:24:51+00:00",
+        "filename": "validation_3.jpg",
+        "id": "410ed60dc8534e258a279e38d39128fa",
+        "label": "AI",
+        "model_name": "23L-0630_VisionGuard",
+        "model_version": "2-fp16",
+        "p_ai": 0.9903510808944702,
+        "threshold": 0.5
+      }
+    }
+  ],
+  "history_verified": true
+}

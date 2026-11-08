@@ -1,0 +1,25 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794139838.658496       6 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794139838.893564       6 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794139840.392147       6 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+/home/cheema605/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-9xyfeo6z because there was an issue with the default path (/home/cheema605/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+E0000 00:00:1794139842.913660       6 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+W0000 00:00:1794139847.834822       6 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1794139847.834846       6 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1794139847.835165       6 reader.cc:83] Reading SavedModel from: /tmp/tmpwguu4i_y
+I0000 00:00:1794139847.840085       6 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1794139847.840103       6 reader.cc:147] Reading SavedModel debug info (if present) from: /tmp/tmpwguu4i_y
+I0000 00:00:1794139847.885168       6 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1794139847.894810       6 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1794139848.262821       6 loader.cc:220] Running initialization op on SavedModel bundle at path: /tmp/tmpwguu4i_y
+I0000 00:00:1794139848.346145       6 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 510987 microseconds.
+I0000 00:00:1794139848.439123       6 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+{
+  "source_bytes": 15444309,
+  "lite_bytes": 4515140,
+  "sha256": "2b1b89ac182cbbdf9d5f1bc47cd4eff2cb86f274c1bd17e549c74794a9c97b35",
+  "runtime_ops": "TFLITE_BUILTINS only; no TensorFlow Flex dependency"
+}

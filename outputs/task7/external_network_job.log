@@ -1,0 +1,59 @@
+﻿2026-11-08T12:38:13.0930169Z Current runner version: '2.338.2'
+2026-11-08T12:38:13.0957097Z ##[group]Runner Image Provisioner
+2026-11-08T12:38:13.0957956Z Hosted Compute Agent
+2026-11-08T12:38:13.0958620Z Version: 20261028.624
+2026-11-08T12:38:13.0959270Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-08T12:38:13.0960394Z Build Date: 2026-10-28T21:51:42Z
+2026-11-08T12:38:13.0961216Z Worker ID: {ddb387fc-20c8-4f08-b66d-1190ef2743ea}
+2026-11-08T12:38:13.0961997Z Region: eastus
+2026-11-08T12:38:13.0962617Z Cloud: Azure
+2026-11-08T12:38:13.0963177Z ##[endgroup]
+2026-11-08T12:38:13.0964690Z ##[group]Operating System
+2026-11-08T12:38:13.0965457Z Ubuntu
+2026-11-08T12:38:13.0965988Z 26.04.1
+2026-11-08T12:38:13.0966478Z LTS
+2026-11-08T12:38:13.0967046Z ##[endgroup]
+2026-11-08T12:38:13.0967653Z ##[group]Runner Image
+2026-11-08T12:38:13.0968343Z Image: ubuntu-26.04
+2026-11-08T12:38:13.0968907Z Version: 20261101.186.1
+2026-11-08T12:38:13.0970365Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-08T12:38:13.0971970Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+2026-11-08T12:38:13.0973021Z ##[endgroup]
+2026-11-08T12:38:13.0974121Z ##[group]GITHUB_TOKEN Permissions
+2026-11-08T12:38:13.0976293Z Contents: read
+2026-11-08T12:38:13.0976954Z Metadata: read
+2026-11-08T12:38:13.0977674Z ##[endgroup]
+2026-11-08T12:38:13.0980436Z Secret source: Actions
+2026-11-08T12:38:13.0981476Z Cache mode: write
+2026-11-08T12:38:13.0982481Z Prepare workflow directory
+2026-11-08T12:38:13.1307792Z Prepare all required actions
+2026-11-08T12:38:13.1410085Z Complete job name: public-access
+2026-11-08T12:38:13.2488565Z ##[group]Run curl --fail --silent --show-error --retry 3 --retry-delay 5 \
+2026-11-08T12:38:13.2490039Z [36;1mcurl --fail --silent --show-error --retry 3 --retry-delay 5 \[0m
+2026-11-08T12:38:13.2491207Z [36;1m  --max-time 60 https://visionguard-a2-api.vercel.app/health -o health.json[0m
+2026-11-08T12:38:13.2492338Z [36;1mpython3 - <<'PY'[0m
+2026-11-08T12:38:13.2492982Z [36;1mimport json[0m
+2026-11-08T12:38:13.2493713Z [36;1mresult = json.load(open('health.json'))[0m
+2026-11-08T12:38:13.2494441Z [36;1massert result['status'] == 'ok'[0m
+2026-11-08T12:38:13.2495185Z [36;1massert result['database_ready'] is True[0m
+2026-11-08T12:38:13.2496013Z [36;1massert result['model_version'] == '2-fp16'[0m
+2026-11-08T12:38:13.2496913Z [36;1mprint(json.dumps(result, indent=2))[0m
+2026-11-08T12:38:13.2497633Z [36;1mPY[0m
+2026-11-08T12:38:13.2498278Z [36;1mstatus=$(curl --silent --show-error --max-time 60 \[0m
+2026-11-08T12:38:13.2499672Z [36;1m  -o unauthorized.json -w '%{http_code}' https://visionguard-a2-api.vercel.app/history)[0m
+2026-11-08T12:38:13.2500712Z [36;1mtest "$status" = 401[0m
+2026-11-08T12:38:13.2501647Z [36;1mecho 'Public health passed; unauthenticated history correctly returned 401.'[0m
+2026-11-08T12:38:13.3147497Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-08T12:38:13.3148959Z ##[endgroup]
+2026-11-08T12:38:13.5375968Z {
+2026-11-08T12:38:13.5378691Z   "database_ready": true,
+2026-11-08T12:38:13.5380542Z   "debug": false,
+2026-11-08T12:38:13.5383180Z   "history_backend": "postgresql",
+2026-11-08T12:38:13.5384639Z   "model_name": "23L-0630_VisionGuard",
+2026-11-08T12:38:13.5385886Z   "model_version": "2-fp16",
+2026-11-08T12:38:13.5387259Z   "runtime": "LiteRT float16",
+2026-11-08T12:38:13.5388158Z   "status": "ok",
+2026-11-08T12:38:13.5388838Z   "threshold": 0.5
+2026-11-08T12:38:13.5389881Z }
+2026-11-08T12:38:13.6366800Z Public health passed; unauthenticated history correctly returned 401.
+2026-11-08T12:38:13.6559273Z Cleaning up orphan processes

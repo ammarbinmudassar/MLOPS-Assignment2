@@ -1,0 +1,62 @@
+{
+  "url": "https://visionguard-a2-api.vercel.app",
+  "health": {
+    "database_ready": true,
+    "debug": false,
+    "history_backend": "postgresql",
+    "model_name": "23L-0630_VisionGuard",
+    "model_version": "2-fp16",
+    "runtime": "LiteRT float16",
+    "status": "ok",
+    "threshold": 0.5
+  },
+  "unauthorized_history_status": 401,
+  "predictions": [
+    {
+      "dataset_label": "AI",
+      "response": {
+        "confidence": 0.8800420165061951,
+        "confidence_is_calibrated": false,
+        "created_at": "2026-11-08T12:30:17+00:00",
+        "filename": "validation_1.jpg",
+        "id": "182f874301c34414885bd10f4ae315e6",
+        "label": "AI",
+        "model_name": "23L-0630_VisionGuard",
+        "model_version": "2-fp16",
+        "p_ai": 0.8800420165061951,
+        "threshold": 0.5
+      }
+    },
+    {
+      "dataset_label": "Real",
+      "response": {
+        "confidence": 0.5679346323013306,
+        "confidence_is_calibrated": false,
+        "created_at": "2026-11-08T12:30:20+00:00",
+        "filename": "validation_2.jpg",
+        "id": "7392aecd59c44f868cc32b38bc61f321",
+        "label": "AI",
+        "model_name": "23L-0630_VisionGuard",
+        "model_version": "2-fp16",
+        "p_ai": 0.5679346323013306,
+        "threshold": 0.5
+      }
+    },
+    {
+      "dataset_label": "AI",
+      "response": {
+        "confidence": 0.9903510808944702,
+        "confidence_is_calibrated": false,
+        "created_at": "2026-11-08T12:30:22+00:00",
+        "filename": "validation_3.jpg",
+        "id": "52c5272deeaa417cb887419b64e798f3",
+        "label": "AI",
+        "model_name": "23L-0630_VisionGuard",
+        "model_version": "2-fp16",
+        "p_ai": 0.9903510808944702,
+        "threshold": 0.5
+      }
+    }
+  ],
+  "history_verified": true
+}

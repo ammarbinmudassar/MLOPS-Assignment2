@@ -1,0 +1,20 @@
+{
+  "api": "https://visionguard-a2-api.vercel.app",
+  "results": [
+    {
+      "dataset_label": "AI",
+      "result_url": "http://127.0.0.1:8001/result/5081aaaaa7dd4906a6262c8e142d6dd4",
+      "status": 200
+    },
+    {
+      "dataset_label": "Real",
+      "result_url": "http://127.0.0.1:8001/result/75e59d81ac1d41b1823c5120b83c521a",
+      "status": 200
+    },
+    {
+      "dataset_label": "AI",
+      "result_url": "http://127.0.0.1:8001/result/a6a7dd8555ba4b7197c8032222252d67",
+      "status": 200
+    }
+  ]
+}

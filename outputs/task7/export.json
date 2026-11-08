@@ -1,0 +1,6 @@
+{
+  "source_bytes": 15444309,
+  "lite_bytes": 4515140,
+  "sha256": "2b1b89ac182cbbdf9d5f1bc47cd4eff2cb86f274c1bd17e549c74794a9c97b35",
+  "runtime_ops": "TFLITE_BUILTINS only; no TensorFlow Flex dependency"
+}
