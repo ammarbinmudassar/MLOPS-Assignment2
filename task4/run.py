@@ -13,7 +13,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--server", choices=("flask", "gunicorn"), default="flask")
     args = parser.parse_args()
-    load_dotenv(ROOT / ".env.web", override=False)
+    config_name = os.environ.get("VISIONGUARD_WEB_ENV", ".env.web")
+    load_dotenv(ROOT / config_name, override=False)
     os.environ["FLASK_DEBUG"] = "0"
     os.environ.setdefault("CUDA_VISIBLE_DEVICES", "-1")
     os.environ.setdefault("TF_NUM_INTRAOP_THREADS", "4")

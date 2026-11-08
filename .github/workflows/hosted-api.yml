@@ -1,0 +1,32 @@
+name: Hosted API check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - deploy/vercel_api/**
+      - .github/workflows/hosted-api.yml
+permissions:
+  contents: read
+jobs:
+  public-access:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify API from GitHub's network
+        shell: bash
+        run: |
+          curl --fail --silent --show-error --retry 3 --retry-delay 5 \
+            --max-time 60 https://visionguard-a2-api.vercel.app/health -o health.json
+          python3 - <<'PY'
+          import json
+          result = json.load(open('health.json'))
+          assert result['status'] == 'ok'
+          assert result['database_ready'] is True
+          assert result['model_version'] == '2-fp16'
+          print(json.dumps(result, indent=2))
+          PY
+          status=$(curl --silent --show-error --max-time 60 \
+            -o unauthorized.json -w '%{http_code}' https://visionguard-a2-api.vercel.app/history)
+          test "$status" = 401
+          echo 'Public health passed; unauthenticated history correctly returned 401.'

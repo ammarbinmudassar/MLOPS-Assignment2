@@ -31,7 +31,9 @@ def settings_from_env():
     ZoneInfo(display_timezone)
     if not 0 <= threshold <= 1 or maximum < 1 or pixels < 1 or not 1 <= port <= 65535:
         raise ValueError("Invalid threshold, upload limit, image dimensions or port in web settings.")
-    return {"MODEL_DIR": model_dir, "DECISION_THRESHOLD": threshold,
+    return {"INFERENCE_API_URL": os.environ.get("INFERENCE_API_URL", ""),
+            "INFERENCE_API_KEY": os.environ.get("INFERENCE_API_KEY", ""),
+            "MODEL_DIR": model_dir, "DECISION_THRESHOLD": threshold,
             "DATABASE_URL": database_url,
             "MAX_FILE_BYTES": maximum, "MAX_CONTENT_LENGTH": maximum + 64 * 1024,
             "MAX_FORM_MEMORY_SIZE": 512 * 1024, "MAX_FORM_PARTS": 4,

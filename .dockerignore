@@ -9,6 +9,7 @@
 !task4/app.py
 !task4/inference.py
 !task4/run.py
+!task4/remote.py
 !task4/settings.py
 !task4/storage.py
 !task4/templates/

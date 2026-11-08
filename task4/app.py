@@ -30,11 +30,15 @@ def create_app(test_config=None, predictor=None):
     app.config.update(settings_from_env())
     if test_config:
         app.config.update(test_config)
-    if predictor is None:
+    remote_mode = bool(app.config["INFERENCE_API_URL"]) and predictor is None
+    if remote_mode:
+        from task4.remote import RemoteClient
+        predictor = RemoteClient(app.config["INFERENCE_API_URL"], app.config["INFERENCE_API_KEY"])
+    elif predictor is None:
         from task4.inference import VisionGuardPredictor
         predictor = VisionGuardPredictor(app.config["MODEL_DIR"], threshold=app.config["DECISION_THRESHOLD"])
     app.extensions["predictor"] = predictor
-    app.extensions["recent_results"] = ResultStore(app.config["DATABASE_URL"])
+    app.extensions["recent_results"] = predictor if remote_mode else ResultStore(app.config["DATABASE_URL"])
 
     @app.context_processor
     def shared_view_data():
@@ -99,6 +103,9 @@ def create_app(test_config=None, predictor=None):
         except (UnidentifiedImageError, OSError, ValueError, SyntaxError, Image.DecompressionBombError, Image.DecompressionBombWarning):
             return error_page("Image could not be opened", "This file is not a readable image. Try a different PNG or JPEG.", 422)
         try:
+            if remote_mode:
+                record = predictor.predict_upload(contents, filename)
+                return redirect(url_for("result", identifier=record["id"]), code=303)
             result = app.extensions["predictor"].predict_bytes(contents)
         except Exception:
             app.logger.exception("Image prediction failed")

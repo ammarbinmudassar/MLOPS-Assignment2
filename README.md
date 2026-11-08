@@ -75,6 +75,12 @@ Task 6.6 defines GitHub Actions CI in `.github/workflows/ci.yml`: install
 dependencies, lint, run the full tests and build Docker. See
 [docs/TASK6_6.md](docs/TASK6_6.md) for hosted-run evidence status and secrets guidance.
 
-Public deployment is not implemented yet.
-AI assistance was used to implement, test and document Tasks 2, 3, 4, 5 and 6.1–6.6;
+Tasks 7–8 deploy the float16 LiteRT model on Vercel and save prediction metadata
+in Neon PostgreSQL. Public health: https://visionguard-a2-api.vercel.app/health.
+Prediction and history routes require the private `X-API-Key` header.
+See [docs/TASK7.md](docs/TASK7.md) for deployment and Postman instructions, and
+[docs/TASK8.md](docs/TASK8.md) for the local UI connected to this API.
+The deployment source and 4.52 MB model are in `deploy/vercel_api/`.
+
+AI assistance was used to implement, test and document Tasks 2–8;
 the final submitted report must disclose that assistance.
