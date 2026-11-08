@@ -1,86 +1,95 @@
 # 23L-0630_A2_Ops — VisionGuard
 
-[![VisionGuard CI](https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/workflows/ci.yml)
+[![CI](https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ammarbinmudassar/MLOPS-Assignment2/actions/workflows/ci.yml)
 
-TensorFlow/Keras coursework for distinguishing the dataset's AI and Real image
-classes. The original dataset is kept locally and excluded from Git.
+TensorFlow/Keras AI-versus-real image classification coursework.
 
-Task 1 audit and EDA are in `dataset_audit.py`, `visual_eda.py` and `outputs/`.
-Task 2 code is in `task2/`; its explanations, commands and screenshot checklist are
-in [docs/TASK2_GUIDE.md](docs/TASK2_GUIDE.md). Generated results and figures live in
-`outputs/task2/`. Large models, downloads and tuner state are Git-ignored.
+- [GitHub](https://github.com/ammarbinmudassar/MLOPS-Assignment2)
+- [DagsHub](https://dagshub.com/ammarbinmudassar/MLOPS-Assignment2)
+- [MLflow](https://dagshub.com/ammarbinmudassar/MLOPS-Assignment2.mlflow)
+- [Hosted API](https://visionguard-a2-api.vercel.app)
+
+## Source and evidence
+
+| Path | Purpose |
+|---|---|
+| `dataset_audit.py`, `visual_eda.py` | Dataset audit and plots |
+| `task2/` | Input pipeline, CNN, transfer learning, tuning and evaluation |
+| `task3/` | MLflow lab, DagsHub tracking, artifacts, comparisons and registry |
+| `task4/`, `visionguard/` | Flask UI, validation, inference and history storage |
+| `task7/`, `deploy/vercel_api/` | Model conversion, validation and hosted LiteRT API |
+| `tests/`, `.github/workflows/` | Tests and CI |
+| `outputs/` | Saved results, figures, screenshots and run evidence |
+| `postman/` | API request collection |
+
+## Training and MLflow
+
+Use Python 3.11 in the local training environment:
 
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-bash run_gpu.sh python -u -m task2.train
-bash run_gpu.sh python -u -m task2.evaluate
-python -m task2.show_results
+python dataset_audit.py
+python visual_eda.py
+bash run_gpu.sh python -m task2.train
+bash run_gpu.sh python -m task2.evaluate
+python -m task2.report
+bash scripts/start_mlflow.sh
 ```
 
-The GPU wrapper uses Bash and exposes the NVIDIA libraries installed in this
-environment. A compatible working NVIDIA driver is still required for GPU training.
-The model code also supports CPU execution with `.venv/bin/python` directly.
-Initial transfer training downloads official ImageNet weights; the toy lab uses
-Fashion-MNIST. Internet access is needed unless these downloads are already cached.
+Open http://127.0.0.1:5000 for local MLflow. Run `python -m task3.local_lab`
+in another terminal, or add `--dagshub` for hosted tracking. Copy `.env.example`
+to the ignored `.env` and enter DagsHub credentials privately.
+`run_gpu.sh` exposes NVIDIA libraries from the local environment; CPU training
+can use Python directly. Test evaluation refuses to overwrite completed results.
 
-Test data is reserved until tuning is complete. The evaluation command refuses to
-overwrite completed test results. Use saved predictions for later analysis.
+## Web application
 
-Task 3 MLflow/DagsHub tracking, comparisons and the model registry are implemented
-in `task3/`. Subsection guides and evidence instructions are in `docs/TASK3_1.md`
-through `docs/TASK3_6.md`; results are under `outputs/task3/`.
-The registered model is `23L-0630_VisionGuard`, with `champion` pointing to version 2.
-Run `bash run_gpu.sh python -m task3.predict_champion` to load it by alias and
-classify the first saved test image. Credentials come from the Git-ignored `.env`.
+For local model inference, prepare the champion once and start the UI:
 
-Task 4.1 local inference is in `task4/`; see [docs/TASK4_1.md](docs/TASK4_1.md).
-The local model package is ignored by Git. After preparation, inference works
-offline and reuses one loaded model for multiple predictions.
+```bash
+python -m task4.prepare_model
+python -m task4.run --server gunicorn
+```
 
-Tasks 4.2–4.4 provide validated uploads, a simple frontend, persistent SQLite
-history and environment-based settings. Run `.venv/bin/python -m task4.run
---server gunicorn` and open http://127.0.0.1:8000. Use `.env.web.example` as the
-template for the ignored `.env.web` settings. Guides and screenshot mappings are
-in `docs/TASK4_2.md` through `docs/TASK4_4.md`.
+Copy `.env.web.example` to `.env.web` first. The default UI is
+http://127.0.0.1:8000. The local model and dataset are excluded from Git.
 
-Task 5 verifies the persistent database trail; see [docs/TASK5.md](docs/TASK5.md)
-for the short explanation, query output and history screenshot.
+For the existing hosted API, the ignored `.env.remote` is already configured:
 
-Task 6.1 Docker warm-up commands, definitions and evidence mappings are in
-[docs/TASK6_1.md](docs/TASK6_1.md). Actual command outputs are in `outputs/task6/6_1/`.
+```bash
+VISIONGUARD_WEB_ENV=.env.remote python -m task4.run
+```
 
-Task 6.2 adds a slim, non-root CPU inference image with a health check and a
-runtime-only build context. Build with `docker build -t visionguard:6.2 .`;
-model mounting, startup and terminal evidence commands are in
-[docs/TASK6_2.md](docs/TASK6_2.md).
+Open http://127.0.0.1:8001. A fresh remote configuration needs
+`INFERENCE_API_URL`, `INFERENCE_API_KEY`, `MAX_UPLOAD_BYTES=3145728` and
+`APP_PORT=8001`. Results are stored in Neon PostgreSQL. Images are processed
+in memory; confidence is an uncalibrated model score.
 
-Task 6.3 adds `compose.yaml` with PostgreSQL, health-based startup ordering,
-a persistent database volume and a read-only model mount. Private database
-credentials belong in the ignored `.env`; see `.env.example`. Run
-`docker compose up -d --build --wait`, then open http://127.0.0.1:8083.
-See [docs/TASK6_3.md](docs/TASK6_3.md) for terminal evidence commands.
+## Docker and deployment
 
-Task 6.4 measures a 5.59% size reduction from disabling pip bytecode compilation.
-Compose uses the verified optimized image. See [docs/TASK6_4.md](docs/TASK6_4.md)
-for before/after sizes, largest layers and terminal screenshot commands.
+```bash
+docker compose up -d --build --wait
+npx vercel deploy --prod --cwd deploy/vercel_api
+```
 
-Task 6.5 demonstrates operations on both services and a controlled missing-model
-failure, diagnosed from logs and recovered without losing history. Commands and
-evidence are in [docs/TASK6_5.md](docs/TASK6_5.md). `compose.failure.yaml` is an
-explicit troubleshooting override; normal startup uses only `compose.yaml`.
+Compose uses the private PostgreSQL settings in `.env` and the prepared champion
+model; its UI is http://127.0.0.1:8083. `compose.failure.yaml` is the intentional
+failure exercise. Vercel uses Python 3.12 and the bundled 4.52 MB float16 model.
+Its production settings require private `DATABASE_URL` and `VISIONGUARD_API_KEY`
+variables, configured with `vercel env add` before deployment.
 
-Task 6.6 defines GitHub Actions CI in `.github/workflows/ci.yml`: install
-dependencies, lint, run the full tests and build Docker. See
-[docs/TASK6_6.md](docs/TASK6_6.md) for hosted-run evidence status and secrets guidance.
+Import `postman/VisionGuard.postman_collection.json` for API checks. `/health`
+is public. `/predict` accepts a multipart `image` file up to 3 MiB;
+`/history` and `/results/<id>` return saved metadata. These three routes require
+`X-API-Key`. Never commit keys or database passwords.
 
-Tasks 7–8 deploy the float16 LiteRT model on Vercel and save prediction metadata
-in Neon PostgreSQL. Public health: https://visionguard-a2-api.vercel.app/health.
-Prediction and history routes require the private `X-API-Key` header.
-See [docs/TASK7.md](docs/TASK7.md) for deployment and Postman instructions, and
-[docs/TASK8.md](docs/TASK8.md) for the local UI connected to this API.
-The deployment source and 4.52 MB model are in `deploy/vercel_api/`.
+## Checks
 
-AI assistance was used to implement, test and document Tasks 2–8;
-the final submitted report must disclose that assistance.
+```bash
+ruff check .
+python -m unittest discover -s tests -v
+```
+
+AI assistance was used for implementation, testing and documentation of Tasks 2–8.

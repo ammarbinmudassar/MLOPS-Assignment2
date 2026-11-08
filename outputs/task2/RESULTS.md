@@ -5,9 +5,8 @@ TensorFlow 2.21.0; Keras 3.15.1; Keras Tuner 1.4.8.
 Initial training source commit: `8c6c3bf0a3793646fe182875613722270385b6a1`. Evaluation source commit:
 `2b9fb8c8c1ca6ec7d25782d8de0a564e8baf8581`. See `resume_config.json` for the resumed-stage revision.
 
-These are actual local experiment outputs, not MLflow/DagsHub evidence. Full
-methods, layer justifications and screenshot instructions are in
-`../../docs/TASK2_GUIDE.md`. Raw image provenance has not been independently verified.
+These are actual local experiment outputs, not MLflow/DagsHub evidence. Setup commands are in
+`../../README.md`. Raw image provenance has not been independently verified.
 
 ## 2.1 — fixed splits and augmentation
 
@@ -201,7 +200,6 @@ and a fresh eight-trial search was run. Failed attempts are not counted as trial
 Models are saved locally under `models/` and Git-ignored. `model_manifest.json`
 records selected paths, sizes and SHA-256 hashes. DVC publication, MLflow/DagsHub
 tracking, a serving application and the optional Grad-CAM bonus are not included.
-Capture actual terminal screenshots with username, date and project context using
-`python -m task2.show_results`; the PNG plots are figures, not terminal screenshots.
+Saved figures, metrics and model summaries are in this output directory.
 
 AI assistance was used to implement, test, execute and document this Task 2 work.

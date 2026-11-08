@@ -36,5 +36,4 @@ separate artifact; use the two FINISHED runs for the comparison.
 | Saved model | `screenshots/logged_model.jpg` |
 
 Open http://127.0.0.1:5000. To start the interface again from the assignment folder,
-run `bash scripts/start_mlflow.sh` and keep that terminal running. Definitions of
-experiment, run, parameter, metric, artifact and tag are in `docs/TASK3_1.md`.
+run `bash scripts/start_mlflow.sh` and keep that terminal running. Project setup commands are in `README.md`.
